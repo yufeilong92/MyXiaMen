@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:background="@color/activity_content_bg"
+    >
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@drawable/btn_return_normal" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleBarText"
+            android:text="@string/find_law_firm"
+            />
+
+        <View
+            style="@style/TitleBarAction"
+            android:clickable="false"
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lawyer_list_rv"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/lawyer_list_empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="当前律所无律师数据"
+        android:textColor="@color/gray_text"
+        android:visibility="gone" />
+</LinearLayout>
+

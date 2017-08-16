@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 热点排行、新闻纵横 列表项布局  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:orientation="horizontal"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_listitem_base1"
+    >
+    <!-- 图片  -->
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_default_avatar"
+        />
+
+    <!-- 图片与内容简介  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!-- 列表项 标题  -->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="2dp"
+            android:text="和唐律师"
+            android:textColor="@color/home_list_text_title"
+            android:textSize="@dimen/text_size_medium"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/law_office_tip"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_small"
+                />
+
+            <TextView
+                android:id="@+id/tv_office"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="意法律师事务所"
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_small"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/law_place_tip"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_small"
+                />
+
+            <TextView
+                android:id="@+id/tv_place"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="贵州市 南明区"
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_small"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/law_speciality_tip"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_small"
+                />
+
+            <TextView
+                android:id="@+id/tv_speciality_tip1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_law_speciality_tip_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                />
+
+            <TextView
+                android:id="@+id/tv_speciality_tip2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_law_speciality_tip_bg"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                />
+
+            <TextView
+                android:id="@+id/tv_speciality_tip3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_law_speciality_tip_bg"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone"
+                android:paddingTop="2dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

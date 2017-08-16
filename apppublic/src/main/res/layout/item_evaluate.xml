@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 热点排行、新闻纵横 列表项布局  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+    <!-- 图片  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_default_avatar"
+            />
+
+        <!-- 图片与内容简介  -->
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            >
+
+            <!-- 列表项 标题  -->
+            <TextView
+                android:id="@+id/tv_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="2dp"
+                android:text="和唐律师"
+                android:textColor="@color/home_list_text_title"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+            <TextView
+                android:id="@+id/tv_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="2dp"
+                android:text="2017年05月20日"
+                android:textColor="@color/pack_up_text"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+<TextView
+    android:id="@+id/tv_content2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="撒大苏打撒大苏打上"
+    android:paddingLeft="8dp"
+    android:textColor="@color/home_list_text_title"
+    android:textSize="@dimen/text_size_mediummin"
+    />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/law_screen_divider"
+        />
+</LinearLayout>

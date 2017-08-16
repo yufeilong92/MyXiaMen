@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:background="@color/activity_content_bg"
+    >
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@drawable/btn_return_normal"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleBarText"
+            android:text="@string/my_consult_detail"
+            />
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:onClick="onToolbarClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="@string/evaluate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_consult_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/law_detail_bg"
+        />
+</LinearLayout>
+

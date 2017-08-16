@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/activity_content_bg"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/law_detail_bg"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/jamed_info"
+            android:textSize="@dimen/text_size_mediummin"
+            android:textColor="@color/lawyer_list_text_tip2"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/law_detail_bg"
+            />
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+               android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/brief_case_of_the_dispute"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_brief_case_of_the_dispute"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:maxEms="18"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:ems="5"
+                android:gravity="right"
+                android:text="@string/the_application_for_the_application"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_the_application_for_the_application"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:maxEms="18"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+    </LinearLayout>

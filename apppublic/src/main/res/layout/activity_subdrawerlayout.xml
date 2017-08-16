@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subdrawerlayout_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/activity_content_bg"
+    tools:context=".ui.SubActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout style="@style/TitleBar">
+
+            <ImageView
+                style="@style/TitleBarAction"
+                android:onClick="onHomeClick"
+                android:src="@mipmap/icon_back" />
+
+            <TextView
+                style="@style/TitleBarText"
+                android:text="@string/sub_activity_title" />
+
+            <ImageView
+                android:id="@+id/subdrawerlayout_filter"
+                style="@style/TitleBarAction"
+                android:clickable="true"
+                android:src="@mipmap/icon_filter_user" />
+        </LinearLayout>
+
+        <!-- 内容部分 -->
+        <FrameLayout
+            android:id="@+id/subdrawerlayout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </FrameLayout>
+    </LinearLayout>
+    <!-- 抽屉内容 -->
+    <FrameLayout
+        android:id="@+id/subdrawerlayout_drawercontent"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true"
+        />
+
+</android.support.v4.widget.DrawerLayout>

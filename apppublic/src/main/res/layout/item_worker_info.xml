@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:id="@+id/iv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:src="@color/white"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        />
+    <LinearLayout
+        android:id="@+id/ll_bottom_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/ic_lawyer_detail_tender"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/practice_organization"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_practice_organization"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/practice_certificate_number"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_practice_certificate_number"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/law_firm_administrative"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_law_firm_administrative"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/politics_status"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"/>
+
+            <TextView
+                android:id="@+id/tv_politics_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/opening_date"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"/>
+
+            <TextView
+                android:id="@+id/tv_opening_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/pactice_area"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"/>
+
+            <TextView
+                android:id="@+id/tv_pactice_area"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/phone"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"/>
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/name4"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"/>
+
+            <TextView
+                android:id="@+id/tv_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/sex"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/education"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"/>
+
+            <TextView
+                android:id="@+id/tv_education"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/nation3"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"/>
+
+            <TextView
+                android:id="@+id/tv_nation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/annual_appraisal"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_annual_appraisal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/lawyer_list_text_tip2"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/law_screen_divider"/>
+            <TextView
+                android:id="@+id/tv_pack_up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/pack_up"
+                android:textColor="@color/pack_up_text"
+                android:textSize="@dimen/text_size_mediummin"
+                android:background="@drawable/selector_pack_up_bg"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_service_office_info"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="5dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/ic_lawyer_detail_bg"
+        android:gravity="center"
+        android:text="@string/worker_info"
+        android:textColor="@color/lawyer_list_text_tip2"
+        android:textSize="@dimen/text_size_mediummin"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+

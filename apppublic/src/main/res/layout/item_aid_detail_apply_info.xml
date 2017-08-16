@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/law_detail_bg"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/applyper_info"
+        android:textSize="@dimen/text_size_mediummin"
+        android:textColor="@color/lawyer_list_text_tip2"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/law_detail_bg"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/name2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/sex2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:text="男"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/certificate_type"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_certificate_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/certificate_num"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_certificate_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/birthday2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_birthday2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/nation2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_nation2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/phone2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_phone2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/apply_domicile2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_apply_domicile2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:ems="5"
+                android:gravity="right"
+                android:text="@string/apply_residence2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_apply_residence2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/apply_work_unit2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_apply_work_unit2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:ems="5"
+                android:gravity="right"
+                android:text="@string/case_reason_summarize"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_case_reason_summarize"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:maxEms="18"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

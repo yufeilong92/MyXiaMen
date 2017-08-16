@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/law_detail_bg"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/entrust_detail"
+            android:textSize="@dimen/text_size_mediummin"
+            android:textColor="@color/lawyer_list_text_tip2"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/law_detail_bg"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/manage_status"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_manage_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/entrust_people"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_entrust_people"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:text="男"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/entrust_matter"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_entrust_matter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/entrust_time"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_entrust_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/entrust_detail2"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+
+            <TextView
+                android:id="@+id/tv_entrust_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:text="王琴"
+                android:textColor="@color/home_list_text_tip"
+                android:textSize="@dimen/text_size_mediummin"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

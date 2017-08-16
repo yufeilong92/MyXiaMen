@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_status_nor"/>
+
+        <TextView
+            android:id="@+id/tv_status_2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:background="@drawable/bg_status_min"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="正在审"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_mediummin"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_status_1"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/submit_aid_internet"
+            android:textColor="@color/pack_up_text"
+            android:textSize="@dimen/text_size_mediummin"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_diviler"
+    android:layout_width="3dp"
+    android:layout_height="30dp"
+    android:layout_marginLeft="11dp"
+    android:background="@color/law_detail_bg"
+    />
+</LinearLayout>

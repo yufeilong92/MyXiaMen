@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:background="@color/activity_content_bg"
+              tools:context=".ui.HomeActivity">
+
+    <LinearLayout
+        android:id="@id/activity_title_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white"
+        android:gravity="bottom"
+        >
+
+        <ImageView
+            android:padding="12dp"
+            android:layout_width="@dimen/title_action_height"
+            android:layout_height="@dimen/title_action_height"
+            android:background="@drawable/title_button_2"
+            android:onClick="onHomeClick"
+            android:src="@drawable/btn_return_pressed"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:text="@string/screen"
+            android:textColor="@color/lawyer_list_text_tip2"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_law_screen_text"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:onClick="onToolbarClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="@string/sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_mediummin"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/law_screen_divider"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        >
+        <ListView
+            android:id="@+id/lv_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scrollbars="none"
+            >
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

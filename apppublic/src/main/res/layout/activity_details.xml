@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="资讯详情" />
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:clickable="false"/>
+    </LinearLayout>
+
+
+    <WebView android:id="@+id/detail_content_wv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:layout_below="@+id/linearLayout" >
+    </WebView>
+
+    <ProgressBar
+        android:id="@+id/newsdetail_content_loading_pb"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

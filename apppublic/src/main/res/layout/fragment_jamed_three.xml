@@ -1,0 +1,194 @@
+<com.lawyee.apppublic.widget.ScrollViewWithEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/law_detail_bg"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:scrollbars="vertical"
+    tools:context="com.lawyee.apppublic.ui.frag.fragService.jamed.JamedThreeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/boundary_16dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingRight="@dimen/boundary_16dp">
+
+            <TextView
+                style="@style/TextTitle"
+                android:text="@string/mediafilter" />
+
+            <TextView
+                android:id="@+id/tv_jamedThree_JoinMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/boundary_8dp"
+                android:paddingTop="@dimen/boundary_8dp"
+                android:text="媒体已申请参与调解"
+                android:textColor="@color/red_org"
+                android:textSize="@dimen/text_size_mediummin"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/boundary_8dp"
+                android:paddingTop="@dimen/boundary_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jamed_mediaIspass"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_mediummin" />
+
+                <TextView
+                    android:id="@+id/tv_jamedThree_Mediaispass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boundary_8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_mediummin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/boundary_8dp"
+                android:paddingTop="@dimen/boundary_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reason"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_mediummin" />
+
+                <TextView
+                    android:id="@+id/tv_jamedThree_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boundary_8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_mediummin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/boundary_8dp"
+                android:paddingTop="@dimen/boundary_8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explain"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_mediummin" />
+
+                <TextView
+                    android:id="@+id/tv_jamedThree_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boundary_8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_mediummin" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+
+        <Space style="@style/Space16" />
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="@string/IsJionMedia" />
+
+        <LinearLayout
+            android:id="@+id/linear_jamedThree_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/boundary_16dp">
+
+            <Space style="@style/Space16" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rdb_jamedThree_MediaJoin"
+                    style="@style/RadioBtn"
+                    android:text="@string/media_join" />
+
+                <Space style="@style/Space16" />
+
+                <RadioButton
+                    android:id="@+id/rdb_jamedThree_MediaNoJoin"
+                    style="@style/RadioBtn"
+                    android:text="@string/media_No_Join" />
+
+            </RadioGroup>
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:id="@+id/tv_jamedThree_mediaNoJoin"
+                style="@style/Tv_InputBox"
+                android:hint="@string/selectNoJoinMedia" />
+
+            <Space style="@style/Space16" />
+
+            <com.lawyee.apppublic.widget.ContentEditText
+                android:id="@+id/et_jamedThree_otherexplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:background="@drawable/bg_input_box"
+                android:gravity="top"
+                android:hint="@string/jamed_otherexplain"
+                android:lines="6"
+                android:imeOptions="actionDone"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:padding="5dp"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <Space style="@style/Space16" />
+
+            <Button
+                android:id="@+id/btn_jamedthree_submit"
+                style="@style/BtnSumbit"
+                android:layout_gravity="center"
+                android:text="@string/dl_btn_submit" />
+
+            <Space style="@style/Space16" />
+        </LinearLayout>
+
+        <include
+            layout="@layout/fragment_jamedthree_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</com.lawyee.apppublic.widget.ScrollViewWithEditText>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/law_detail_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/TitleBar">
+
+        <ImageView
+            android:layout_alignParentBottom="true"
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:id="@+id/activity_title_text"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_action_height"
+            android:textSize="@dimen/text_size_mediumex"
+            android:gravity="center"
+            android:textColor="@color/activity_topbar_bg"
+            android:singleLine="true"
+            android:ellipsize="end"
+           />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_addNbv"
+            android:textColor="@color/white"
+            android:text="新增业务"
+            android:textSize="@dimen/text_size_mediumex"
+            android:layout_width="wrap_content"
+            style="@style/TitleBarAction"
+         />
+    </RelativeLayout>
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/mXrefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.andview.refreshview.XRefreshView>
+
+    <TextView
+        android:id="@+id/jamedorg_content_empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="无符合条件的数据" />
+</LinearLayout>

@@ -1,0 +1,3019 @@
+﻿{
+    "ret": {
+        "code": 1
+    },
+    "data": {
+        "list": [
+            {
+                "DataDictionaryVO": {
+                    "name": "工作动态",
+                    "oid": "0b341ee21a884d82b33677283cec41b3",
+                    "parentId": "c8794200dce74bd198d128cc2d216ac2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "政策法规",
+                    "oid": "fd92b0dd1ee5459daaabf018635177d9",
+                    "parentId": "aba7d8ba6629427783859f511726fd10"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "工作动态",
+                    "oid": "7db1467eb1bc49368438d280e9d68700",
+                    "parentId": "b950a23f1abb48afb30bdb7cc016a54c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证指南",
+                    "oid": "76b2f435b63c4802a39620f7a34a90e3",
+                    "parentId": "9e4fad51381a4da1a10bd87ea24d5461"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "数据中心",
+                    "oid": "d292d72c7bd240e49411254a9dadc6a4",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "未回复",
+                    "oid": "40944bc00121447fa0d5405a0c26d097",
+                    "parentId": "070c2126da6645cf83437457306efe81"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "已回复",
+                    "oid": "9b6b3a5deb0643679a432728a7573451",
+                    "parentId": "070c2126da6645cf83437457306efe81"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "已办结",
+                    "oid": "1bae189eeb2d4c7a8a309fece6da39df",
+                    "parentId": "070c2126da6645cf83437457306efe81"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "咨询状态",
+                    "oid": "070c2126da6645cf83437457306efe81",
+                    "parentId": "ea4a210202e540c38ef7894065d927c9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "司法档案",
+                    "oid": "08b6a14fbda8460ebefb5f6dd6724a81",
+                    "parentId": "2c7b649fd4bf41b1998530729a948b88"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解大篷车",
+                    "oid": "3a6cf4559a2b46d7ad7d437eb78f22e5",
+                    "parentId": "2c7b649fd4bf41b1998530729a948b88"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "微电影",
+                    "oid": "99f1839b3e9c47208bcb19d10d79aa8a",
+                    "parentId": "2c7b649fd4bf41b1998530729a948b88"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "动漫",
+                    "oid": "debc3ca1beeb45bdadfff5d38fc5c5f6",
+                    "parentId": "2c7b649fd4bf41b1998530729a948b88"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法宣视频",
+                    "oid": "2c7b649fd4bf41b1998530729a948b88",
+                    "parentId": "fef14010f29e432a98fb586eb4c6fb9d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法治宣传",
+                    "oid": "fef14010f29e432a98fb586eb4c6fb9d",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法治宣传",
+                    "oid": "77f5c14147584e42994622c9bf2564e1",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "工作动态",
+                    "oid": "b950a23f1abb48afb30bdb7cc016a54c",
+                    "parentId": "1a57016a71094d2787263cb027db40a7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "12348热线咨询",
+                    "oid": "64086a4d979944ab9783f1413e24948d",
+                    "parentId": "5e3a35ef577a48158d2276d53ede427a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "政务信箱",
+                    "oid": "9084c53d3c5d450a8957df80e62e2c13",
+                    "parentId": "5e3a35ef577a48158d2276d53ede427a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "留言咨询",
+                    "oid": "ece9860eb33e4dbda2e04663187f5de4",
+                    "parentId": "5e3a35ef577a48158d2276d53ede427a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "在线咨询",
+                    "oid": "138fa6b221464fb0b8a7cc37d61f8114",
+                    "parentId": "5e3a35ef577a48158d2276d53ede427a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "咨询来源",
+                    "oid": "5e3a35ef577a48158d2276d53ede427a",
+                    "parentId": "ea4a210202e540c38ef7894065d927c9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "咨询服务",
+                    "oid": "ea4a210202e540c38ef7894065d927c9",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "e1976bf0701641958c4030c311acac73",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法律咨询",
+                    "oid": "b2a67ac7f0134e91b5fa8cf10d21b9c5",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "投诉信访",
+                    "oid": "f0ccfccfe9284a25845928c0996ac4b5",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "基层服务",
+                    "oid": "fa457284a8bc43d0b6c10028f46bccbd",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "安置帮教",
+                    "oid": "f47d9aaaba1b49949d4c1586a7757dc0",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "社区矫正",
+                    "oid": "cc6439d4a8bf46399182e9ae4f927899",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "商事仲裁",
+                    "oid": "3cb74040a1d3429e8bc04ed70aa823de",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法治宣传",
+                    "oid": "8e1b547d422a4f649259a4b911abad7b",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "司法考试",
+                    "oid": "60213e73ce3742d7a8b510e26fab52a8",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解",
+                    "oid": "8068981ba4f34cbdb4813dac08d9e547",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "司法鉴定",
+                    "oid": "8fb35b89442e4ae8a8dccd9fc45eab3f",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证服务",
+                    "oid": "5105889514bf40bc9984424ecc1f87e8",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律师服务",
+                    "oid": "9b3f7ca997424892bdbdd9b9ec1034c0",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法律援助",
+                    "oid": "be112402e5e74f8e971b2a53c9610af2",
+                    "parentId": "01c689a6162f405c8e0847f12c1b2b8b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "咨询分类",
+                    "oid": "01c689a6162f405c8e0847f12c1b2b8b",
+                    "parentId": "ea4a210202e540c38ef7894065d927c9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "数据分析",
+                    "oid": "2e92d35b44a547a5a793470fba1e8af1",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "功能权限",
+                    "oid": "11dced35f84044e48c02c2a55f2bbed7",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "20年以上",
+                    "oid": "20-",
+                    "parentId": "95bc8ca17f844df9888d14b59094d7ac"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "15-20年",
+                    "oid": "15-20",
+                    "parentId": "95bc8ca17f844df9888d14b59094d7ac"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "10-15年",
+                    "oid": "10-15",
+                    "parentId": "95bc8ca17f844df9888d14b59094d7ac"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "5-10年",
+                    "oid": "5-10",
+                    "parentId": "95bc8ca17f844df9888d14b59094d7ac"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "0-5年",
+                    "oid": "0-5",
+                    "parentId": "95bc8ca17f844df9888d14b59094d7ac"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "从业年限",
+                    "oid": "95bc8ca17f844df9888d14b59094d7ac",
+                    "parentId": "4240729b57db4c87b633a3565f00356a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "不在线",
+                    "oid": "unline",
+                    "parentId": "7045b14b824048d69aa6c09cb3005a12"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "在线",
+                    "oid": "online",
+                    "parentId": "7045b14b824048d69aa6c09cb3005a12"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "是否在线",
+                    "oid": "7045b14b824048d69aa6c09cb3005a12",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法宣动态",
+                    "oid": "5a7e32d703de42a88f3c528550cbce7b",
+                    "parentId": "5f0164e4da48424f9aa3734a03c15a81"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "工作动态",
+                    "oid": "aa75d97bf29742fc8b90d624ef9c1418",
+                    "parentId": "b2323d7dd247479c934b68a31cc0a3b3"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "援助案例",
+                    "oid": "31b1d387ad9a4b6aa66510c2edbfaf31",
+                    "parentId": "4ec36365e6104576a455582c0748227f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "政策法规",
+                    "oid": "a1018bc7558249efaa6412b9f265980c",
+                    "parentId": "4ec36365e6104576a455582c0748227f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "援助指南",
+                    "oid": "de3395b5eeef427ba8ea098bb1b25cdb",
+                    "parentId": "4ec36365e6104576a455582c0748227f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他资讯",
+                    "oid": "4ec36365e6104576a455582c0748227f",
+                    "parentId": "f55a122433864975976db9ea5ec5e744"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "新闻媒体",
+                    "oid": "aa950ea49af24af1941f5b64552762a4",
+                    "parentId": "eb07c53eacb943e89eb8f405f715dd68"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "资讯公告",
+                    "oid": "1f0ef1f5e0dd451896be4ae4daea28b6",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "村居",
+                    "oid": "8dff2ca6febd430e9a86e98440919043",
+                    "parentId": "c384c4fb20ad4c7e82723d8f589e0e39"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "乡镇",
+                    "oid": "946131a907d3444bb130744434e230a9",
+                    "parentId": "c384c4fb20ad4c7e82723d8f589e0e39"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "无民事行为能力人",
+                    "oid": "4110da852c2c460994aa43b35c13ed83",
+                    "parentId": "68665233a40c472aa1c19805bb49e3d6"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "限制民事行为能力人",
+                    "oid": "fcf08dc71d5a41c0be02401f0f8c79bf",
+                    "parentId": "68665233a40c472aa1c19805bb49e3d6"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "完全民事行为能力人",
+                    "oid": "5f44db6ab74b45b78d0de2e415473c36",
+                    "parentId": "68665233a40c472aa1c19805bb49e3d6"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "机构委托",
+                    "oid": "929867e6ffd04d0e9b4e7f9e6067636a",
+                    "parentId": "200d0fce21b74a788317b483f3cead91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "个人申请",
+                    "oid": "5c8c9e991b60413a9174bb38fd5344c7",
+                    "parentId": "200d0fce21b74a788317b483f3cead91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "申请人行为能力",
+                    "oid": "68665233a40c472aa1c19805bb49e3d6",
+                    "parentId": "05dcef1203ef4332ac90eb379a00f0ce"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "鉴定类别",
+                    "oid": "200d0fce21b74a788317b483f3cead91",
+                    "parentId": "05dcef1203ef4332ac90eb379a00f0ce"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "执行",
+                    "oid": "4bcf1f7fa95b4ab49ea82af5962d2cb3",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "审监",
+                    "oid": "8edeba0cd9214b07ab1676c8445d30cb",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "海事",
+                    "oid": "bdf45a4f90c545e3862375f2362711eb",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民商",
+                    "oid": "7e825c17de3b4845bb0431e558536f23",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国际法",
+                    "oid": "a37d93dc0a2d4f73ab335e6c5825170a",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "经济",
+                    "oid": "5386cc5f0158446d9ff8ee2701e44173",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "知识产权",
+                    "oid": "20e39ef889ad4784909075abde1c1147",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行政法",
+                    "oid": "edaf8a561f4646d39dac2700b57fba35",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "刑事",
+                    "oid": "20c0ffd0ee624633abc63e2ff06b501e",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民法",
+                    "oid": "85c18710db3d45d3a16ab9438decc105",
+                    "parentId": "7dd7b8caa164403ca7a4a1719a51275f"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法治毕节",
+                    "oid": "fb490cd72ff74ec5843267bef654fb6b",
+                    "parentId": "72c7cb2ce0b54bc0b7680d5bc57e4ec6"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法治校园",
+                    "oid": "2b535657a70947ad8d4d44cf43b28fc8",
+                    "parentId": "72c7cb2ce0b54bc0b7680d5bc57e4ec6"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民主示范村",
+                    "oid": "c4d6c95d14444c0a85d1ebd7b18f04df",
+                    "parentId": "72c7cb2ce0b54bc0b7680d5bc57e4ec6"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法治区县市",
+                    "oid": "6111177302874e75b104d2e95b73acbe",
+                    "parentId": "72c7cb2ce0b54bc0b7680d5bc57e4ec6"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "以案释法",
+                    "oid": "7dd7b8caa164403ca7a4a1719a51275f",
+                    "parentId": "75a5c5dcce3a44778f94de6d686f5487"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法治创建",
+                    "oid": "72c7cb2ce0b54bc0b7680d5bc57e4ec6",
+                    "parentId": "75a5c5dcce3a44778f94de6d686f5487"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法宣动态",
+                    "oid": "5f0164e4da48424f9aa3734a03c15a81",
+                    "parentId": "75a5c5dcce3a44778f94de6d686f5487"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "工作动态",
+                    "oid": "c8794200dce74bd198d128cc2d216ac2",
+                    "parentId": "e3beac64d8f541ff91eef9dd97da8bac"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "政策法规",
+                    "oid": "aba7d8ba6629427783859f511726fd10",
+                    "parentId": "e3beac64d8f541ff91eef9dd97da8bac"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证指南",
+                    "oid": "9e4fad51381a4da1a10bd87ea24d5461",
+                    "parentId": "1a57016a71094d2787263cb027db40a7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "工作动态",
+                    "oid": "b2323d7dd247479c934b68a31cc0a3b3",
+                    "parentId": "f55a122433864975976db9ea5ec5e744"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解指南",
+                    "oid": "3cbc8200f93d46f3a1e5ff7bd972117d",
+                    "parentId": "4e3e88453c6847c194511ac481d73289"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法宣资讯",
+                    "oid": "75a5c5dcce3a44778f94de6d686f5487",
+                    "parentId": "7528a99c512c4bd890631c427ab78a21"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解资讯",
+                    "oid": "4e3e88453c6847c194511ac481d73289",
+                    "parentId": "7528a99c512c4bd890631c427ab78a21"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "鉴定资讯",
+                    "oid": "e3beac64d8f541ff91eef9dd97da8bac",
+                    "parentId": "7528a99c512c4bd890631c427ab78a21"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证资讯",
+                    "oid": "1a57016a71094d2787263cb027db40a7",
+                    "parentId": "7528a99c512c4bd890631c427ab78a21"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法援资讯",
+                    "oid": "f55a122433864975976db9ea5ec5e744",
+                    "parentId": "7528a99c512c4bd890631c427ab78a21"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "新闻资讯",
+                    "oid": "7528a99c512c4bd890631c427ab78a21",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "新闻媒体",
+                    "oid": "e2ebb9e4b5f94da48e54b5b8ee05e678",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "线下申请",
+                    "oid": "ea374201c728437f98cbcf28e2411d59",
+                    "parentId": "f7dd56bfa20947c3bae687ee4487ad77"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "网上申请",
+                    "oid": "7c640cc30e104ae289e29815a1895865",
+                    "parentId": "f7dd56bfa20947c3bae687ee4487ad77"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "未知",
+                    "oid": "1a42053f7ccd4094992d8533ed4a36fe",
+                    "parentId": "68a3123ec5cf4a358e1a8aed83d6af59"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "群众",
+                    "oid": "1c624e8f217d459fa63e54fbdbfb15c3",
+                    "parentId": "68a3123ec5cf4a358e1a8aed83d6af59"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民主党派",
+                    "oid": "6bb44b32ee874a9c8f9828ad2212fa02",
+                    "parentId": "68a3123ec5cf4a358e1a8aed83d6af59"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "团员",
+                    "oid": "7f246430cd144061bb43e9954dc31fe8",
+                    "parentId": "68a3123ec5cf4a358e1a8aed83d6af59"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "预备党员",
+                    "oid": "0c4dda7433674f23b45c3eb47b65c6c7",
+                    "parentId": "68a3123ec5cf4a358e1a8aed83d6af59"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "执业未满3个月参加考核不评定等次",
+                    "oid": "8ff2f5499b0945b28e3f83de8ebb94d3",
+                    "parentId": "15d815ff458640fa948a71df6038b0d9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "未参加考核",
+                    "oid": "1d1d61f940284550a21dbec0b56f7a41",
+                    "parentId": "15d815ff458640fa948a71df6038b0d9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "暂缓考核",
+                    "oid": "93010ad34b904a6f8ab6180c65938ab9",
+                    "parentId": "15d815ff458640fa948a71df6038b0d9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "不称职",
+                    "oid": "64d4bc9dee39491e8e7c5be09757cfc0",
+                    "parentId": "15d815ff458640fa948a71df6038b0d9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "基本称职",
+                    "oid": "65e7d6d18ae34e32a03292a5069a6079",
+                    "parentId": "15d815ff458640fa948a71df6038b0d9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "称职",
+                    "oid": "d6cd13816fe64cf7ab42eedb71f1368c",
+                    "parentId": "15d815ff458640fa948a71df6038b0d9"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "终止执业",
+                    "oid": "21d05699b81d4a9d9fe4d333e4c844ac",
+                    "parentId": "515414beea7b4a88994e376fbec0ad18"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "停止执业",
+                    "oid": "2d7b9a77868749499d26be0bf4390b6b",
+                    "parentId": "515414beea7b4a88994e376fbec0ad18"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "暂停执业",
+                    "oid": "c3110d4bded0451caad98cfa5c449740",
+                    "parentId": "515414beea7b4a88994e376fbec0ad18"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "正常",
+                    "oid": "d60c34d8bc5848649de4c16558e8f7cd",
+                    "parentId": "515414beea7b4a88994e376fbec0ad18"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "无",
+                    "oid": "a93ff3557aff45a2a13f0576d370d50c",
+                    "parentId": "2b657b4d48734722be38422b95c5fc65"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "副主任",
+                    "oid": "999ed64ee9634932b32504834dd486f5",
+                    "parentId": "2b657b4d48734722be38422b95c5fc65"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "主任",
+                    "oid": "8421f39cd9d94b90b580dfe746a789d9",
+                    "parentId": "2b657b4d48734722be38422b95c5fc65"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法律援助律师",
+                    "oid": "8d04639097ac4c5b88a19dac64195bcd",
+                    "parentId": "b6330d4736664037885f488a0e175ffa"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公司律师",
+                    "oid": "dfb986037fe24f43bfc7dee8772443d8",
+                    "parentId": "b6330d4736664037885f488a0e175ffa"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公职律师",
+                    "oid": "120a3bc8cf4b4175aee399654aa52029",
+                    "parentId": "b6330d4736664037885f488a0e175ffa"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "兼职律师",
+                    "oid": "df98766e6f3641979214b097e6a00222",
+                    "parentId": "b6330d4736664037885f488a0e175ffa"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "专职律师",
+                    "oid": "e9fd7729662b42669de63e65987cdddd",
+                    "parentId": "b6330d4736664037885f488a0e175ffa"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "四级",
+                    "oid": "32b40a28853347028250f330574cb1e7",
+                    "parentId": "7b4b943bc16a43728670fae604890c86"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "三级",
+                    "oid": "f6d25a182dc542318db7f8760c209c57",
+                    "parentId": "7b4b943bc16a43728670fae604890c86"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "二级",
+                    "oid": "b804cc3d998f48288e4f26ecb519be89",
+                    "parentId": "7b4b943bc16a43728670fae604890c86"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "一级",
+                    "oid": "ab96b7aed4c745159d158e81c46b6b78",
+                    "parentId": "7b4b943bc16a43728670fae604890c86"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "无",
+                    "oid": "aba9bae5db4f4fb88d470bad27bd4e82",
+                    "parentId": "7b4b943bc16a43728670fae604890c86"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "dca19a0f7bfb43b7bca11c5955416793",
+                    "parentId": "e557f6c5a23d4b69a8de57f096ab3259"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "海事海商",
+                    "oid": "ba8df79d9a8a4805a7002986cadf97b1",
+                    "parentId": "e95a0b875fb9484b9a6ff79d8fdaa839"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "WTO事务",
+                    "oid": "b90be5dab0864e60b88530422767ee30",
+                    "parentId": "e95a0b875fb9484b9a6ff79d8fdaa839"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "倾销补贴",
+                    "oid": "bbd5515554b44992b24f4a6b876b7b8c",
+                    "parentId": "e95a0b875fb9484b9a6ff79d8fdaa839"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "涉外仲裁",
+                    "oid": "de924be360e049c4898b7ba0f8c0e108",
+                    "parentId": "e95a0b875fb9484b9a6ff79d8fdaa839"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "涉外商事",
+                    "oid": "5439f26e4adf406d87405fadc513cdc3",
+                    "parentId": "e95a0b875fb9484b9a6ff79d8fdaa839"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "涉外民事",
+                    "oid": "d1120bf715f64e7e9552955b3b23d7aa",
+                    "parentId": "e95a0b875fb9484b9a6ff79d8fdaa839"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国际贸易",
+                    "oid": "398679a0290a43afbb6b7d559cc37184",
+                    "parentId": "e95a0b875fb9484b9a6ff79d8fdaa839"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行政复议",
+                    "oid": "78c956384fa8420a8c87380dd8f5abe9",
+                    "parentId": "6245250061a8495fa5bb2af1ceec1e91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行政诉讼",
+                    "oid": "9bbf3de37f154d0e97b77dc32743eada",
+                    "parentId": "6245250061a8495fa5bb2af1ceec1e91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国家赔偿",
+                    "oid": "d83deccca0804b22a49043c78a87580e",
+                    "parentId": "6245250061a8495fa5bb2af1ceec1e91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "刑事自诉",
+                    "oid": "5c0892365be849dbbe812ef26bbf788e",
+                    "parentId": "6245250061a8495fa5bb2af1ceec1e91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "取保候审",
+                    "oid": "3122c977d1db4cf889d24978c591943a",
+                    "parentId": "6245250061a8495fa5bb2af1ceec1e91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "刑事代理",
+                    "oid": "0e1e75d00c17498ea855d7cbc1d6f93e",
+                    "parentId": "6245250061a8495fa5bb2af1ceec1e91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "刑事辩护",
+                    "oid": "237ca0ecd4c24a619a638c864b6d3601",
+                    "parentId": "6245250061a8495fa5bb2af1ceec1e91"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "招标投标",
+                    "oid": "8f45792eac054cc0806076e3d788fd29",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "商事仲裁",
+                    "oid": "90cbaaf7436643c2ba0f63ae0f056f0c",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "商标专利",
+                    "oid": "74c4174e975b464b94262602931acd97",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "高新技术",
+                    "oid": "f971e855984749a88af91d12f71e5684",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "建设工程",
+                    "oid": "d54cf0ae52d14a1fba0b6507a6d66a2f",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "反不正当竞争",
+                    "oid": "aeb55dcbf0f54d9c9820522276c808dd",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "票据",
+                    "oid": "7e5388bbf32c456c866eb96c3d4db734",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "证券",
+                    "oid": "4cb759bade374e07bc7f2c5a1069acbe",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "融资借贷",
+                    "oid": "1c39722656944fc6af62f6a167b98248",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "破产清算",
+                    "oid": "4e49075e74b34a2aace68860355844ce",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "合并分立",
+                    "oid": "b6c065ddac2844699f2e93f5428d6ea8",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "股权转让",
+                    "oid": "6855881eaa3a46e696768afde1666714",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公司上市",
+                    "oid": "b5391bde6b42434696a3a3d7522c18d9",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法律顾问",
+                    "oid": "7e69230504fd45daab63098a32b4ab27",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "外资经营",
+                    "oid": "0b5ca6c2464742628190364271e693cb",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "中外合资合作",
+                    "oid": "4be45d912a764dc8b2d43429bf23da08",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "个人独资",
+                    "oid": "eb012dbc2cba47d09e1355a8813c0579",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "合伙企业",
+                    "oid": "240784beb8a542bdac971bc094662c8d",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公司法",
+                    "oid": "45a23349c5024fdf94e7b16c7f7b2116",
+                    "parentId": "ffd7f0dbac7240298959e4d82f6e79c0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "消费者权益",
+                    "oid": "92cb045988cc41b5ae9701fc4952cd9b",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民事仲裁",
+                    "oid": "9f2419f07b0e4a2ba6d030c06186fc8e",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "著作侵权",
+                    "oid": "6b05ac34393d46d98a5673ef056d7513",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "环境污染",
+                    "oid": "648b8cae601945a1a4f1f2837dd5c727",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "农业纠纷",
+                    "oid": "4ee526fc9e704ecabc559d74c35ce8fb",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "房产土地",
+                    "oid": "1efe86f06640456d98e490061915f94b",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "财产损害",
+                    "oid": "c755dc1ba4e44cc98ac38eaa69b7db8f",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人身侵权",
+                    "oid": "f8bf7227b1864ceca888b71168eeafb4",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "拆迁安置",
+                    "oid": "176c9dd53e8044acb8468136812664c4",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "抵押担保",
+                    "oid": "b4d86cbaa0d1468782a0aa194e683619",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "债权债务",
+                    "oid": "b7d8b22ba96b443cafd85c328842d3a3",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "医疗纠纷",
+                    "oid": "5d3554f485f640aa80b69295d8388a82",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "工伤赔偿",
+                    "oid": "60466668e5214bf9ada179f518ec38c3",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "劳动人事",
+                    "oid": "a4ddc4aaf04749308b34f039964cf45f",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "社会保险",
+                    "oid": "8e9f377192924b24b08f387ea9a2bb76",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "合同纠纷",
+                    "oid": "2444f116585a4192aa3abd9e153e54b8",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "交通事故",
+                    "oid": "aa08168219be4935b2d69f10ce48ae2d",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "遗嘱继承",
+                    "oid": "7efa057aaa8b450c8da7c8332a28b3fa",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "婚姻家庭",
+                    "oid": "420108ed34e6490db6914f5854950b12",
+                    "parentId": "a0e1bb526c714e69a134b7d20f1acfbe"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "e557f6c5a23d4b69a8de57f096ab3259",
+                    "parentId": "616818ec929f42d08049e100fe4a86a0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国际涉外",
+                    "oid": "e95a0b875fb9484b9a6ff79d8fdaa839",
+                    "parentId": "616818ec929f42d08049e100fe4a86a0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "刑事行政",
+                    "oid": "6245250061a8495fa5bb2af1ceec1e91",
+                    "parentId": "616818ec929f42d08049e100fe4a86a0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "经济金融",
+                    "oid": "ffd7f0dbac7240298959e4d82f6e79c0",
+                    "parentId": "616818ec929f42d08049e100fe4a86a0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民事民法",
+                    "oid": "a0e1bb526c714e69a134b7d20f1acfbe",
+                    "parentId": "616818ec929f42d08049e100fe4a86a0"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "专业领域",
+                    "oid": "616818ec929f42d08049e100fe4a86a0",
+                    "parentId": "e0fe9427aa2e483a90fb1284a038243c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "代写文书",
+                    "oid": "e1b89d35ef5e4c8c9cd0cd56f2400e14",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "非诉业务",
+                    "oid": "ffa02767abff43748aec1e6ebfda48b0",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法律顾问",
+                    "oid": "4578ccb9ccf2478d9114033c1a255dc3",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "仲裁调解",
+                    "oid": "9efa2df5105a4656818a76545eb104ca",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "赔偿案件",
+                    "oid": "2d15bd0fc0c347838f6d873947fc9fe2",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "执行案件",
+                    "oid": "dd773e30f0a7404cb71488bf8d08591e",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行政诉讼",
+                    "oid": "7be6c4fb8f79469a81d63e57bb0b8cbf",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民商代理",
+                    "oid": "4c40c98f42b945a19bc379b7c7ef3e94",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "刑事辩护",
+                    "oid": "399844b376da408096d219ee2dfbe419",
+                    "parentId": "2af6a3f6d9854b4cb3f2cc7b112112af"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "取消会员资格",
+                    "oid": "76bea53aa0a64e199c05d922971575c5",
+                    "parentId": "d6b7ad9e6ca14b62886255c96485765a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公开谴责",
+                    "oid": "963e574ed7044ffdaeeab5e5252982ae",
+                    "parentId": "d6b7ad9e6ca14b62886255c96485765a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "通报批评",
+                    "oid": "16ea56baa3084d74991297b67787c88f",
+                    "parentId": "d6b7ad9e6ca14b62886255c96485765a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "训诫",
+                    "oid": "4569d4f4f25b4936871e480114a77c21",
+                    "parentId": "d6b7ad9e6ca14b62886255c96485765a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "吊销执业许可证",
+                    "oid": "cc84703ed8704eaf838b923cb616a901",
+                    "parentId": "e6a323eec6ee43b1b56dcb39e06c32dc"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "停业整顿",
+                    "oid": "2b6db7b8cd744161a429e2d2d7e250ac",
+                    "parentId": "e6a323eec6ee43b1b56dcb39e06c32dc"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "停止执业",
+                    "oid": "d5b314ebd6164424abb1c2b794ac3d36",
+                    "parentId": "e6a323eec6ee43b1b56dcb39e06c32dc"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "没收违法所得",
+                    "oid": "632f43640e8d40cc890006cbc9d4fd67",
+                    "parentId": "e6a323eec6ee43b1b56dcb39e06c32dc"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "罚款",
+                    "oid": "9c566a02c90248d6af687190db28752d",
+                    "parentId": "e6a323eec6ee43b1b56dcb39e06c32dc"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "警告",
+                    "oid": "4d8494265f6c44ac89cdf7dbe30db60f",
+                    "parentId": "e6a323eec6ee43b1b56dcb39e06c32dc"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "暂缓考核",
+                    "oid": "aa74446f119044e38ce68474fa1b5f4e",
+                    "parentId": "c843dbafdf254ffa90fdb4b3ebc617ea"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "不合格",
+                    "oid": "d6e6300c011e4f02ae906d471546c030",
+                    "parentId": "c843dbafdf254ffa90fdb4b3ebc617ea"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "合格",
+                    "oid": "fbdfc0af517449809e02fb53ac54d965",
+                    "parentId": "c843dbafdf254ffa90fdb4b3ebc617ea"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行业处分",
+                    "oid": "d6b7ad9e6ca14b62886255c96485765a",
+                    "parentId": "36d204ee70df4db08cd4558297e721d3"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行政处罚",
+                    "oid": "e6a323eec6ee43b1b56dcb39e06c32dc",
+                    "parentId": "36d204ee70df4db08cd4558297e721d3"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "1c69bedc100249cdb49f7b72bb77bbdb",
+                    "parentId": "db9c029af24f4a6f91af8cfa6d8e75e2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行业",
+                    "oid": "1473697af0fe4c1a9cb180474c6642c3",
+                    "parentId": "db9c029af24f4a6f91af8cfa6d8e75e2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "区县级",
+                    "oid": "8ac22c0c89f742a389214185ce254aff",
+                    "parentId": "db9c029af24f4a6f91af8cfa6d8e75e2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "市级",
+                    "oid": "4d141fa5c1d240f6955e3e615a819edf",
+                    "parentId": "db9c029af24f4a6f91af8cfa6d8e75e2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "省级",
+                    "oid": "c699ada8308941c69652795224c39713",
+                    "parentId": "db9c029af24f4a6f91af8cfa6d8e75e2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国家级",
+                    "oid": "4c68132c937f4991815907e78286fc20",
+                    "parentId": "db9c029af24f4a6f91af8cfa6d8e75e2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "自有",
+                    "oid": "9df3732ad85941c5931924545fcc620c",
+                    "parentId": "c1401e9912764f5a9a5533b05418e94a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "租赁",
+                    "oid": "629ddd5439814a1696d3ec64b1cccc38",
+                    "parentId": "c1401e9912764f5a9a5533b05418e94a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国资",
+                    "oid": "8ae17b9fb18c46eb80e3f8db59d631ca",
+                    "parentId": "63e69fac1aa14310a1e96acb972738ee"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "特殊合伙",
+                    "oid": "2995978e3fec4b0c86ca33bca6488d51",
+                    "parentId": "63e69fac1aa14310a1e96acb972738ee"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "普通合伙",
+                    "oid": "e839aad2a77c4fa98399cf7a271a4c72",
+                    "parentId": "63e69fac1aa14310a1e96acb972738ee"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "个人",
+                    "oid": "c896dc80ec4742a9ab8efc5403205ae0",
+                    "parentId": "63e69fac1aa14310a1e96acb972738ee"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "停止执业",
+                    "oid": "691289a755524f1d9651e49690ca91cc",
+                    "parentId": "0aea53813d2f44299708362db4799c99"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "暂停执业",
+                    "oid": "d34eeeae82ad45faa97929afba6ca725",
+                    "parentId": "0aea53813d2f44299708362db4799c99"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "正常",
+                    "oid": "39a62a49a44341a7942b34b9ac9e90a9",
+                    "parentId": "0aea53813d2f44299708362db4799c99"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "藏语",
+                    "oid": "d0803050545d47e4908853b79112cf58",
+                    "parentId": "992ee6948b244144be6d94e195b7f8a2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "汉语",
+                    "oid": "16d04df9cbd445d49c0e8ab6d2c2f29c",
+                    "parentId": "992ee6948b244144be6d94e195b7f8a2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "维语",
+                    "oid": "9f624631d16e416cb41708f69a6372d0",
+                    "parentId": "992ee6948b244144be6d94e195b7f8a2"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "57becd0e5db547e0b4018893e130ee1c",
+                    "parentId": "c84f0c31a2094719a9da5710ae6cd303"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "德语",
+                    "oid": "2d4ecfe3222f45d2b0fe424c4b6db9aa",
+                    "parentId": "c84f0c31a2094719a9da5710ae6cd303"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "俄语",
+                    "oid": "fdd08c8688dd4304afee72148d49ac05",
+                    "parentId": "c84f0c31a2094719a9da5710ae6cd303"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法语",
+                    "oid": "49c8d2a19cdf45f7be1314300d9cc12b",
+                    "parentId": "c84f0c31a2094719a9da5710ae6cd303"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "日语",
+                    "oid": "df9173ea5828472d8476ed3b5f4cb648",
+                    "parentId": "c84f0c31a2094719a9da5710ae6cd303"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "英语",
+                    "oid": "eccda85e3e224773ab930dea22f4c8b2",
+                    "parentId": "c84f0c31a2094719a9da5710ae6cd303"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "服务内容",
+                    "oid": "2af6a3f6d9854b4cb3f2cc7b112112af",
+                    "parentId": "e0fe9427aa2e483a90fb1284a038243c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "少数名族语",
+                    "oid": "992ee6948b244144be6d94e195b7f8a2",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "外语能力",
+                    "oid": "c84f0c31a2094719a9da5710ae6cd303",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "年度考核情况",
+                    "oid": "15d815ff458640fa948a71df6038b0d9",
+                    "parentId": "4240729b57db4c87b633a3565f00356a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "执业状态",
+                    "oid": "515414beea7b4a88994e376fbec0ad18",
+                    "parentId": "4240729b57db4c87b633a3565f00356a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律所属性",
+                    "oid": "8f51abda33c74bcabc6002c6bdc406a5",
+                    "parentId": "e0fe9427aa2e483a90fb1284a038243c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律师属性",
+                    "oid": "4240729b57db4c87b633a3565f00356a",
+                    "parentId": "e0fe9427aa2e483a90fb1284a038243c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "所内职务",
+                    "oid": "2b657b4d48734722be38422b95c5fc65",
+                    "parentId": "4240729b57db4c87b633a3565f00356a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律师执业类别",
+                    "oid": "b6330d4736664037885f488a0e175ffa",
+                    "parentId": "4240729b57db4c87b633a3565f00356a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律师职称",
+                    "oid": "7b4b943bc16a43728670fae604890c86",
+                    "parentId": "4240729b57db4c87b633a3565f00356a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "年度考核情况",
+                    "oid": "c843dbafdf254ffa90fdb4b3ebc617ea",
+                    "parentId": "8f51abda33c74bcabc6002c6bdc406a5"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "惩罚类别",
+                    "oid": "36d204ee70df4db08cd4558297e721d3",
+                    "parentId": "e0fe9427aa2e483a90fb1284a038243c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "奖励级别",
+                    "oid": "db9c029af24f4a6f91af8cfa6d8e75e2",
+                    "parentId": "e0fe9427aa2e483a90fb1284a038243c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "场所性质",
+                    "oid": "c1401e9912764f5a9a5533b05418e94a",
+                    "parentId": "8f51abda33c74bcabc6002c6bdc406a5"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "组织形式",
+                    "oid": "63e69fac1aa14310a1e96acb972738ee",
+                    "parentId": "8f51abda33c74bcabc6002c6bdc406a5"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律所执业状态",
+                    "oid": "0aea53813d2f44299708362db4799c99",
+                    "parentId": "8f51abda33c74bcabc6002c6bdc406a5"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解服务",
+                    "oid": "0b841d6f87264d83bc685eeb760b67ff",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "鉴定服务",
+                    "oid": "6cfa9d0a19274510aef4e4dd855f2ccd",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证服务",
+                    "oid": "6fa5527a5c144f7db4cb3b8317e90798",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "系统资源",
+                    "oid": "9789d16c09a84b438686c0c35fd786d0",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法援服务",
+                    "oid": "5776aab823a94c8ab0c28da967bba47d",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律师服务",
+                    "oid": "fdababeaf3c7473ebf7fc3eb30d7ed18",
+                    "parentId": "48631d87a7d0494093f9f4f94503ac8d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "系统资源类型",
+                    "oid": "48631d87a7d0494093f9f4f94503ac8d",
+                    "parentId": "0d03cf1f-3224-435f-8098-9e456afe3c41"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "调解申请来源",
+                    "oid": "f7dd56bfa20947c3bae687ee4487ad77",
+                    "parentId": "7eb54b13e34947ee9d39d2b02143569a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "116b8ca03adc4ffc8160a5c9cf4734b1",
+                    "parentId": "c7dd80590fb94cd7a070df98b3a23725"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法定禁止调解事项",
+                    "oid": "99f8058b3e844374beb6f2a8026e8a30",
+                    "parentId": "c7dd80590fb94cd7a070df98b3a23725"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "不属于本调解组织管辖范围",
+                    "oid": "6c0a9f385f8848c49be64f39eea05a6d",
+                    "parentId": "c7dd80590fb94cd7a070df98b3a23725"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "对方不同意调解",
+                    "oid": "80905b37f3dc4884b01bddba757e08db",
+                    "parentId": "c7dd80590fb94cd7a070df98b3a23725"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "调解申请不予受理原因",
+                    "oid": "c7dd80590fb94cd7a070df98b3a23725",
+                    "parentId": "7eb54b13e34947ee9d39d2b02143569a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "委托代理人",
+                    "oid": "c2187a26d5354bcb8f3e40f3ea6f5689",
+                    "parentId": "30d42f8996b14cffae3d45eb4301426b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法定代理人",
+                    "oid": "cd1782c287a340b3bcbd44e4e24d42d1",
+                    "parentId": "30d42f8996b14cffae3d45eb4301426b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "代理人类型",
+                    "oid": "30d42f8996b14cffae3d45eb4301426b",
+                    "parentId": "445c4cf3d29e445b9f3dbb390caf856d"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "代写与公证事项有关的法律事务文书",
+                    "oid": "17bcdff8034f429eb442929d329d9bd5",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "7f557958cbab41ec8deb9d1d9d5e9dba",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "涉农类鉴定",
+                    "oid": "87b65af3646e489d85254612d984d96f",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "文物类鉴定",
+                    "oid": "9d1d3f617602489697e04593b6a093ba",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "价格类鉴定",
+                    "oid": "882e96a5d58e47adbe115c7eccba757b",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "产品质量类鉴定",
+                    "oid": "03a672dc29fd4eed8ef6c8018bba3107",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "建设工程类鉴定",
+                    "oid": "ffa43862312449959e91c3af750b0d49",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "司法会计鉴定",
+                    "oid": "5c015187d8f642e29b39f1545cbe7e3f",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "知识产权鉴定",
+                    "oid": "6bd80d78c18a493a89548900898711ea",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "精神障碍医学鉴定",
+                    "oid": "4a79bc9b5f07415aa91e1456f50a8c20",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "环境损害鉴定",
+                    "oid": "a2ff876f84674b15bb7b526c56c66833",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "电子数据鉴定",
+                    "oid": "e37b6cc910b5432bbff2da7fcaea5326",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "声像资料鉴定",
+                    "oid": "cfbd5b0458a741dab94b03f40b03bd48",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "微量鉴定",
+                    "oid": "4c53fc969d4f4e638204e682c30a4bcf",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "痕迹鉴定",
+                    "oid": "7e09d0f40c414ca398fa4a2f6dc00b2d",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "文书鉴定",
+                    "oid": "393b21a21b57420b979693bd90294ae4",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法医毒物鉴定",
+                    "oid": "edfb96bd4dd44f33a5ebe68781c752cf",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法医物证鉴定",
+                    "oid": "6afc400e391a44a486e0fcb02407cf93",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法医精神病鉴定",
+                    "oid": "0a56df614a104735ae5576d897c531bb",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法医临床鉴定",
+                    "oid": "fc199be5ab364ed0bcadfc7f6025af37",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法医病理鉴定",
+                    "oid": "0174dfea50394b14b7322698ac5a756c",
+                    "parentId": "955d1a3fd1194e4e8392d362a9ff64ec"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "鉴定事项",
+                    "oid": "955d1a3fd1194e4e8392d362a9ff64ec",
+                    "parentId": "05dcef1203ef4332ac90eb379a00f0ce"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解服务",
+                    "oid": "7eb54b13e34947ee9d39d2b02143569a",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法援服务",
+                    "oid": "445c4cf3d29e445b9f3dbb390caf856d",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律师律所",
+                    "oid": "e0fe9427aa2e483a90fb1284a038243c",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "鉴定服务",
+                    "oid": "05dcef1203ef4332ac90eb379a00f0ce",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "机构权限",
+                    "oid": "fb6c32b34f3b4dd8bfa6176f9335b3ef",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "中国共产党员",
+                    "oid": "40f5ea208f4c462ba44cfce45c5c0151",
+                    "parentId": "68a3123ec5cf4a358e1a8aed83d6af59"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "硕士研究生",
+                    "oid": "6c1ac416778346869299c69db49dc2a2",
+                    "parentId": "c47c2b5c6a9b46c59f3fb46237621e47"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "本科",
+                    "oid": "de3f058bc9844263995d59631eb3db9a",
+                    "parentId": "c47c2b5c6a9b46c59f3fb46237621e47"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "大专",
+                    "oid": "b125b113cdd84311805de287166b3b1b",
+                    "parentId": "c47c2b5c6a9b46c59f3fb46237621e47"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "高中",
+                    "oid": "5b33d0a7bc4242f3a820ea4426d5fc04",
+                    "parentId": "c47c2b5c6a9b46c59f3fb46237621e47"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "初中",
+                    "oid": "4c7b1eb1e2a74bee8f30e2d5923aa4b4",
+                    "parentId": "c47c2b5c6a9b46c59f3fb46237621e47"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "小学",
+                    "oid": "903cda2be66a40c9810657c711982ec8",
+                    "parentId": "c47c2b5c6a9b46c59f3fb46237621e47"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "博士研究生",
+                    "oid": "702c0f992ab84e51a07ff8a0f538591e",
+                    "parentId": "c47c2b5c6a9b46c59f3fb46237621e47"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "藏族",
+                    "oid": "697949c409734a68b24eb95c50429195",
+                    "parentId": "98c19b3055cc46158dfe8dccf547475b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "傣族",
+                    "oid": "81233e9351d84b5aaa8434b4939ca0ee",
+                    "parentId": "98c19b3055cc46158dfe8dccf547475b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "苗族",
+                    "oid": "f2a88916be994159af6708470728ae7b",
+                    "parentId": "98c19b3055cc46158dfe8dccf547475b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "汉族",
+                    "oid": "add2e15654b24079aab1579794f93a46",
+                    "parentId": "98c19b3055cc46158dfe8dccf547475b"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "保密",
+                    "oid": "b9b1971a0eca42a1aea219d71c103e24",
+                    "parentId": "7bf4b3e23f9d4bcb9a3c7509281e7f08"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "女",
+                    "oid": "e10d702b89d849e789039de65cd268cd",
+                    "parentId": "7bf4b3e23f9d4bcb9a3c7509281e7f08"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "男",
+                    "oid": "0f33f0f8cdaf48d0b0cd9522756db346",
+                    "parentId": "7bf4b3e23f9d4bcb9a3c7509281e7f08"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "政治面貌",
+                    "oid": "68a3123ec5cf4a358e1a8aed83d6af59",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "文化程度",
+                    "oid": "c47c2b5c6a9b46c59f3fb46237621e47",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "性别",
+                    "oid": "7bf4b3e23f9d4bcb9a3c7509281e7f08",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "民族",
+                    "oid": "98c19b3055cc46158dfe8dccf547475b",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人员属性",
+                    "oid": "e8dbf73c6eb9442eae25fa9c780659da",
+                    "parentId": "993440029b2943f6845d6a002ae168ba"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "通用字典",
+                    "oid": "993440029b2943f6845d6a002ae168ba",
+                    "parentId": "root"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "军官证",
+                    "oid": "78db8d2737594de6a40fe86cfb2ada72",
+                    "parentId": "c2c7f943b45e4abf9fe8ce55ac81fa53"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "身份证",
+                    "oid": "6eca3b981bb7496f96b7299d590543e3",
+                    "parentId": "c2c7f943b45e4abf9fe8ce55ac81fa53"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "涉港澳台",
+                    "oid": "0ffc00e6b6fb4902974370da81d2f3f7",
+                    "parentId": "1d9cca148020439381272d9fb990c703"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "涉外",
+                    "oid": "72245edfc7de4c4897fd6730a90bf1f5",
+                    "parentId": "1d9cca148020439381272d9fb990c703"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "非涉外",
+                    "oid": "ab683fee3202417b8343ceb55dedaae1",
+                    "parentId": "1d9cca148020439381272d9fb990c703"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证类型",
+                    "oid": "1d9cca148020439381272d9fb990c703",
+                    "parentId": "1990e5b02e1745be8bfe114bb0926401"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "证件类型",
+                    "oid": "c2c7f943b45e4abf9fe8ce55ac81fa53",
+                    "parentId": "e8dbf73c6eb9442eae25fa9c780659da"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "保管遗嘱、遗产或者其他与公证事项有关的财产、物品、文书",
+                    "oid": "fff25717ecba4a21a1d0b3fe159efaf7",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法律、行政法规规定由公证机构登记的事务",
+                    "oid": "80fbf0eaf118459dbc1a291fbe1a9a5b",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "自然人、法人或者其他组织自愿申请办理的其他公证事项",
+                    "oid": "34358e50e5ea4172818e6d391f1058b2",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "文书上的签名、印鉴、日期、文书的副本、影印本与原本相符",
+                    "oid": "bfd53e41f9cf40c485502ddaaa596983",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "提供公证法律咨询",
+                    "oid": "76799ff8959945c78be2913ef5f1cc83",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "提存",
+                    "oid": "c537e68b518146379c9f191374b5004e",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "保全证据",
+                    "oid": "d245e0b56e1740efbb6ccd202016523c",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公司章程",
+                    "oid": "195f7d261dc84ab48fa0048ea1ab6fbe",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "出生、生存、死亡、身份、经历、学历、学位、职务、职称、有无违法犯罪记录",
+                    "oid": "d901842add2e4d78829235dacee11609",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "婚姻状况、亲属关系、收养关系",
+                    "oid": "0485291fd32b4a16a463f47e5991756b",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "招标投标、拍卖",
+                    "oid": "f742b707fc5d480591437f7a84696fc9",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "财产分割",
+                    "oid": "26c1f15f5ce846b2bcba44cbecfeacc1",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "委托、声明、赠与、遗嘱",
+                    "oid": "a0c3a0c33d7146b094ed49298f835727",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "继承",
+                    "oid": "c12b2e462a5348f2a3588f2eaea938c3",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "合同",
+                    "oid": "99e673e4aabb49519d25ebc0289a9e75",
+                    "parentId": "6f2bc7aabe414758aa80fafaac69a48e"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "服务范围",
+                    "oid": "6f2bc7aabe414758aa80fafaac69a48e",
+                    "parentId": "1990e5b02e1745be8bfe114bb0926401"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证服务",
+                    "oid": "1990e5b02e1745be8bfe114bb0926401",
+                    "parentId": "17a7aaa66c444f898d6303b34b4ebce7"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "仲裁机构",
+                    "oid": "742b6e563f3544288fd2cda6985f2cef",
+                    "parentId": "e455f79ec94e4881b68b4d25e058af95"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "基层法律服务所",
+                    "oid": "7fb50258c86f4ff8a35f2f18722b9838",
+                    "parentId": "e455f79ec94e4881b68b4d25e058af95"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他",
+                    "oid": "9c1e8e1ae0554f2da2458ac4cf45c8cf",
+                    "parentId": "7f8e719f5288426388efe9c1d9a9019a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法定禁止调解的事项",
+                    "oid": "4257a48cb1ff409ba574c04695829fde",
+                    "parentId": "7f8e719f5288426388efe9c1d9a9019a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "不属于本调解组织管辖范围",
+                    "oid": "7ba8763a60a04befb182046017032707",
+                    "parentId": "7f8e719f5288426388efe9c1d9a9019a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "对方不同意调解",
+                    "oid": "aa49abe20ffc4cc98179e25e41ac070c",
+                    "parentId": "7f8e719f5288426388efe9c1d9a9019a"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解不受理理由",
+                    "oid": "7f8e719f5288426388efe9c1d9a9019a",
+                    "parentId": "273f75db6e16469c803500a699f7bc92"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "录制中",
+                    "oid": "b2dd22c11e09494aa2171cf29ee70555",
+                    "parentId": "b0ef617d4dbd448aa28a858220931935"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "未播",
+                    "oid": "49a9b3f8e1c84fb1ab84867b74a3863c",
+                    "parentId": "b0ef617d4dbd448aa28a858220931935"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "已播",
+                    "oid": "093a34024d4d4644aded493ea4280837",
+                    "parentId": "b0ef617d4dbd448aa28a858220931935"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "节目状态",
+                    "oid": "b0ef617d4dbd448aa28a858220931935",
+                    "parentId": "273f75db6e16469c803500a699f7bc92"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "审核不通过",
+                    "oid": "364a21ba87fb4510b28aea3350df3d85",
+                    "parentId": "6a1fdaa1f299432a9f6e0ed85bdac2ab"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "审核通过",
+                    "oid": "7bb86d08acd845c2b23c003353ecc772",
+                    "parentId": "6a1fdaa1f299432a9f6e0ed85bdac2ab"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "未审核",
+                    "oid": "b3dfdf1a235e4934bb7e0681a11976ce",
+                    "parentId": "6a1fdaa1f299432a9f6e0ed85bdac2ab"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "审核状态",
+                    "oid": "6a1fdaa1f299432a9f6e0ed85bdac2ab",
+                    "parentId": "273f75db6e16469c803500a699f7bc92"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "调解结束",
+                    "oid": "3a9ee076f8dd43caa7d14781d40cf0cf",
+                    "parentId": "575a9114b9e148aa95917b392e8c4356"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "未受理",
+                    "oid": "80c1dc6bba624b0da35f4b582b0f1bf3",
+                    "parentId": "575a9114b9e148aa95917b392e8c4356"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "已受理",
+                    "oid": "be58e7bc22324669a172013c106ffb5b",
+                    "parentId": "575a9114b9e148aa95917b392e8c4356"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "未审核",
+                    "oid": "db133408a91e433182d8bca3142836c8",
+                    "parentId": "575a9114b9e148aa95917b392e8c4356"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解状态",
+                    "oid": "575a9114b9e148aa95917b392e8c4356",
+                    "parentId": "273f75db6e16469c803500a699f7bc92"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "线下申请",
+                    "oid": "c65b7e8fcbd84a079cd5ab8aa403a438",
+                    "parentId": "8c07d2229d374aaebf501bdc3eb75259"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "网上申请",
+                    "oid": "d2565988106e400eb917f3dafa44b2ae",
+                    "parentId": "8c07d2229d374aaebf501bdc3eb75259"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解来源",
+                    "oid": "8c07d2229d374aaebf501bdc3eb75259",
+                    "parentId": "273f75db6e16469c803500a699f7bc92"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "运维公司",
+                    "oid": "51511f1168ea42b9b94946a139df36d5",
+                    "parentId": "eb07c53eacb943e89eb8f405f715dd68"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "博士",
+                    "oid": "36e3249a6ff94adaa8c27be54a03ce1a",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "硕士",
+                    "oid": "378a070e8a7446edaf0677df61f1f27f",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "本科",
+                    "oid": "7d2da7e565e246ad9526588db590970f",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "大专",
+                    "oid": "5bff195fac3640dcb1150d052f10bedb",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "中专",
+                    "oid": "dc7ae9cd20c5404c84c40d9567fe9a62",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "高中",
+                    "oid": "a0b77ea0fc3a47ecb092d2307fa61757",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "初中",
+                    "oid": "dcd158ad30cb45b382ce2d75d5cc4d6a",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "小学",
+                    "oid": "f78daf37501945c1906be8a6ca6c6ef3",
+                    "parentId": "bf2898f7f85248269cd17c901f5e617c"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "文化程度",
+                    "oid": "bf2898f7f85248269cd17c901f5e617c",
+                    "parentId": "273f75db6e16469c803500a699f7bc92"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "村居级",
+                    "oid": "51b67aa3ae1e4208b48145570e834c46",
+                    "parentId": "e073bc98c1ea41e0ae26de1cad59f594"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "乡镇级",
+                    "oid": "9c4eafc852594427bba19d9bb5a3c377",
+                    "parentId": "e073bc98c1ea41e0ae26de1cad59f594"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "区县级",
+                    "oid": "207701915ce94f2cbf3c29e00a062e73",
+                    "parentId": "e073bc98c1ea41e0ae26de1cad59f594"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "市州级",
+                    "oid": "a2169e39d855474a8c94258974e63146",
+                    "parentId": "e073bc98c1ea41e0ae26de1cad59f594"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "省级",
+                    "oid": "5c61cf7f94724244bae983d3a4a0f800",
+                    "parentId": "e073bc98c1ea41e0ae26de1cad59f594"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "机构层级",
+                    "oid": "e073bc98c1ea41e0ae26de1cad59f594",
+                    "parentId": "273f75db6e16469c803500a699f7bc92"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "普通帐号",
+                    "oid": "099ee32be1cd4b5598fc72d8b601b4a2",
+                    "parentId": "789febf43ace4f0ab6189ddbaa865fda"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "身份证",
+                    "oid": "56af3ecbda2f4433bf8bb04e6766e3ee",
+                    "parentId": "789febf43ace4f0ab6189ddbaa865fda"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "微信号",
+                    "oid": "b45ba6512a8441caa6fb8445bdf617ae",
+                    "parentId": "789febf43ace4f0ab6189ddbaa865fda"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "邮箱",
+                    "oid": "a44e6a6a16204142bd40839d0ed2f0c7",
+                    "parentId": "789febf43ace4f0ab6189ddbaa865fda"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "帐号类别",
+                    "oid": "789febf43ace4f0ab6189ddbaa865fda",
+                    "parentId": "fb6c32b34f3b4dd8bfa6176f9335b3ef"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国家级",
+                    "oid": "da0b66837e0341c9b46b5ab4f5f8e627",
+                    "parentId": "c384c4fb20ad4c7e82723d8f589e0e39"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "区/县级",
+                    "oid": "bf34aeca48bd478bb147c864d3441852",
+                    "parentId": "c384c4fb20ad4c7e82723d8f589e0e39"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "市级",
+                    "oid": "d516abb01a9c471bb937b5397a3e61d8",
+                    "parentId": "c384c4fb20ad4c7e82723d8f589e0e39"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "省级",
+                    "oid": "3c541c60093544fd88659e94b59ef02c",
+                    "parentId": "c384c4fb20ad4c7e82723d8f589e0e39"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "行政级别",
+                    "oid": "c384c4fb20ad4c7e82723d8f589e0e39",
+                    "parentId": "993440029b2943f6845d6a002ae168ba"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "司法考试机构",
+                    "oid": "7cbd06f809f94706bd56cd90a784b3b8",
+                    "parentId": "e455f79ec94e4881b68b4d25e058af95"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "人民调解机构",
+                    "oid": "96c13a36899e4f97bc20aace398878f3",
+                    "parentId": "e455f79ec94e4881b68b4d25e058af95"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公证机构",
+                    "oid": "d4c1915070044dc8ab98570d2190c00e",
+                    "parentId": "e455f79ec94e4881b68b4d25e058af95"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "司法系统",
+                    "oid": "17a7aaa66c444f898d6303b34b4ebce7",
+                    "parentId": "root"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "鉴定事务所",
+                    "oid": "7544ef3726aa49b684d0a7db42577829",
+                    "parentId": "e455f79ec94e4881b68b4d25e058af95"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "律师事务所",
+                    "oid": "52868cc5abf0416c9d0ced71879d8e49",
+                    "parentId": "e455f79ec94e4881b68b4d25e058af95"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "直属公证机构",
+                    "oid": "866c333e15e94b71ba260b8c866d8da0",
+                    "parentId": "eb07c53eacb943e89eb8f405f715dd68"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "法律援助中心",
+                    "oid": "9c3ccfd6a8654555ac94bb51534423a0",
+                    "parentId": "eb07c53eacb943e89eb8f405f715dd68"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "所辖机构",
+                    "oid": "e455f79ec94e4881b68b4d25e058af95",
+                    "parentId": "025458fa28394e389ade60f30d579d80"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "直属单位",
+                    "oid": "eb07c53eacb943e89eb8f405f715dd68",
+                    "parentId": "025458fa28394e389ade60f30d579d80"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "机构类型",
+                    "oid": "025458fa28394e389ade60f30d579d80",
+                    "parentId": "fb6c32b34f3b4dd8bfa6176f9335b3ef"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "销售报表2",
+                    "oid": "368c6872be9f4043aeabcc1b97942f2e",
+                    "parentId": "8f2e7bcebf804c3998a3be83d342c4ed"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "饼图",
+                    "oid": "ffd078e3f07c4c7eaf839b327f326414",
+                    "parentId": "5a4743c189ea44b4812921a70bda1596"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "折线图",
+                    "oid": "a3d8044358c340cba64beb340329fa6a",
+                    "parentId": "5a4743c189ea44b4812921a70bda1596"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "柱形图",
+                    "oid": "737bebd00f214831aa058c22e71d56a3",
+                    "parentId": "5a4743c189ea44b4812921a70bda1596"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "销售报表",
+                    "oid": "9712184e7e0347db90ecbfdf2be58d30",
+                    "parentId": "8f2e7bcebf804c3998a3be83d342c4ed"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "图表类型",
+                    "oid": "5a4743c189ea44b4812921a70bda1596",
+                    "parentId": "0d03cf1f-3224-435f-8098-9e456afe3c41"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "报表类别",
+                    "oid": "8f2e7bcebf804c3998a3be83d342c4ed",
+                    "parentId": "0d03cf1f-3224-435f-8098-9e456afe3c41"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "户型鉴赏",
+                    "oid": "349a82f3-c73e-459b-a6f4-d76624fbab4f",
+                    "parentId": "57394471-2412-4113-ac34-16730aa9d664"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "在线视频",
+                    "oid": "f9969b6b-9b8f-47e2-a314-cbccb11ebb10",
+                    "parentId": "57394471-2412-4113-ac34-16730aa9d664"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "项目动态",
+                    "oid": "9a790f74-b420-4bd6-bf70-687da207af32",
+                    "parentId": "57394471-2412-4113-ac34-16730aa9d664"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "项目介绍",
+                    "oid": "5b22e04a-ea5e-44f0-88cb-f1fa7bf01465",
+                    "parentId": "57394471-2412-4113-ac34-16730aa9d664"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公告类别",
+                    "oid": "03baba0b-1010-470a-be16-a602954d6c90",
+                    "parentId": "0d03cf1f-3224-435f-8098-9e456afe3c41"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "活动公告",
+                    "oid": "0560a90d-ecca-47cd-855e-4046aa04b82f",
+                    "parentId": "03baba0b-1010-470a-be16-a602954d6c90"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "系统管理",
+                    "oid": "0d03cf1f-3224-435f-8098-9e456afe3c41",
+                    "parentId": "root"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "部门性质",
+                    "oid": "1738c937-ff3c-473a-b2bd-0613c69b1e45",
+                    "parentId": "0d03cf1f-3224-435f-8098-9e456afe3c41"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "金融业",
+                    "oid": "1c757235-6cab-4ed3-a092-08de13480e45",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "公司性质",
+                    "oid": "25207605-5db8-4206-8268-58ddaec2d377",
+                    "parentId": "0d03cf1f-3224-435f-8098-9e456afe3c41"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "询性",
+                    "oid": "291af21b-8542-49bb-83d7-fc8efe274199",
+                    "parentId": "1738c937-ff3c-473a-b2bd-0613c69b1e45"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "社会服务业",
+                    "oid": "3bf950db-564e-4865-8b92-e66846bd167a",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他性",
+                    "oid": "54b01a0e-18f7-4607-a997-8deba7f50a90",
+                    "parentId": "1738c937-ff3c-473a-b2bd-0613c69b1e45"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "新闻类别",
+                    "oid": "57394471-2412-4113-ac34-16730aa9d664",
+                    "parentId": "0d03cf1f-3224-435f-8098-9e456afe3c41"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "内部公告",
+                    "oid": "5b51f7e4-99a2-4a7d-ad90-318317ee70a9",
+                    "parentId": "03baba0b-1010-470a-be16-a602954d6c90"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他公告",
+                    "oid": "5db5ebb5-a3c7-450e-9664-b9f17371c7f7",
+                    "parentId": "03baba0b-1010-470a-be16-a602954d6c90"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "国家机关",
+                    "oid": "63e139ef-fed7-421e-8f9e-ec55e43e228c",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "会议通知",
+                    "oid": "6a7b2d1c-ae57-4c5b-be99-2380c85a3346",
+                    "parentId": "03baba0b-1010-470a-be16-a602954d6c90"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "协调性",
+                    "oid": "72c605c6-e2b8-4bff-8f98-3b4efeaba81f",
+                    "parentId": "1738c937-ff3c-473a-b2bd-0613c69b1e45"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "互联网",
+                    "oid": "a92738e9-08fc-4090-9368-174e7c8a55b8",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "社会公告",
+                    "oid": "b84e1587-6469-4b79-b215-93dbd7d4895d",
+                    "parentId": "03baba0b-1010-470a-be16-a602954d6c90"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "房地产",
+                    "oid": "cac8519a-89ea-4c9a-9cc4-a9b8e91c9f57",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "建筑业",
+                    "oid": "d8e0aaac-1263-4e5d-96ac-e9ace7c55a9c",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "综合性",
+                    "oid": "e2726103-e573-4831-b040-71b781c69593",
+                    "parentId": "1738c937-ff3c-473a-b2bd-0613c69b1e45"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "生产性",
+                    "oid": "e80c8c4f-01de-4763-b0ba-1238f534fe53",
+                    "parentId": "1738c937-ff3c-473a-b2bd-0613c69b1e45"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "其他业",
+                    "oid": "eb83dde7-e6d8-4846-9867-4a216629866b",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            },
+            {
+                "DataDictionaryVO": {
+                    "name": "制造业",
+                    "oid": "ef6dc9ca-0ecc-4465-8a42-23119e0a2a4e",
+                    "parentId": "25207605-5db8-4206-8268-58ddaec2d377"
+                }
+            }
+        ]
+    }
+}

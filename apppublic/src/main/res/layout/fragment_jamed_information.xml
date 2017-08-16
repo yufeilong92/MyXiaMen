@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.lawyee.apppublic.ui.frag.JamedApplyInformationFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/boundary_16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jaemd_select_adjust_type"
+            android:textColor="@color/apply_text_color_title"
+            android:textSize="@dimen/text_size_medium" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rdg_jamed_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radiobtn_jamed_same"
+                style="@style/ApplyRadioButton"
+                android:text="@string/jamed_commonly_apply"
+                 />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_jamed_specialty"
+                style="@style/ApplyRadioButton"
+                android:text="@string/jamed_profession_apply"
+              />
+        </RadioGroup>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jamed_mediate_org"
+                android:textColor="@color/apply_text_color_title"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tv_jamed_selectorg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
+                android:text="@string/jamed_select"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_jamed_warning"
+            android:layout_marginTop="16dp"
+            android:layout_margin="8dp"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/jamed_warn_content"
+            style="@style/ApplyWranText"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chb_select_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_apply_radio" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/jamed_warn_tishi"
+                android:textColor="@color/apply_text_color_title"
+                android:textSize="@dimen/text_size_mediummin"  />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            style="@style/ApplyWranText"
+            android:visibility="invisible"
+            android:text="@string/jamed_warn_infom" />
+    </LinearLayout>
+</RelativeLayout>

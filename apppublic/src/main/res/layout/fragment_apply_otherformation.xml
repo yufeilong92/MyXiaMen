@@ -1,0 +1,290 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:overScrollMode="never"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    tools:context="com.lawyee.apppublic.ui.frag.JaaidApplyOtherInformationFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boundary_16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/apply_othreinformation"
+                android:textColor="@color/apply_text_color_title"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boundary_16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:layout_marginRight="@dimen/boundary_16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:ems="6"
+                        style="@style/InputboxLifeNoIcon"
+                        android:text="@string/apply_agentName" />
+
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/et_apply_other_name"
+                        style="@style/InputBoxRight"
+                     />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:ems="6"
+                        style="@style/InputboxLifeNoIcon"
+                        android:text="代理人类型" />
+
+                    <RadioGroup
+                        android:id="@+id/rdo_apply_other_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.71"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+
+                            style="@style/ApplyRadioButton"
+                            android:id="@+id/radiobtn_Legal"
+                            android:text="@string/jaaid_legal_representative"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/radiobtn_entrust"
+                            style="@style/ApplyRadioButton"
+                            android:text="@string/jaaid_agent"
+                            />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:ems="6"
+                        style="@style/InputboxLifeNoIcon"
+                        android:text="@string/quilt_id_card" />
+
+                    <EditText
+                        android:maxLength="18"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:digits="0123456789xyzXYZ"
+                        android:id="@+id/et_apply_other_idcard"
+                        style="@style/InputBoxRight"
+                        />
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/InputboxLifeNoIcon"
+                        android:text="@string/jaaid_apply_numberpeple"
+                        />
+
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:id="@+id/et_apply_number_people"
+                        style="@style/InputBoxRight"
+                        android:hint="@string/jaaid_apply_number_people" />
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:ems="6"
+                       style="@style/InputboxLifeNoIcon"
+                        android:text="@string/apply_other_name"
+
+                       />
+
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/et_apply_party_name"
+                      style="@style/InputBoxRight"/>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:ems="6"
+                        android:text="@string/apply_other_here"
+                        style="@style/InputboxOhterLife" />
+
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/et_apply_party_here"
+                       style="@style/InputBoxRight" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:ems="6"
+                        style="@style/InputboxOhterLife"
+                        android:text="@string/apply_case_here" />
+
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/et_apply_other_crimeplace"
+                      style="@style/InputBoxRight" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/InputboxOhterLife"
+                        android:ems="6"
+                        android:text="@string/apply_other_handlercase" />
+
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/et_apply_other_organ"
+                  style="@style/InputBoxRight" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:ems="6"
+                        style="@style/InputboxOhterLife"
+                        android:text="@string/apply_other_handler_org" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_other_apply"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.71"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:text="@string/apply_apply_rule"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/InputboxLife"/>
+
+                    <TextView
+                        android:hint="@string/apply_sel_area"
+                        android:id="@+id/tv_apply_other_area"
+                       style="@style/InputBoxRight" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/InputboxLife"
+                        android:textColor="@color/text_currency_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_apply_other_org"
+                        android:hint="@string/apply_sel_org"
+                       style="@style/InputBoxRight"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+</ScrollView>

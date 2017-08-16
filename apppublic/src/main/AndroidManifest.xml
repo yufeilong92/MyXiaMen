@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lawyee.apppublic">
+
+    <!-- 硬件支持 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 百度地图需要的权限 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name=".config.ApplicationSet"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        >
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SubActivity"
+            android:label="@string/sub_activity_title" />
+        <activity
+            android:name=".ui.SubDrawerlayoutActivity"
+            android:label="@string/sub_activity_title" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.infom.InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.infom.InfomDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JaaidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.apply.JaaidApplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.LawServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JaaidAreaSelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JamedOrgListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.ScreenMuchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JamedOrgTypeSelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.ScreenOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JaaidOrgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.OrgDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.LawyerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JamedOrgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JanotaOrgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.JaaidSelectOrgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.LawFirmDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.LawyerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.ScreenOneOtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.apply.JamedOrgApplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.ForgetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.PersonCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.DutyLawyersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyLawAidActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyLawAidDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyJamedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyEntrustActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.OnlineEntrustActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyEntrustDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyJamedDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ViewImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.HtmlShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawyerService.map.SessionMapActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".services.JaaidApplyService" />
+        android:screenOrientation="portrait">
+        <service android:name=".services.JaaidApplyService" />
+
+        <!-- 这里输入百度密钥 -->
+        <!-- 正式的key  kfzhnLR2qSZuFYouZrbQTSKGm4zohW2Q -->
+        <!-- czq  PkqztaAZZB1CA7lrLTZeYHt92XSU25oR -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="PkqztaAZZB1CA7lrLTZeYHt92XSU25oR" />
+
+        <!-- 百度的远程服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".ui.lawyerService.SessionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.LegalpublicityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.japub.LegalActivityListsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawAdministration.jamed.JamedServiceListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawAdministration.jamed.JamedApplyNBVActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.japub.LawActivityLookActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.org.japub.LawVoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.basiclaw.BasicLawServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.EntrystEvaluateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.WalkingRouteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.basiclaw.ServicePlaceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.basiclaw.ServiceWorkerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.basiclaw.BasicScreenMuchActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".util.db.ChatProvider"
+            android:authorities="com.lawyee.apppublic.provider.Chats"
+            android:exported="true"
+            android:grantUriPermissions="true" />
+        <provider
+            android:name=".util.db.RosterProvider"
+            android:authorities="com.lawyee.apppublic.provider.Roster" />
+
+        <activity
+            android:name=".ui.personalcenter.lawyer.LawyerPCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.lawyer.LawyerEntrustActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.lawyer.LawyerEntrustReplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.lawyer.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.lawyer.LawyerEntrustDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.basiclaw.JaglsStaffOfOrgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.PerInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.ModifyPerInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyJaglsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.MyJaglsEntrustDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawAdministration.PersionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawAdministration.ShowInfomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.lawAdministration.media.MediaListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personalcenter.lawyer.ConsultDealActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.personalcenter.lawyer.ConsultListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.personalcenter.lawyer.ConsuluDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.personalcenter.lawyer.ConsultEvaluateActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.personalcenter.lawyer.CheckChatActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ui.org.japub.ImageLookActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,375 @@
+package com.lawyee.apppublic.util.db;
+
+import android.content.ContentProvider;
+import android.content.ContentUris;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.UriMatcher;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteQueryBuilder;
+import android.net.Uri;
+import android.provider.BaseColumns;
+import android.text.TextUtils;
+
+import net.lawyee.mobilelib.utils.L;
+
+import java.util.ArrayList;
+
+/**
+ * 聊天记录Provider
+ */
+public class ChatProvider extends ContentProvider {
+	public static final String AUTHORITY = "com.lawyee.apppublic.provider.Chats";
+	public static final String TABLE_NAME = "chats";
+	public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY
+			+ "/" + TABLE_NAME);
+	public static final Uri CONTENT_URI_1 = Uri.parse("content://" + AUTHORITY
+			+ "/" + TABLE_NAME+"/1");
+	public static final Uri CONTENT_FRIEND_URI = Uri.parse("content://" + AUTHORITY
+			+ "/" + TABLE_NAME+"/3");
+	private static final UriMatcher URI_MATCHER = new UriMatcher(
+			UriMatcher.NO_MATCH);
+
+	private static final int MESSAGES = 1;
+	private static final int MESSAGE_ID = 2;
+	private static final int MESSAGE_GETF = 3;
+	static {
+		URI_MATCHER.addURI(AUTHORITY, "chats", MESSAGES);
+		URI_MATCHER.addURI(AUTHORITY, "chats/#", MESSAGE_ID);
+		URI_MATCHER.addURI(AUTHORITY, "chats/#", MESSAGE_GETF);
+	}
+
+	private static final String TAG = "ChatProvider";
+
+	private SQLiteOpenHelper mOpenHelper;
+
+	public ChatProvider() {
+	}
+
+	@Override
+	public int delete(Uri url, String where, String[] whereArgs) {
+		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+		int count;
+		switch (URI_MATCHER.match(url)) {
+
+		case MESSAGES:
+			count = db.delete(TABLE_NAME, where, whereArgs);
+			break;
+		case MESSAGE_ID:
+			String segment = url.getPathSegments().get(1);
+
+			if (TextUtils.isEmpty(where)) {
+				where = "_id=" + segment;
+			} else {
+				where = "_id=" + segment + " AND (" + where + ")";
+			}
+
+			count = db.delete(TABLE_NAME, where, whereArgs);
+			break;
+		default:
+			throw new IllegalArgumentException("Cannot delete from URL: " + url);
+		}
+
+		getContext().getContentResolver().notifyChange(url, null);
+		return count;
+	}
+
+	@Override
+	public String getType(Uri url) {
+		int match = URI_MATCHER.match(url);
+		switch (match) {
+		case MESSAGES:
+			return ChatConstants.CONTENT_TYPE;
+		case MESSAGE_ID:
+			return ChatConstants.CONTENT_ITEM_TYPE;
+		default:
+			throw new IllegalArgumentException("Unknown URL");
+		}
+	}
+
+	@Override
+	public Uri insert(Uri url, ContentValues initialValues) {
+		if (URI_MATCHER.match(url) != MESSAGES) {
+			throw new IllegalArgumentException("Cannot insert into URL: " + url);
+		}
+
+		ContentValues values = (initialValues != null) ? new ContentValues(
+				initialValues) : new ContentValues();
+
+		for (String colName : ChatConstants.getRequiredColumns()) {
+			if (values.containsKey(colName) == false) {
+				throw new IllegalArgumentException("Missing column: " + colName);
+			}
+		}
+
+		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+
+		long rowId = db.insert(TABLE_NAME, ChatConstants.DATE, values);
+
+		if (rowId < 0) {
+			throw new SQLException("Failed to insert row into " + url);
+		}
+
+		Uri noteUri = ContentUris.withAppendedId(CONTENT_URI, rowId);
+		getContext().getContentResolver().notifyChange(noteUri, null);
+		return noteUri;
+	}
+
+	@Override
+	public boolean onCreate() {
+		mOpenHelper = new ChatDatabaseHelper(getContext());
+		return true;
+	}
+
+	@Override
+	public Cursor query(Uri url, String[] projectionIn, String selection,
+                        String[] selectionArgs, String sortOrder) {
+
+		SQLiteQueryBuilder qBuilder = new SQLiteQueryBuilder();
+		int match = URI_MATCHER.match(url);
+
+		switch (match) {
+		case MESSAGES:
+			qBuilder.setTables(TABLE_NAME);
+			break;
+		case MESSAGE_ID:
+			qBuilder.setTables(TABLE_NAME);
+			qBuilder.appendWhere("_id=");
+			qBuilder.appendWhere(url.getPathSegments().get(1));
+			break;
+
+			case MESSAGE_GETF:
+				qBuilder.setTables(TABLE_NAME);
+				qBuilder.setDistinct(true);
+				break;
+		default:
+			throw new IllegalArgumentException("Unknown URL " + url);
+		}
+
+		String orderBy;
+		if (TextUtils.isEmpty(sortOrder)) {
+			orderBy = ChatConstants.DEFAULT_SORT_ORDER;
+		} else {
+			orderBy = sortOrder;
+		}
+
+		SQLiteDatabase db = mOpenHelper.getReadableDatabase();
+		Cursor ret = qBuilder.query(db, projectionIn, selection, selectionArgs,
+				null, null, orderBy);
+
+		if (ret == null) {
+			infoLog("ChatProvider.query: failed");
+		} else {
+			ret.setNotificationUri(getContext().getContentResolver(), url);
+		}
+
+		return ret;
+	}
+
+	@Override
+	public int update(Uri url, ContentValues values, String where,
+                      String[] whereArgs) {
+		int count;
+		long rowId = 0;
+		int match = URI_MATCHER.match(url);
+		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+
+		switch (match) {
+		case MESSAGES:
+			count = db.update(TABLE_NAME, values, where, whereArgs);
+			break;
+		case MESSAGE_ID:
+			String segment = url.getPathSegments().get(1);
+			rowId = Long.parseLong(segment);
+			count = db.update(TABLE_NAME, values, "_id=" + rowId, null);
+			break;
+		default:
+			throw new UnsupportedOperationException("Cannot update URL: " + url);
+		}
+
+		infoLog("*** notifyChange() rowId: " + rowId + " url " + url);
+
+		getContext().getContentResolver().notifyChange(url, null);
+		return count;
+
+	}
+
+	private static void infoLog(String data) {
+		L.i(TAG, data);
+	}
+
+	private static class ChatDatabaseHelper extends SQLiteOpenHelper {
+
+		private static final String DATABASE_NAME = "apppublicchat.db";
+		private static final int DATABASE_VERSION = 1;
+
+		public ChatDatabaseHelper(Context context) {
+			super(context, DATABASE_NAME, null, DATABASE_VERSION);
+		}
+
+		@Override
+		public void onCreate(SQLiteDatabase db) {
+			infoLog("creating new chat table");
+
+			db.execSQL("CREATE TABLE " + TABLE_NAME + " (" + ChatConstants._ID
+					+ " INTEGER PRIMARY KEY AUTOINCREMENT,"
+					+	ChatConstants.USERID+" TEXT,"
+					+ ChatConstants.DATE + " INTEGER,"
+					+ ChatConstants.DIRECTION + " INTEGER," + ChatConstants.JID
+					+ " TEXT," + ChatConstants.MESSAGE + " TEXT,"
+					+ ChatConstants.DELIVERY_STATUS + " INTEGER,"
+					+	ChatConstants.BUSINESSID+" TEXT,"
+					+	ChatConstants.CONSULTTYPE+" TEXT,"
+					+	ChatConstants.STAFFID+" TEXT,"
+					+	ChatConstants.STAFFNAME+" TEXT,"
+					+	ChatConstants.USERNAME+" TEXT,"
+					+ 	ChatConstants.BPROCESS + " INTEGER,"
+					+ ChatConstants.PACKET_ID + " TEXT);");
+		}
+
+		@Override
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+			infoLog("onUpgrade: from " + oldVersion + " to " + newVersion);
+			switch (oldVersion) {
+			/*case 3:
+				db.execSQL("UPDATE " + TABLE_NAME + " SET READ=1");
+			case 4:
+				db.execSQL("ALTER TABLE " + TABLE_NAME + " ADD "
+						+ ChatConstants.PACKET_ID + " TEXT");
+				break;*/
+			default:
+				db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+				onCreate(db);
+			}
+		}
+
+	}
+
+	public static final class ChatConstants implements BaseColumns {
+
+		private ChatConstants() {
+		}
+
+		/**
+		 * 所有的字段
+		 */
+		public static final String[] ALLFROM = new String[] {
+				ChatProvider.ChatConstants._ID, ChatProvider.ChatConstants.DATE,
+				ChatProvider.ChatConstants.DIRECTION,
+				ChatProvider.ChatConstants.JID, ChatProvider.ChatConstants.MESSAGE,
+				ChatProvider.ChatConstants.DELIVERY_STATUS,
+				ChatConstants.BUSINESSID, ChatConstants.CONSULTTYPE,
+				ChatConstants.STAFFID, ChatConstants.STAFFNAME,
+				ChatConstants.USERNAME, ChatConstants.BPROCESS,
+				ChatConstants.PACKET_ID
+		};
+
+		public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.wuzhuim.chat";
+		public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd.wuzhuim.chat";
+		public static final String DEFAULT_SORT_ORDER = "_id ASC"; // sort by
+																	// auto-id
+
+		public static final String DATE = "date";
+		public static final String DIRECTION = "from_me";
+		public static final String JID = "jid";
+		public static final String MESSAGE = "message";
+
+		/**
+		 * 所属用户ID，为增加支持多用户情况
+		 */
+		public static final String USERID = "userid";
+		/**
+		 * 业务ID
+		 */
+		public static final String BUSINESSID="businessId";//
+		/**
+		 * 咨询类型
+		 */
+		public static final String CONSULTTYPE="consultType";//
+		/**
+		 * 当前咨询人登录账号
+		 */
+		public static final String STAFFNAME="staffName";//
+		/**
+		 * 当前咨询人ID
+		 */
+		public static final String STAFFID="staffId";//
+		/**
+		 * 当前咨询人姓名
+		 */
+		public static final String USERNAME="username";//
+
+		/**
+		 * 是否可以进行回复处理，即在对方已经结束会话时，要设置为不可以再回复及
+		 * 在某个咨询人ID已经出现且有新的businessid时旧的咨询人ID记录要设置为不可回复
+		 */
+		public static final String BPROCESS= "bprocess";
+		/**
+		 * 可以回复处理
+		 */
+		public static final int BP_NEW = 0;
+		/**
+		 * 不可回复处理
+		 */
+		public static final int BP_OLD = 1;
+
+		public static final String DELIVERY_STATUS = "read"; // SQLite can not
+																// rename
+																// columns,
+																// reuse old
+																// name
+		public static final String PACKET_ID = "pid";
+
+		// boolean mappings
+		/**
+		 * 接收
+		 */
+		public static final int INCOMING = 0;
+		/**
+		 * 发送
+		 */
+		public static final int OUTGOING = 1;
+		/**
+		 * this message has not been sent/displayed yet 未读或未发送
+		 */
+		public static final int DS_NEW = 0; // < this message has not been
+											// sent/displayed yet
+		/**
+		 * this message was sent but not yet acked, or it was received and read
+		 * 消息发送但未确认状态或接收并已经读取
+		 */
+		public static final int DS_SENT_OR_READ = 1; // < this message was sent
+														// but not yet acked, or
+														// it was received and
+														// read
+
+		/**
+		 * this message was XEP-0184 acknowledged
+		 * 消息已经被确认
+		 */
+		public static final int DS_ACKED = 2; // < this message was XEP-0184
+												// acknowledged
+		/**
+		 * 自定义信息值，表示消息为上传图片,message内容为需要上传的内容
+		 */
+		public static final int DS_UPLOADIMG = 3;
+		/**
+		 * 自定义信息值，表示消息为上传文件,message内容为需要上传的内容
+		 */
+		public static final int DS_UPLOADFILE = 4;
+
+		public static ArrayList<String> getRequiredColumns() {
+			ArrayList<String> tmpList = new ArrayList<String>();
+			tmpList.add(DATE);
+			tmpList.add(DIRECTION);
+			tmpList.add(JID);
+			tmpList.add(MESSAGE);
+			return tmpList;
+		}
+
+	}
+
+}

@@ -1,0 +1,469 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:scrollbars="vertical"
+    tools:context="com.lawyee.apppublic.ui.frag.fragService.jamed.JamedOneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="申请信息" />
+
+        <View style="@style/viewstyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/org_jamedtype" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_ApplyType"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_pop_org" />
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookOrg"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/whether_agree_in_media_jamed" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookAgree"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp"
+            android:background="#f7f7f7" />
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="申请人信息" />
+
+        <View style="@style/viewstyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_apply_name" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookName"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/sex4" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookSex"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/cer_num" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookCardType"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/apply_age" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookAge"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/nation" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookNation"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/phone1" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookTelephone"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_domicile" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookAddress"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/tv_jamed_nexus" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookRelation"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp"
+            android:background="#f7f7f7" />
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="@string/jamed_beApplyInfom" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_quilt_name" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookBeiName"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/sex4" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookBeiSex"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/apply_age" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookBeiAge"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/nation" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookBeiNation"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/phone1" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookBeiTelephone"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_domicile" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookBeiAddress"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp"
+            android:background="#f7f7f7" />
+
+        <TextView
+
+            style="@style/TextTitle"
+            android:text="@string/jamed_info" />
+
+        <View style="@style/viewstyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/brief_case_of_the_dispute" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookCase"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_applyitem" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_MediaOne_LookItem"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <Space style="@style/Space16" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btn_mediaOne_submit"
+                style="@style/BtnSumbit"
+                android:layout_gravity="center"
+                android:padding="@dimen/boundary_8dp"
+                android:text="申请媒体参与调解" />
+            <Space style="@style/Space16" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

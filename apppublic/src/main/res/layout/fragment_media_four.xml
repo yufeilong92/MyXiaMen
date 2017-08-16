@@ -1,0 +1,294 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context="com.lawyee.apppublic.ui.frag.fragService.media.MediaFourFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="调解结束反馈信息" />
+
+        <LinearLayout
+            android:id="@+id/linear_mediafour_apply"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/boundary_16dp"
+            android:orientation="vertical">
+
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/boundary_8dp"
+                android:drawableRight="@mipmap/icon_tv_stars"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:text="@string/playChannel"
+                android:textColor="@color/color_hei"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Space style="@style/Space16" />
+
+            <EditText
+                android:id="@+id/Et_MediaFour_Play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/boundary_8dp"
+                android:textSize="@dimen/text_size_mediummin"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:background="@drawable/bg_input_box"
+                android:hint="@string/pleaseplayChannel" />
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/boundary_8dp"
+                android:drawableRight="@mipmap/icon_tv_stars"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:text="@string/playtime"
+                android:textColor="@color/color_hei"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:id="@+id/tv_MediaFour_PlayDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_mediummin"
+               android:gravity="center_vertical"
+                android:padding="@dimen/boundary_8dp"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:background="@drawable/bg_input_box"
+                android:hint="@string/pleaseplaytime" />
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/boundary_8dp"
+                android:drawableRight="@mipmap/icon_tv_stars"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:text="@string/programTitle"
+                android:textColor="@color/color_hei"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Space style="@style/Space16" />
+
+            <EditText
+                android:id="@+id/et_MediaFour_Act"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:hint="@string/pleaseprogramTitle"
+                android:padding="@dimen/boundary_8dp"
+                android:textSize="@dimen/text_size_mediummin"
+                android:background="@drawable/bg_input_box" />
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/boundary_8dp"
+                android:drawableRight="@mipmap/icon_tv_stars"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:text="@string/mediaPlayUrl"
+                android:textColor="@color/color_hei"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Space style="@style/Space16" />
+
+            <EditText
+                android:id="@+id/Et_MediaFour_VideoHere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:background="@drawable/bg_input_box"
+                android:gravity="center_vertical"
+                android:hint="@string/pleasemediaPlayUrl"
+                android:padding="@dimen/boundary_8dp"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/boundary_8dp"
+                android:drawableRight="@mipmap/icon_tv_stars"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:text="@string/netFlag"
+                android:textColor="@color/color_hei"
+                android:textSize="@dimen/text_size_medium" />
+
+            <Space style="@style/Space16" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:id="@+id/rdb_MediaFour_Yes"
+                    android:drawablePadding="@dimen/boundary_8dp"
+                    style="@style/RadioBtn"
+                    android:text="@string/yes" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:id="@+id/rdb_MediaFour_No"
+                    style="@style/RadioBtn"
+                    android:drawablePadding="@dimen/boundary_8dp"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+            <Space style="@style/Space16" />
+
+            <Button
+                android:id="@+id/btn_MediaFour_Submit"
+                style="@style/BtnSumbit"
+                android:layout_gravity="center"
+                android:text="@string/dl_btn_submit" />
+            <Space style="@style/Space16" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:visibility="gone"
+            android:id="@+id/linear_mediafour_result"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/boundary_16dp"
+                android:paddingLeft="@dimen/boundary_16dp"
+
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/boundary_8dp"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/playChannelR"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediafourResultPlayChannel"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/boundary_8dp"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/playtimeR"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediafourResultvplaytime"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/boundary_8dp"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/programTitleR"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediafourResultProgramTitle"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/boundary_8dp"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/mediaPlayUrlR"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediafourResultmediaPlayUrl"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/boundary_8dp"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="@string/netFlagR"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediafourResultnetflag"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:background="#f1dddd" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

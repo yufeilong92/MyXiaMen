@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lawyee.apppublic.ui.org.OrgDetailActivity">
+    <LinearLayout
+        android:id="@+id/li_jamed_title"
+        style="@style/TitleBar">
+
+        <ImageView
+            android:onClick="onHomeClick"
+            style="@style/TitleBarAction"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/org_center" />
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:clickable="false"/>
+    </LinearLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_org_layout"
+        style="@style/Base.Widget.Design.TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:tabSelectedTextColor="@color/red_org"
+        app:tabTextAppearance="@style/TabLayoutTextAppearance" />
+
+    <com.lawyee.apppublic.widget.NoScrollViewPager
+        android:id="@+id/viewpager_org"
+        style="@style/Base.Widget.Design.TabLayout"
+        android:layout_width="match_parent"
+        app:tabTextAppearance="@style/TabLayoutTextAppearance"
+        app:tabSelectedTextColor="@color/tab_seltext"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

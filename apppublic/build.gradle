@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion compileSdk
+    buildToolsVersion buildTools
+
+    defaultConfig {
+        applicationId "com.lawyee.apppublic"
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode 815
+        versionName "0.9.0815"
+
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+repositories {
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:design:$support_library_version"
+    compile "com.android.support:appcompat-v7:$support_library_version"
+    compile "com.android.support:recyclerview-v7:$support_library_version"
+    compile "com.android.support:support-v4:$support_library_version"
+    compile project(':mobilelib')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile(name: 'easypermissions-release', ext: 'aar')
+    compile(name: 'material-dialogs-core-release', ext: 'aar')
+    compile(name: 'XRefreshView-release', ext: 'aar')
+    compile(name: 'banner-release', ext: 'aar')
+    compile(name: 'poplibrary-release', ext: 'aar')
+    compile(name: 'photoview-release', ext: 'aar')
+    //compile project(':multi-image-selector')
+    compile(name: 'multi-image-selector-release', ext: 'aar')
+    //用于multi-image-selector-release
+    compile(name: 'uploadservice-release', ext: 'aar')
+    compile project(':smack')
+    /* compile project(':easypermissions')
+                            compile project(':material-dialogs-core')
+                            compile project(':XRefreshView')
+                            compile project(':banner')
+                            compile project(':poplibrary')
+                            compile project(':photoview')*/
+    compile project(':emojilib')
+    // 头像
+    compile project(':emojiadpaterlibrary')
+    compile project(':emojirecycleviewlibrary')
+    compile files('libs/baidumapapi_base_v4_1_0.jar')
+    compile files('libs/baidumapapi_cloud_v4_1_0.jar')
+    compile files('libs/baidumapapi_map_v4_1_0.jar')
+    compile files('libs/baidumapapi_radar_v4_1_0.jar')
+    compile files('libs/baidumapapi_search_v4_1_0.jar')
+    compile files('libs/baidumapapi_util_v4_1_0.jar')
+    compile files('libs/locSDK_6.13.jar')
+    compile files('libs/badgeview.jar')
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.code.gson:gson:2.2.2'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:25.3.1'
+    testCompile 'junit:junit:4.12'
+}

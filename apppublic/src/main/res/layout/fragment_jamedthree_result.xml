@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/linear_jamedThree_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="媒体是否参与调解："
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_resultjion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reason"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_resultreason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/explain"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_reasulexplain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <Space style="@style/Space8" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+    </LinearLayout>
+    <Space style="@style/Space16" />
+    <LinearLayout
+        android:id="@+id/linear_jamedThree_recordinfom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <TextView
+            style="@style/TextTitle"
+            android:text="录制信息"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recordTimeR"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_Rrecord_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recordAddressR"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_Rrecord_Address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <Space style="@style/Space8" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+    </LinearLayout>
+
+    <Space style="@style/Space16" />
+
+    <LinearLayout
+        android:id="@+id/linear_jamedThree_playinfom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <TextView
+            style="@style/TextTitle"
+            android:text="播出信息"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/playChannelR"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_RplayChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/playtimeR"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_Rplaytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/programTitleR"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_RplayprogramTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mediaPlayUrlR"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_RplaymediaPlayUrlR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boundary_8dp"
+            android:paddingLeft="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/netFlagR"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <TextView
+                android:id="@+id/tv_jamedthree_RplaynetFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_mediummin" />
+        </LinearLayout>
+
+        <Space style="@style/Space8" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+    </LinearLayout>
+</LinearLayout>

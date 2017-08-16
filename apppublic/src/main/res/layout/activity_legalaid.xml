@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.lawyee.apppublic.ui.org.JaaidActivity">
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/jaaidapply_title" />
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:clickable="false"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="74dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_legalaid_sign" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/boundary_16dp"
+                    android:text="@string/legalaidinformation"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_smallx" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_janotorg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/li_legalaid_org"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_bg_org"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:src="@mipmap/icon_legalaid_org" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/boundary_16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_legalaid_orgtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/legalaid_org"
+                            android:textColor="@drawable/select_tvtitle_color"
+                            android:textSize="@dimen/text_size_about" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/boundary_16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_legalaid_orginfom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="3"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/legalaid_org_information"
+                            android:textColor="@drawable/select_tvcon_color"
+                            android:textSize="@dimen/text_size_smallx" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/li_legalaid_information"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_bg_org"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:src="@mipmap/icon_legalaid_inform" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/boundary_16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_legalaid_infomtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/legalaid_information"
+                            android:textColor="@drawable/select_tvtitle_color"
+                            android:textSize="@dimen/text_size_about" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/boundary_16dp" />
+
+                        <TextView
+                            android:id="@+id/tv_legalaid_infoms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="3"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/jaaidinfom"
+                            android:textColor="@drawable/select_tvcon_color"
+                            android:textSize="@dimen/text_size_smallx" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boundary_16dp" />
+
+                <LinearLayout
+                    android:id="@+id/li_legalaid_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/selector_bg_org"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:src="@mipmap/icon_legalaid_apply" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_legalaid_applytitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/legalaid_net_apply"
+                            android:textColor="@drawable/select_tvtitle_color"
+                            android:textSize="@dimen/text_size_about" />
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/boundary_16dp" />
+                        <TextView
+                            android:id="@+id/tv_legalaid_applyinfom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/legalaid_apply_information"
+                            android:textColor="@drawable/select_tvcon_color"
+                            android:textSize="@dimen/text_size_smallx" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

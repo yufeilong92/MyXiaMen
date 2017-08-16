@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/law_detail_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.lawyee.apppublic.ui.org.japub.LawActivityLookActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/icon_back" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_lawLook_showTitile"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_image_def_min" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/boundary_16dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_lawlook_activity_introdution"
+                    style="@style/LawRelativeLayoutCustom">
+
+                    <TextView
+                        style="@style/LawTextTab"
+                        android:text="@string/law_vote_introdu" />
+                </RelativeLayout>
+
+                <Space style="@style/Space16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_linear_law_vote"
+                    android:orientation="vertical"
+                    android:padding="@dimen/boundary_16dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/lawlife"
+                            android:text="@string/law_activity_name1" />
+
+                        <TextView
+                            android:id="@+id/tv_lawLookactivityName"
+                            style="@style/lawRight"/>
+                    </LinearLayout>
+
+                    <Space style="@style/Space8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/lawlife"
+                            android:text="@string/vote_date" />
+
+                        <TextView
+                            android:id="@+id/tv_lawLook_activityDate"
+                            style="@style/lawRight" />
+                    </LinearLayout>
+
+                    <Space style="@style/Space8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/lawlife"
+                            android:text="@string/vote_here" />
+
+                        <TextView
+                            android:id="@+id/tv_lawLook_activityhere"
+                            style="@style/lawRight" />
+                    </LinearLayout>
+
+                    <Space style="@style/Space8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/lawlife"
+                            android:text="@string/vote_undertaker" />
+
+                        <TextView
+                            android:id="@+id/tv_lawLook_activityundertaker"
+                            style="@style/lawRight" />
+                    </LinearLayout>
+
+                    <Space style="@style/Space8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/lawlife"
+                            android:text="@string/vote_organizer" />
+
+                        <TextView
+                            android:id="@+id/tv_lawLook_activityOrganizer"
+                            style="@style/lawRight" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Space style="@style/Space16" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_lawlook_activity_infom"
+                    style="@style/LawRelativeLayoutCustom">
+
+                    <TextView
+                        style="@style/LawTextTab"
+                        android:text="@string/lawvote_activityinfom"/>
+
+                    <ImageView
+                        android:id="@+id/iv_lawLook_infom"
+                        style="@style/LawImageTab"
+                        android:src="@mipmap/icon_lawvote_packup"/>
+                </RelativeLayout>
+
+                <Space style="@style/Space8" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_lawlook_activity_infomContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/boundary_8dp"
+                    android:background="@drawable/bg_linear_law_vote"
+                    >
+
+                    <TextView
+                        android:text="2222222"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin"
+                        android:id="@+id/tv_infomContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <Space style="@style/Space8" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_lawlook_activity_profile"
+                    style="@style/LawRelativeLayoutCustom">
+
+                    <TextView
+                        style="@style/LawTextTab"
+                        android:text="@string/lawVote_Organizer_Profile" />
+
+                    <ImageView
+                        android:id="@+id/iv_lawLook_profile"
+                        style="@style/LawImageTab"
+                        android:src="@mipmap/icon_lawvote_packup" />
+                </RelativeLayout>
+
+                <Space style="@style/Space8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_law_organizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Space style="@style/Space8" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_lawlook_activity_organizer"
+                    style="@style/LawRelativeLayoutCustom">
+
+                    <TextView
+                        style="@style/LawTextTab"
+                        android:text="@string/lawVote_Organizer_Introduction" />
+
+                    <ImageView
+                        android:id="@+id/iv_lawLook_organizer"
+                        style="@style/LawImageTab"
+                        android:src="@mipmap/icon_lawvote_packup" />
+                </RelativeLayout>
+
+                <Space style="@style/Space8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_law_Introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Space style="@style/Space8" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_lawlook_activity_picture"
+                    style="@style/LawRelativeLayoutCustom">
+
+                    <TextView
+                        style="@style/LawTextTab"
+                        android:text="@string/lawVote_activitiesPick" />
+
+                    <ImageView
+                        android:id="@+id/iv_lawLook_picture"
+                        style="@style/LawImageTab"
+                        android:src="@mipmap/icon_lawvote_packup" />
+                </RelativeLayout>
+
+                <Space style="@style/Space8" />
+
+                <LinearLayout
+                    android:id="@+id/liear_lawLook_Picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_linear_law_vote"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_lawlook_pictureLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:paddingRight="@dimen/boundary_8dp">
+
+                        <ImageView
+                            android:id="@+id/iv_LawLook_pictureLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:src="@mipmap/icon_lawvote_left" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:paddingTop="@dimen/boundary_8dp"
+                        android:paddingBottom="@dimen/boundary_8dp"
+                        android:id="@+id/rlv_lawlook_picture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:overScrollMode="never" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_lawLook_pictureRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:paddingRight="@dimen/boundary_8dp">
+
+                        <ImageView
+                            android:id="@+id/iv_lawLook_pictureRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/icon_lawvote_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <Space style="@style/Space8" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_lawlook_activity_map"
+                    style="@style/LawRelativeLayoutCustom">
+
+                    <TextView
+                        style="@style/LawTextTab"
+                        android:text="@string/law_activityMap" />
+
+                    <ImageView
+                        android:id="@+id/iv_lawLook_map"
+                        style="@style/LawImageTab"
+                        android:src="@mipmap/icon_lawvote_packup" />
+                </RelativeLayout>
+
+                <Space style="@style/Space8" />
+                <LinearLayout
+                    android:id="@+id/liear_lawLook_activitymap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_linear_law_vote"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:paddingTop="@dimen/boundary_8dp">
+                <ImageView
+                    android:id="@+id/iv_lawLook_activitymap"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY" />
+                    <TextView
+                        android:id="@+id/tv_null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/nothing"
+                        android:textColor="@color/lawyer_list_text_tip2"
+                        android:textSize="@dimen/text_size_mediummin"
+                        />
+                    </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

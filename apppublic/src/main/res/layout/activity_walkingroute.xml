@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@drawable/btn_return_normal" />
+
+        <TextView
+            android:id="@+id/activity_title_text"
+            style="@style/TitleBarText"
+            android:text="@string/location_information"
+            />
+
+        <View
+            style="@style/TitleBarAction"
+            android:clickable="false"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@color/activity_content_bg"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:text="@string/adress"
+                        android:textColor="@color/home_list_text_tip"
+                        android:textSize="@dimen/text_size_mediummin"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_law_irms_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:maxLines="3"
+                        android:textColor="@color/lawyer_list_text_tip2"
+                        android:textSize="@dimen/text_size_mediummin"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:text="@string/phone"
+                        android:textColor="@color/home_list_text_tip"
+                        android:textSize="@dimen/text_size_mediummin"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_law_service_calls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:autoLink="phone"
+                        android:textColor="@color/lawyer_list_text_tip2"
+                        android:textSize="@dimen/text_size_mediummin"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/btn_more"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_navigation"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

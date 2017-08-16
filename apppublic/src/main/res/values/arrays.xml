@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 首页模块名称列表 -->
+    <string-array name="HomeModuleName">
+        <item >法律援助</item>
+        <item >公证服务</item>
+        <item >人民调解</item>
+        <item >律师服务</item>
+        <item >值班律师</item>
+        <item >法制宣传</item>
+        <item >司法鉴定</item>
+        <item >司法考试</item>
+    </string-array>
+
+    <!-- 法治宣传资讯名称列表 -->
+    <string-array name="FZXCInfoName">
+        <item >法治创建</item>
+        <item >法宣动态</item>
+        <item >以案释法</item>
+        <item >法宣视频</item>
+    </string-array>
+    <string-array name="FZXCInfoID">
+        <item >72c7cb2ce0b54bc0b7680d5bc57e4ec6</item>
+        <item >5f0164e4da48424f9aa3734a03c15a81</item>
+        <item >7dd7b8caa164403ca7a4a1719a51275f</item>
+        <item >video</item>
+    </string-array>
+    <!-- 首页资讯名称列表 -->
+    <string-array name="homeInfoName">
+        <item >首页咨询</item>
+    </string-array>
+    <string-array name="homeInfoID">
+        <item >7528a99c512c4bd890631c427ab78a21</item>
+    </string-array>
+
+    <!-- 法宣视频资讯名称列表 -->
+    <string-array name="FXSPInfoName">
+        <item >法宣视频</item>
+    </string-array>
+    <string-array name="FXSPInfoID">
+        <item >2c7b649fd4bf41b1998530729a948b88</item>
+    </string-array>
+
+    <!-- 法律援助资讯名称列表 -->
+    <string-array name="FLYZInfoName">
+        <item >政策法规</item>
+        <item >援助指南</item>
+        <item >援助案例</item>
+        <item >工作动态</item>
+    </string-array>
+    <string-array name="FLYZInfoID">
+        <item >a1018bc7558249efaa6412b9f265980c</item>
+        <item >de3395b5eeef427ba8ea098bb1b25cdb</item>
+        <item >31b1d387ad9a4b6aa66510c2edbfaf31</item>
+        <item >b2323d7dd247479c934b68a31cc0a3b3</item>
+    </string-array>
+    <string-array name="FLYZORGInfoName">
+        <item >工作动态</item>
+    </string-array>
+    <string-array name="FLYZORGInfoID">
+        <item >b2323d7dd247479c934b68a31cc0a3b3</item>
+    </string-array>
+    <!-- 公证服务资讯名称列表 -->
+    <string-array name="GZFWInfoName">
+        <item >公证指南</item>
+    </string-array>
+    <string-array name="GZFWInfoID">
+        <item >9e4fad51381a4da1a10bd87ea24d5461</item>
+    </string-array>
+    <string-array name="GZFWORGInfoName">
+        <item >工作动态</item>
+    </string-array>
+    <string-array name="GZFWORGInfoID">
+        <item >b950a23f1abb48afb30bdb7cc016a54c</item>
+    </string-array>
+    <!-- 人民调解资讯名称列表 -->
+    <string-array name="RMDJInfoName">
+        <item >调解指南</item>
+    </string-array>
+    <string-array name="RMDJInfoID">
+        <item >3cbc8200f93d46f3a1e5ff7bd972117d</item>
+    </string-array>
+    <!-- 司法鉴定资讯名称列表 -->
+    <string-array name="SFZDInfoName">
+        <item >工作动态</item>
+        <item >政策法规</item>
+    </string-array>
+    <string-array name="SFZDInfoID">
+        <item >c8794200dce74bd198d128cc2d216ac2</item>
+        <item >aba7d8ba6629427783859f511726fd10</item>
+    </string-array>
+    <!-- 资讯类别名称列表 -->
+    <string-array name="InfoType">
+        <item >法援资讯</item>
+        <item >公证资讯</item>
+        <item >鉴定资讯</item>
+        <item >人民调解资讯</item>
+        <item >法宣资讯</item>
+    </string-array>
+    <string-array name="InfoTypeID">
+        <item >f55a122433864975976db9ea5ec5e744</item>
+        <item >1a57016a71094d2787263cb027db40a7</item>
+        <item >e3beac64d8f541ff91eef9dd97da8bac</item>
+        <item >4e3e88453c6847c194511ac481d73289</item>
+        <item >75a5c5dcce3a44778f94de6d686f5487</item>
+    </string-array>
+
+    <string-array name="JamedTypeList">
+        <item>一般调解</item>
+        <item>专业调解</item>
+    </string-array>
+    <!--人民调解机构详情-->
+    <string-array name="jamedorgtab">
+        <item>调解机构信息</item>
+        <item>调解员</item>
+    </string-array>
+    <!--公证机构详情-->
+    <string-array name="janotaorgtab">
+        <item>公证处信息</item>
+        <item>公证员</item>
+        <item>工作动态</item>
+    </string-array>
+    <string-array name="jaauthorgtab">
+        <item>鉴定机构信息</item>
+        <item>鉴定员</item>
+    </string-array>
+
+    <string-array name="LEGALACTIVITIES">
+        <item>讲座类</item>
+        <item>展览类</item>
+        <item>运动类</item>
+        <item>消费类</item>
+        <item>体验类</item>
+        <item>演出类</item>
+        <item>投票类</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="LEGALIOFOM">
+        <!--<item >法治创建</item>-->
+        <item >法宣动态</item>
+        <item >以案释法</item>
+    </string-array>
+    <string-array name="LEGALINFOMWITHOID">
+        <!--<item >72c7cb2ce0b54bc0b7680d5bc57e4ec6</item>-->
+        <item >5f0164e4da48424f9aa3734a03c15a81</item>
+        <item >7dd7b8caa164403ca7a4a1719a51275f</item>
+    </string-array>
+    <string-array name="LEGALVIDEO">
+        <item >法宣视频</item>
+    </string-array>
+    <string-array name="LEGALVIDEOWITHOID">
+        <item >video</item>
+    </string-array>
+    <string-array name="jamedServicetab">
+        <item >调解申请信息</item>
+        <item >审核信息</item>
+        <item >媒体参与信息</item>
+        <item >调解结束反馈</item>
+    </string-array>
+    <string-array name="jaaidorgtab">
+        <item >法援机构信息</item>
+        <item >工作动态</item>
+    </string-array>
+    <string-array name="MediaServicetab">
+        <item >调解申请信息</item>
+        <item >筛选信息</item>
+        <item >录制信息</item>
+        <item >播出信息</item>
+    </string-array>
+</resources>

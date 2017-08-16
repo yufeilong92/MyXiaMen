@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+        <LinearLayout
+            android:padding="16dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_weight="0.30"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/iv_head"
+                android:layout_width="0dp"
+                android:scaleType="fitXY"
+                android:layout_height="100dp" />
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_weight="0.70"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+             <LinearLayout
+                 android:orientation="horizontal"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="姓名:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                   <TextView
+                       android:layout_marginLeft="8dp"
+                       android:id="@+id/tv_jamed_name"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+             </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/boundary_16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="性别:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/tv_jamed_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/boundary_16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="联系电话:" />
+
+                    <TextView
+                        android:autoLink="phone"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/tv_jamed_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/li_service"
+                    android:layout_marginTop="@dimen/boundary_16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="业务范围:" />
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/tv_service_business"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/li_number"
+                    android:layout_marginTop="@dimen/boundary_16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="证书编号:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/tv_certificate_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

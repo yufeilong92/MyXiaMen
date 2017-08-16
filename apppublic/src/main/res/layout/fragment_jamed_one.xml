@@ -1,0 +1,468 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:scrollbars="vertical"
+    android:overScrollMode="never"
+    tools:context="com.lawyee.apppublic.ui.frag.fragService.jamed.JamedOneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="@string/apply_info" />
+
+        <View style="@style/viewstyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/org_jamedtype" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_JamedOne_applytype"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_pop_org" />
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookOrg"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/whether_agree_in_media_jamed" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookMedia"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp"
+            android:background="#f7f7f7" />
+
+        <TextView
+            style="@style/TextTitle"
+            android:text="@string/applyper_info" />
+        <View style="@style/viewstyle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_apply_name" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookName"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/sex4" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookSex"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/cer_num" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookCardType"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/apply_age" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookBrithday"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/nation" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookNation"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/phone1" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookTelephone"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_domicile" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookWork"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/tv_jamed_nexus" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookRelation"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+            <View style="@style/viewstyle" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#f1dddd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp"
+            android:background="#f7f7f7" />
+        <TextView
+            style="@style/TextTitle"
+            android:text="@string/jamed_beApplyInfom" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_quilt_name" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookBeiName"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/sex4" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookBeiSex"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/apply_age" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookBeiBrithday"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/nation" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookBeiNation"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/phone1" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookBeiTelephone"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_domicile" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContent" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookBeiWork"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:background="#f1dddd"
+            android:layout_width="match_parent"
+            android:layout_height="6px"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp"
+            android:background="#f7f7f7" />
+
+        <TextView
+
+            style="@style/TextTitle"
+            android:text="@string/jamed_info" />
+        <View style="@style/viewstyle" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_8dp">
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/brief_case_of_the_dispute" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookCase"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+            <View style="@style/viewstyle" />
+
+            <LinearLayout
+                style="@style/Linearlayout">
+
+                <LinearLayout style="@style/LinearLayoutShowLife">
+
+                    <TextView
+                        style="@style/TextShowLife"
+                        android:text="@string/jamed_applyitem" />
+
+                </LinearLayout>
+
+                <TextView style="@style/TextShowContentNoIcon" />
+
+                <TextView
+                    android:id="@+id/tv_jamedOne_LookItem"
+                    style="@style/TextShowRight" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

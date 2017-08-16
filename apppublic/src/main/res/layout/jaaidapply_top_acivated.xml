@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:background="#79797979"
+            android:layout_height="2dp" />
+        <ImageView
+            android:id="@+id/iv_legalapply_1"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/bg_jaaidapply_activated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:background="#79797979"
+            android:layout_height="2dp" />
+        <ImageView
+            android:id="@+id/iv_legalapply_2"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/bg_jaaidapply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:background="#79797979"
+            android:layout_height="2dp" />
+        <ImageView
+            android:id="@+id/iv_legalapply_3"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/bg_jaaidapply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:background="#79797979"
+            android:layout_height="2dp" />
+        <ImageView
+            android:id="@+id/iv_legalapply_4"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/bg_jaaidapply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:background="#79797979"
+            android:layout_height="2dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

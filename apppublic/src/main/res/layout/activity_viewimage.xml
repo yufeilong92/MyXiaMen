@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/viewimage_pv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_content_bg"  />
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/viewimage_top_rl">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="图片预览" />
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:clickable="false"/>
+    </LinearLayout>
+<!--
+    <RelativeLayout
+        android:id="@+id/viewimage_top_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/activity_title_bg" >
+
+        <ImageButton
+            android:id="@+id/viewimage_top_back_ib"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_return_normal"
+            android:onClick="onHomeClick" />
+    </RelativeLayout>
+-->
+</RelativeLayout>

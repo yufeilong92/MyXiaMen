@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:background="@color/white"
+    >
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@drawable/btn_return_normal" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TitleBarText"
+            android:text="@string/my_entrust"
+            />
+
+        <View
+            style="@style/TitleBarAction"
+            android:clickable="false"
+            />
+    </LinearLayout>
+
+
+
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/my_entrust_xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_entrust_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/law_detail_bg"
+            />
+    </com.andview.refreshview.XRefreshView>
+    <TextView
+        android:id="@+id/my_entrust_empty_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="当前无我的委托数据，请下拉刷新"
+        android:textColor="@color/gray_text"
+        android:visibility="visible" />
+</LinearLayout>
+

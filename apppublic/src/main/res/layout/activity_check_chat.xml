@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_content_bg"
+    android:orientation="vertical">
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@drawable/btn_return_normal" />
+
+        <TextView
+            style="@style/TitleBarText"
+            />
+        <View
+            android:id="@+id/view_null"
+            style="@style/TitleBarAction"
+            android:clickable="false"
+            android:visibility="visible"
+            />
+    </LinearLayout>
+
+
+
+        <com.lqr.recyclerview.LQRRecyclerView
+            android:id="@+id/cvMessage"
+            android:layout_width="match_parent"
+            android:background="@color/activity_content_bg"
+            android:layout_height="match_parent"
+            />
+
+
+
+
+</LinearLayout>

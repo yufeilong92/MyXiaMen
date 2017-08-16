@@ -1,0 +1,290 @@
+<com.lawyee.apppublic.widget.ScrollViewWithEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:overScrollMode="never"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:scrollbars="vertical"
+    tools:context="com.lawyee.apppublic.ui.frag.fragService.media.MediaTwoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/law_detail_bg"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linear_mediatwo_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/boundary_16dp"
+            android:paddingRight="@dimen/boundary_16dp"
+            android:paddingTop="@dimen/boundary_16dp"
+           >
+            <TextView
+                style="@style/TextTitle"
+                android:text="@string/select_result" />
+            <TextView
+                android:id="@+id/tv_mediatwo_jamedagree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:text="调解员建议媒体参与调解"
+                android:textColor="@color/red_org"
+                android:textSize="@dimen/text_size_mediummin"
+                android:visibility="gone" />
+
+            <Space style="@style/Space16" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rdb_MediaTwo_Pass"
+                    style="@style/RadioBtn"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_pass" />
+
+                <Space style="@style/Space16" />
+
+                <RadioButton
+                    android:id="@+id/rdb_MediaTwo_Nopass"
+                    style="@style/RadioBtn"
+                    android:text="@string/select_no_pass" />
+            </RadioGroup>
+
+            <Space style="@style/Space16" />
+
+            <TextView
+                android:id="@+id/tv_MediaTwo_NoJoinPass"
+                style="@style/Tv_InputBox"
+                android:text="@string/please_select_nopassreason" />
+
+            <Space style="@style/Space16" />
+
+            <com.lawyee.apppublic.widget.ContentEditText
+                android:id="@+id/et_MediaTwo_OtherExplain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boundary_16dp"
+                android:background="@drawable/bg_input_box"
+                android:gravity="top"
+                android:hint="@string/jamed_otherexplain"
+                android:lines="6"
+                android:padding="5dp"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:imeOptions="actionDone"
+                android:textSize="@dimen/text_size_mediummin" />
+
+            <Space style="@style/Space16" />
+
+            <Button
+                android:id="@+id/btn_mediaTwo_submit"
+                style="@style/BtnSumbit"
+                android:layout_gravity="center"
+                android:text="@string/dl_btn_submit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linear_mediatwo_Mreasult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextTitle"
+                android:text="@string/select_result" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:paddingRight="@dimen/boundary_16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:paddingTop="@dimen/boundary_8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_result2"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediatwo_resultagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:paddingTop="@dimen/boundary_8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reason"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediatwo_resultreason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:paddingTop="@dimen/boundary_8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/explain"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_mediatwo_resultexplain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:background="#f1dddd" />
+            <Space
+                style="@style/Space16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linear_MediaTwo_Result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+         >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/boundary_16dp"
+                android:paddingRight="@dimen/boundary_16dp"
+                android:paddingTop="@dimen/boundary_8dp">
+
+                <TextView
+                    style="@style/TextTitle"
+                    android:text="@string/IsJionMedia" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:paddingTop="@dimen/boundary_8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/isMediaJoin"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_MediaTwo_Mresultagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:paddingTop="@dimen/boundary_8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reason"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_MediaTwo_MreasultReason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/boundary_8dp"
+                    android:paddingTop="@dimen/boundary_8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/explain"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+
+                    <TextView
+                        android:paddingLeft="@dimen/boundary_8dp"
+                        android:id="@+id/tv_MediaTwo_MreasultExplain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_mediummin" />
+                </LinearLayout>
+
+                <Space style="@style/Space16" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6px"
+                android:background="#f1dddd" />
+        </LinearLayout>
+    </LinearLayout>
+</com.lawyee.apppublic.widget.ScrollViewWithEditText>

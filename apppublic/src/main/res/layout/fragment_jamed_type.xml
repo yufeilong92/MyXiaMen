@@ -1,0 +1,414 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="vertical"
+    android:overScrollMode="never"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    tools:context="com.lawyee.apppublic.ui.frag.JaaidApplyInformationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/jamed_both_information"
+            android:textColor="@color/apply_text_color_title"
+            android:textSize="@dimen/text_size_medium" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boundary_16dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#f2f2f2" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="申请人信息"
+            android:textColor="@color/apply_text_color_title"
+            android:textSize="@dimen/text_size_medium" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#f2f2f2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_bg_linear"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:ems="6"
+                    android:text="@string/jamed_apply_name" />
+
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/et_jaemd_apply_name"
+                    style="@style/InputBoxRight"
+                    android:imeOptions="actionNext" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_sex" />
+
+                <RadioGroup
+                    android:id="@+id/rdo_jamed_apply_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.71"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_jamed_girl"
+                        style="@style/ApplyRadioButton"
+                        android:text="@string/girl" />
+
+                    <RadioButton
+                        android:id="@+id/radio_jamed_boy"
+                        style="@style/ApplyRadioButton"
+                        android:text="@string/boy" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/InputboxLife"
+                    android:ems="6"
+                    android:text="@string/apply_document_type_number" />
+
+                <EditText
+                    android:maxLength="18"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_id_number"
+                    style="@style/InputBoxRight"
+                    android:digits="0123456789xyzXYZ"
+
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_age" />
+
+                <EditText
+                    android:maxLength="3"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_age"
+                    style="@style/InputBoxRight"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_Nation" />
+
+                <TextView
+                    android:id="@+id/tv_jamed_nation"
+                    style="@style/InputBoxRight" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_phone" />
+
+                <EditText
+                    android:maxLength="11"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_phone"
+                    style="@style/InputBoxRight"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLifeNoIcon"
+                    android:text="@string/jamed_domicile" />
+
+                <EditText
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_here"
+                    style="@style/InputBoxRight" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/InputboxLifeNoIcon"
+                    android:ems="6"
+                    android:lines="2"
+                    android:text="@string/tv_jamed_nexus" />
+
+                <EditText
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_nexus"
+                    style="@style/InputBoxRight" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#f2f2f2" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="被申请人信息"
+            android:textColor="@color/apply_text_color_title"
+            android:textSize="@dimen/text_size_medium" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#f2f2f2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_bg_linear"
+            android:orientation="vertical"
+            android:padding="@dimen/boundary_16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:layout_gravity="center_vertical"
+                    android:ems="5"
+                    android:lines="2"
+                    android:text="@string/jamed_quilt_name" />
+
+                <EditText
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_quilt_name"
+                    style="@style/InputBoxRight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_sex" />
+
+                <RadioGroup
+                    android:id="@+id/rdo_jamed_quilt_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.71"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_jamed_quilt_gril"
+                        style="@style/ApplyRadioButton"
+                        android:text="@string/girl" />
+
+                    <RadioButton
+                        android:id="@+id/radio_jamed_quilt_boy"
+                        style="@style/ApplyRadioButton"
+                        android:text="@string/boy" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_age" />
+
+                <EditText
+                    android:maxLength="3"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_quilt_age"
+                    style="@style/InputBoxRight"
+                    android:inputType="number" />
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_Nation" />
+
+                <TextView
+                    android:id="@+id/tv_jamed_quilt_nation"
+                    style="@style/InputBoxRight" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLife"
+                    android:text="@string/apply_phone" />
+
+                <EditText
+                    android:maxLength="11"
+                    android:imeOptions="actionNext"
+                    android:id="@+id/et_jamed_quilt_phone"
+                    style="@style/InputBoxRight"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/InputboxLifeNoIcon"
+                    android:text="@string/jamed_domicile" />
+
+                <EditText
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:id="@+id/et_jamed_quilt_here"
+                    style="@style/InputBoxRight" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

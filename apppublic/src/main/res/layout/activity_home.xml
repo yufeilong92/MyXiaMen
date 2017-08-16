@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/activity_content_bg"
+    tools:context=".ui.HomeActivity">
+
+    <RelativeLayout style="@style/TitleBar">
+        <ImageView
+            android:id="@+id/iv_per"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onToolbarClick"
+            android:paddingBottom="17dp"
+            android:paddingTop="17dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="@dimen/title_action_height"
+            android:layout_height="@dimen/title_action_height"
+            android:background="@drawable/title_button"
+            android:src="@drawable/ic_per_center"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/activity_topbar_bg"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="@string/home_title_name"/>
+    </RelativeLayout>
+    <com.lawyee.apppublic.widget.XRefreshViewLayout
+        android:id="@+id/xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </com.lawyee.apppublic.widget.XRefreshViewLayout>
+</LinearLayout>

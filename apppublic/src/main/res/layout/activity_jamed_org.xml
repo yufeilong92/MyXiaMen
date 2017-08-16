@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    tools:context="com.lawyee.apppublic.ui.org.JamedOrgActivity">
+    <LinearLayout style="@style/TitleBar">
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/jamed_org" />
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:clickable="false"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="74dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_jamedorg_sign" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/jamedorginformation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_smallx" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_bg_org"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/li_jamed_org"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_org"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:src="@mipmap/icon_jamedorg_org" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/boundary_16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_jamed_orgtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/jamed_pop_org"
+                        android:textColor="@drawable/select_tvtitle_color"
+                        android:textSize="@dimen/text_size_about" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/boundary_16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_jamed_orginfom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:lines="3"
+                        android:text="@string/jamed_poporg_information"
+                        android:textColor="@drawable/select_tvcon_color"
+                        android:textSize="@dimen/text_size_smallx" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/li_jamed_guide"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_org"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:src="@mipmap/icon_jamedorg_guide" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/boundary_16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_jamed_guidetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/jamed_guide"
+                        android:textColor="@drawable/select_tvtitle_color"
+                        android:textSize="@dimen/text_size_about" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/boundary_16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_jamed_guideinfoms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:lines="3"
+                        android:text="@string/jamed_guide_information"
+                        android:textColor="@drawable/select_tvcon_color"
+                        android:textSize="@dimen/text_size_smallx" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:id="@+id/li_jamed_apply"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/selector_bg_org"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:src="@mipmap/icon_legalaid_apply" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_jamed_applytitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/jamed_apply"
+                        android:textColor="@drawable/select_tvtitle_color"
+                        android:textSize="@dimen/text_size_about" />
+
+                    <TextView
+                        android:id="@+id/tv_jamed_applyinfom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/jamedorg_apply_inform"
+                        android:textColor="@drawable/select_tvcon_color"
+                        android:textSize="@dimen/text_size_smallx" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
