@@ -260,7 +260,7 @@
                 <TextView
                     android:paddingLeft="@dimen/boundary_8dp"
                     android:id="@+id/tv_jamdefour_resultXieYi"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/text_color"
                     android:textSize="@dimen/text_size_mediummin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />

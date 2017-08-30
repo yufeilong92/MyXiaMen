@@ -154,12 +154,12 @@ public class MediaTwoFragment extends BaseFragment implements View.OnClickListen
                     requestServiceData(false, true);
                 } else if (mediaApplyType != null && mediaApplyType.equals("3") && applyMediaConfirm.equals("-1")) {
                     requestServiceData(false, true);
-                } else if(mediaConfirm==1){
-                    requestServiceData(false,true);
-                }else if (mediaConfirm==-1){
-                    requestServiceData(false,true);
-                }else {
-                    requestServiceData(true,false);
+                } else if (mediaConfirm == 1) {
+                    requestServiceData(false, true);
+                } else if (mediaConfirm == -1) {
+                    requestServiceData(false, true);
+                } else {
+                    requestServiceData(true, false);
                 }
             }
         } else if (mMediaStutas.equals(ShowInfomActivity.statusThreeOrgNoAgree)) {//机构不受理
@@ -282,8 +282,10 @@ public class MediaTwoFragment extends BaseFragment implements View.OnClickListen
                 submit();
                 break;
             case R.id.tv_MediaTwo_NoJoinPass:
+
                 String str = getTextStr(mTvMediaTwoNoJoinPass);
-                handlerPopWindos(mTvMediaTwoNoJoinPass, mNoHandlerLists, str, null);
+                if (mNoHandlerLists != null && !mNoHandlerLists.isEmpty())
+                    handlerPopWindos(mTvMediaTwoNoJoinPass, mNoHandlerLists, str, null);
                 break;
 
         }
@@ -474,6 +476,7 @@ public class MediaTwoFragment extends BaseFragment implements View.OnClickListen
 
     /**
      * 媒体筛选结果
+     *
      * @param str
      * @return
      */
@@ -491,6 +494,7 @@ public class MediaTwoFragment extends BaseFragment implements View.OnClickListen
 
     /**
      * 筛选通过
+     *
      * @param str
      * @return
      */

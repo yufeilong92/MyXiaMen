@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,6 +16,7 @@ import com.lawyee.apppublic.config.ApplicationSet;
 import com.lawyee.apppublic.ui.BaseActivity;
 import com.lawyee.apppublic.util.BaseCommonToStringUtil;
 import com.lawyee.apppublic.util.TextViewUtil;
+import com.lawyee.apppublic.util.UrlUtil;
 import com.lawyee.apppublic.vo.UserVO;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -66,6 +68,12 @@ public class SettingActivity extends BaseActivity {
         TextViewUtil.isEmpty(mTvPhone,userVO.getMobile());
         TextViewUtil.isEmpty(mTvSex, BaseCommonToStringUtil.toString(userVO.getGender()));
         TextViewUtil.isEmpty(mTvLawfirm, userVO.getOrgName());
+        String imageUrl = userVO.getPhoto();
+        if (!TextUtils.isEmpty(imageUrl)) {
+            ImageLoader.getInstance().displayImage(UrlUtil.getImageFileUrl(mContext, imageUrl), mIvHead, ApplicationSet.CDIO_LAW);
+        } else {
+            mIvHead.setImageResource(R.drawable.ic_default_avatar);
+        }
         if (userVO.getBusiness() != null && userVO.getBusiness().size() > 0) {
             for (int i = 0; i < userVO.getBusiness().size(); i++) {
                 switch (i) {

@@ -30,18 +30,15 @@ public class JapubService extends BaseJsonService {
      * 获取法宣活动列表
      * @param category 活动类型ID，全部时此参数为空
      * @param pageNo 第几页,从1开始
-     * @param city  市id,可以空
-     * @param county 区县id,可以空
+     * @param activityCitySearch  市id/区县id,可以空,如果用户选择到市，则只传市id，如果选择到区县，则只传区县id
      * @param listener 结果回调
      */
-    public void getActivityList(String category, int pageNo, String city,
-                                String county,IResultInfoListener listener) {
+    public void getActivityList(String category, int pageNo, String activityCitySearch,IResultInfoListener listener) {
         JsonCreater creater = JsonCreater.startJson(getDevID());
         creater.setParam("pageNo",pageNo<1?1:pageNo);
         creater.setParam("pageSize", Constants.CINT_PAGE_SIZE);
         creater.setParamAutoCheckEmpty("category",category);
-        creater.setParamAutoCheckEmpty("activityCitySearch",city);
-        creater.setParamAutoCheckEmpty("activityCountySearch",county);
+        creater.setParamAutoCheckEmpty("activityCitySearch",activityCitySearch);
         mCommandName = "mmJapubGetActivityList";
         String json = creater.createJson(mCommandName);
         setResultInfoListener(listener);

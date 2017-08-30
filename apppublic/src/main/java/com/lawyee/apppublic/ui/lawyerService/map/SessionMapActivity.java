@@ -1,6 +1,7 @@
 
 package com.lawyee.apppublic.ui.lawyerService.map;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -118,11 +119,13 @@ public class SessionMapActivity extends BaseActivity {
 
     @Override
     protected void initContentView(Bundle savedInstanceState) {
+
         SDKInitializer.initialize(ApplicationSet.getInstance());
         instance = this;
         setContentView(R.layout.activity_session_map);
         setTitle();
         init();
+
     }
 
     /**

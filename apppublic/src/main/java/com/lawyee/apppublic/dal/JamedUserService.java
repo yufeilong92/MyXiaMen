@@ -104,7 +104,7 @@ public class JamedUserService extends BaseJsonService {
         creater.setParam("role", userVO.getRole());
         creater.setParam("password", SecurityUtil.Encrypt(userVO.getPassword(),SecurityUtil.getLegalKey(creater.getId()), Constants.CSTR_IVS));
 
-        creater.setParam("serialNO",detailVO.getSerialNo());
+        creater.setParam("serialNo",detailVO.getSerialNo());
         creater.setParam("applyName",detailVO.getApplyName());
         creater.setParam("applyGender",detailVO.getApplyGender());
         /*if(detailVO.isTjType())

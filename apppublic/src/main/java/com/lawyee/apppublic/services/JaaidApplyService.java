@@ -12,6 +12,7 @@ import android.support.v4.app.NotificationCompat;
 
 import com.lawyee.apppublic.R;
 import com.lawyee.apppublic.config.ApplicationSet;
+import com.lawyee.apppublic.config.Constants;
 import com.lawyee.apppublic.dal.BaseJsonService;
 import com.lawyee.apppublic.dal.JaaidService;
 import com.lawyee.apppublic.ui.WelcomeActivity;
@@ -38,8 +39,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-
-import  com.lawyee.apppublic.config.Constants;
 
 /**
  * All rights Reserved, Designed By www.lawyee.com
@@ -259,6 +258,7 @@ public class JaaidApplyService extends Service {
             String pwd =  SecurityUtil.Encrypt(uservo.getPassword(),SecurityUtil.getLegalKey(timespan), Constants.CSTR_IVS);
             req.addHeader("timespan",timespan);
             req.addHeader("loginId",uservo.getLoginId());
+            req.addHeader("role",uservo.getRole());
             req.addHeader("password", URLEncoder.encode(pwd,Constants.CSTR_PAGECODE_DEFAULT));
             req.addHeader("parent",URLEncoder.encode(CSTR_JAAIDAPPLY_UPLOAD_PARENT,Constants.CSTR_PAGECODE_DEFAULT));
             req.addHeader("pid",mApplyDetailVO.getOid());

@@ -70,7 +70,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:singleLine="true"
-                android:text="@string/address"
+                android:text="@string/service_office_phone"
                 android:textColor="@color/home_list_text_tip"
                 android:textSize="@dimen/text_size_small"/>
 
@@ -78,9 +78,9 @@
                 android:id="@+id/tv_address"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="2dp"
                 android:maxLines="2"
-                android:text="贵州市南  贵州市南  贵州市南  贵州市南  贵州市南"
+                android:text=""
                 android:textColor="@color/lawyer_list_text_tip2"
                 android:textSize="@dimen/text_size_small"
                 />

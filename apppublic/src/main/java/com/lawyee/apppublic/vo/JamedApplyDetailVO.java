@@ -5,6 +5,8 @@ import android.content.Context;
 import net.lawyee.mobilelib.utils.JavaLangUtil;
 import net.lawyee.mobilelib.vo.BaseVO;
 
+import java.util.List;
+
 /**
  * All rights Reserved, Designed By www.lawyee.com
  *
@@ -203,6 +205,11 @@ public class JamedApplyDetailVO extends JamedApplyVO {
      *调解结束提交时间,yyyy-MM-dd HH:mm:ss
      */
     private String endSubmitTime;
+
+    /**
+     * 调解协议
+     */
+    private List<AttachmentVO> attachments;
 
     public String getTjOrgId() {
         return tjOrgId;
@@ -565,6 +572,15 @@ public class JamedApplyDetailVO extends JamedApplyVO {
     public void setEndSubmitTime(String endSubmitTime) {
         this.endSubmitTime = endSubmitTime;
     }
+
+    public List<AttachmentVO> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<AttachmentVO> attachments) {
+        this.attachments = attachments;
+    }
+
     /**
      * 缓存输入内容文件名称
      * @param c

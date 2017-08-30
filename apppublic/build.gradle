@@ -8,8 +8,9 @@ android {
         applicationId "com.lawyee.apppublic"
         minSdkVersion minSdk
         targetSdkVersion targetSdk
-        versionCode 815
-        versionName "0.9.0815"
+        multiDexEnabled true
+        versionCode 822
+        versionName "0.9.0822"
 
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -31,6 +32,7 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:multidex:'
     compile "com.android.support:design:$support_library_version"
     compile "com.android.support:appcompat-v7:$support_library_version"
     compile "com.android.support:recyclerview-v7:$support_library_version"
@@ -51,15 +53,12 @@ dependencies {
     compile(name: 'uploadservice-release', ext: 'aar')
     compile project(':smack')
     /* compile project(':easypermissions')
-                            compile project(':material-dialogs-core')
-                            compile project(':XRefreshView')
-                            compile project(':banner')
-                            compile project(':poplibrary')
-                            compile project(':photoview')*/
-    compile project(':emojilib')
+                                        compile project(':material-dialogs-core')
+                                        compile project(':XRefreshView')
+                                        compile project(':banner')
+                                        compile project(':poplibrary')
+                                        compile project(':photoview')*/
     // 头像
-    compile project(':emojiadpaterlibrary')
-    compile project(':emojirecycleviewlibrary')
     compile files('libs/baidumapapi_base_v4_1_0.jar')
     compile files('libs/baidumapapi_cloud_v4_1_0.jar')
     compile files('libs/baidumapapi_map_v4_1_0.jar')
@@ -78,4 +77,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:support-v4:25.3.1'
     testCompile 'junit:junit:4.12'
+    compile project(':chat')
+    compile files('libs/universal-image-loader-1.9.5.jar')
 }

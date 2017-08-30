@@ -343,6 +343,7 @@ public class LegalActivityListsActivity extends BaseActivity {
             }
         });
     }
+
     private void LoadNewData() {
         if (mInProgess)
             return;
@@ -351,6 +352,7 @@ public class LegalActivityListsActivity extends BaseActivity {
         handlerRequestService(mActivityTypeParameter, 1, mCityParameter, mAreaParameter);
 
     }
+
     /**
      * 判读是否有选择
      */
@@ -369,7 +371,10 @@ public class LegalActivityListsActivity extends BaseActivity {
         JapubService japubService = new JapubService(mContext);
         japubService.setShowProgress(true);
         japubService.setProgressShowContent(getResources().getString(R.string.get_ing));
-        japubService.getActivityList(mActivityTypeParameter, 1, mCityParameter, mAreaParameter, new BaseJsonService.IResultInfoListener() {
+        if (mAreaParameter != null) {
+            mCityParameter = mAreaParameter;
+        }
+        japubService.getActivityList(mActivityTypeParameter, 1, mCityParameter, new BaseJsonService.IResultInfoListener() {
             @Override
             public void onComplete(ArrayList<Object> values, String content) {
                 mInProgess = false;
@@ -455,10 +460,10 @@ public class LegalActivityListsActivity extends BaseActivity {
                     Intent intent = new Intent(LegalActivityListsActivity.this, LawVoteActivity.class);
                     intent.putExtra(LawActivityLookActivity.CSTR_EXTRA_TITLE_STR, "法制宣传-投票活动");
                     startActivity(intent);
-                }else {
+                } else {
                     Intent intent = new Intent(LegalActivityListsActivity.this, LawActivityLookActivity.class);
                     intent.putExtra(LawActivityLookActivity.CSTR_EXTRA_TITLE_STR, getString(R.string.law_Propaganda));
-                    intent.putExtra(LawActivityLookActivity.ACTIVITYLOOK,vo.getOid());
+                    intent.putExtra(LawActivityLookActivity.ACTIVITYLOOK, vo.getOid());
                     startActivity(intent);
                 }
             }
@@ -467,7 +472,10 @@ public class LegalActivityListsActivity extends BaseActivity {
 
     private void handlerRequestService(String mCardType, int i, String mCityParameter, String mAreaParameter) {
         JapubService service = new JapubService(mContext);
-        service.getActivityList(mCardType, i, mCityParameter, mAreaParameter, new BaseJsonService.IResultInfoListener() {
+        if (mAreaParameter != null) {
+            mCityParameter = mAreaParameter;
+        }
+        service.getActivityList(mCardType, i, mCityParameter, new BaseJsonService.IResultInfoListener() {
             @Override
             public void onComplete(ArrayList<Object> values, String content) {
                 mInProgess = false;
@@ -487,7 +495,7 @@ public class LegalActivityListsActivity extends BaseActivity {
                 }
                 //缓存数据
                 ActivityVO.saveVOList(mDataList, ActivityVO.dataListFileName(getApplicationContext(), SAVELISTDATAS));
-                if (!mDataList.isEmpty()&&mDataList.size()%Constants.CINT_PAGE_SIZE ==0) {
+                if (!mDataList.isEmpty() && mDataList.size() % Constants.CINT_PAGE_SIZE == 0) {
                     //设置是否可以上拉加载
                     mXrefreshView.setPullLoadEnable(true);
                     mXrefreshView.setLoadComplete(false);
@@ -532,13 +540,17 @@ public class LegalActivityListsActivity extends BaseActivity {
     }
 
     private void loadMoreDatas() {
+
         if (mInProgess) {
             return;
         }
         mInProgess = true;
         selectCondition();
         JapubService japubService = new JapubService(mContext);
-        japubService.getActivityList(mActivityTypeParameter, getNowPage() + 1, mCityParameter, mAreaParameter, new BaseJsonService.IResultInfoListener() {
+        if (mAreaParameter != null) {
+            mCityParameter = mAreaParameter;
+        }
+        japubService.getActivityList(mActivityTypeParameter, getNowPage() + 1, mCityParameter, new BaseJsonService.IResultInfoListener() {
             @Override
             public void onComplete(ArrayList<Object> values, String content) {
                 mInProgess = false;
@@ -574,7 +586,6 @@ public class LegalActivityListsActivity extends BaseActivity {
             }
         });
     }
-
 
 
     @Override

@@ -160,6 +160,7 @@ public class ShowInfomActivity extends BaseActivity implements View.OnClickListe
                     mThreeIsChick = true;
                     mFourIsChick = true;
                     break;
+
                 default:
                     break;
             }
@@ -206,6 +207,7 @@ public class ShowInfomActivity extends BaseActivity implements View.OnClickListe
                     mThreeIsChick = true;
                     mFourIsChick = false;
                     break;
+
                 default:
                     break;
             }
@@ -315,12 +317,12 @@ public class ShowInfomActivity extends BaseActivity implements View.OnClickListe
                     MediaStutas.SelectStutas(MediaStutas.Service);
                 } else if (!TextUtils.isEmpty(mRecordTime) && TextUtils.isEmpty(mPlayTime)) {
                     MediaStutas.SelectStutas(MediaStutas.Four);
-                }else {
+                } else {
                     MediaStutas.SelectStutas(MediaStutas.Four);
                 }
             } else if (mApplyMediaConfirm != null && mApplyMediaConfirm.equals("-1")) {
                 MediaStutas.SelectStutas(MediaStutas.Five);
-            }  else {
+            } else {
                 MediaStutas.SelectStutas(MediaStutas.Four);
             }
         } else if (mMediaStatus.equals(statusFiveMeidaNoAgree)) {//媒体不受理
@@ -385,7 +387,10 @@ public class ShowInfomActivity extends BaseActivity implements View.OnClickListe
         } else if (mMediaStatus.equals(statusFiveMeidaNoAgree)) {//媒体不受理
             JamedStutas.SelectStutas(JamedStutas.Five);
         } else if (mMediaStatus.equals(statusSixFinish)) {//调解结束
-            JamedStutas.SelectStutas(JamedStutas.Six);
+            if (mMediaConfirm == 0) {
+                JamedStutas.SelectStutas(JamedStutas.Two);
+            } else
+                JamedStutas.SelectStutas(JamedStutas.Six);
         }
     }
 

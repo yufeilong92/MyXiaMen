@@ -66,7 +66,7 @@ public class Constants extends net.lawyee.mobilelib.Constants {
 	public static final String ORGWEITUO="929867e6ffd04d0e9b4e7f9e6067636a";//机构委托
 	public static final String APPLYNOTAOID="1d9cca148020439381272d9fb990c703";//公证类型
 	public static final String APPLYAILITY="68665233a40c472aa1c19805bb49e3d6";//申请人行为能力
-	public static final String APPLYJAMEDNOHANDLE="7f8e719f5288426388efe9c1d9a9019a";//人民调解不予处理原因
+	public static final String APPLYJAMEDNOHANDLE="c7dd80590fb94cd7a070df98b3a23725";//人民调解不予处理原因
 	public static final String ACTIVITYOID="a4a4a5a819dd46dc963dcfd1afb1e637";//活动类型
 	public static final String CONSULTTYPE="01c689a6162f405c8e0847f12c1b2b8b";//咨询分类
 	public static final String VOTEOID="2c0c75c991ba41c7ac8850e7b5c8f74f";//投票类oid

@@ -63,7 +63,7 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <com.lqr.recyclerview.LQRRecyclerView
+        <com.lawyee.apppublic.widget.recycleView.LQRRecyclerView
             android:id="@+id/cvMessage"
             android:layout_width="match_parent"
             android:background="@color/activity_content_bg"
@@ -75,89 +75,92 @@
             android:layout_height="1dp"
             android:background="#ccc"
             />
-
-        <LinearLayout
+        <org.kymjs.chat.widget.KJChatKeyboard
+            android:id="@+id/chat_msg_input_box"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"/>
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
 
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center">-->
 
-                <EditText
-                    android:id="@+id/etContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@null"
-                    android:drawableBottom="@drawable/selector_edit_focus"
-                    android:visibility="visible"/>
+                <!--<EditText-->
+                    <!--android:id="@+id/etContent"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:background="@null"-->
+                    <!--android:drawableBottom="@drawable/selector_edit_focus"-->
+                    <!--android:visibility="visible"/>-->
 
 
 
-            </RelativeLayout>
+            <!--</RelativeLayout>-->
 
-            <ImageView
-                android:id="@+id/ivEmo"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_margin="5dp"
-                android:src="@drawable/selector_ic_cheat_emo"/>
+            <!--<ImageView-->
+                <!--android:id="@+id/ivEmo"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:src="@drawable/selector_ic_cheat_emo"/>-->
 
-            <ImageView
-                android:id="@+id/ivMore"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="7dp"
-                android:src="@drawable/selector_ic_cheat_add"
-                android:visibility="gone"/>
+            <!--<ImageView-->
+                <!--android:id="@+id/ivMore"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginRight="7dp"-->
+                <!--android:src="@drawable/selector_ic_cheat_add"-->
+                <!--android:visibility="gone"/>-->
 
-            <Button
-                android:id="@+id/btnSend"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="43dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="4dp"
-                android:background="@drawable/shape_session_btn_send"
-                android:text="@string/send"
-                android:textColor="@color/white"
-                android:textSize="13sp"
-                android:visibility="gone"/>
+            <!--<Button-->
+                <!--android:id="@+id/btnSend"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:layout_width="43dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_marginRight="4dp"-->
+                <!--android:background="@drawable/shape_session_btn_send"-->
+                <!--android:text="@string/send"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="13sp"-->
+                <!--android:visibility="gone"/>-->
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#ccc"
-            />
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="#ccc"-->
+            <!--/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
-    <FrameLayout
-        android:id="@+id/flEmotionView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
-        <!--表情-->
-        <com.lqr.emoji.EmotionLayout
-            android:id="@+id/elEmotion"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            />
-        <!--其他功能-->
-        <include
-            android:id="@+id/llMore"
-            layout="@layout/include_func_layout"
-            android:visibility="gone"/>
-    </FrameLayout>
+    <!--<FrameLayout-->
+        <!--android:id="@+id/flEmotionView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone">-->
+        <!--&lt;!&ndash;表情&ndash;&gt;-->
+        <!--<com.lqr.emoji.EmotionLayout-->
+            <!--android:id="@+id/elEmotion"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:visibility="gone"-->
+            <!--/>-->
+        <!--&lt;!&ndash;其他功能&ndash;&gt;-->
+        <!--<include-->
+            <!--android:id="@+id/llMore"-->
+            <!--layout="@layout/include_func_layout"-->
+            <!--android:visibility="gone"/>-->
+    <!--</FrameLayout>-->
 </LinearLayout>

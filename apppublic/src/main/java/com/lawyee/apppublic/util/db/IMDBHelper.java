@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.lawyee.apppublic.config.ApplicationSet;
 import com.lawyee.apppublic.smack.IMNotificationManager;
@@ -13,12 +14,15 @@ import com.lawyee.apppublic.smack.SmackManager;
 import com.lawyee.apppublic.smack.StatusMode;
 import com.lawyee.apppublic.ui.lawyerService.SessionActivity;
 import com.lawyee.apppublic.vo.ConsulationRecordVO;
+import com.lawyee.apppublic.vo.UserVO;
 import com.nostra13.universalimageloader.utils.L;
 
 import net.lawyee.mobilelib.app.AppContext;
 import net.lawyee.mobilelib.processes.AndroidProcesses;
 import net.lawyee.mobilelib.utils.StringUtil;
 
+import org.jivesoftware.smack.SmackException;
+import org.jivesoftware.smack.chat.Chat;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.roster.RosterEntry;
@@ -26,6 +30,9 @@ import org.jivesoftware.smack.roster.RosterGroup;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smackx.offline.OfflineMessageManager;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -132,10 +139,54 @@ public class IMDBHelper {
             }
 
         }
+        Log.e("czqmessage.getBody()1",message.getBody());
+        String str1 = null;
+        try {
+            str1 = URLDecoder.decode(message.getBody(),"UTF-8");
+            message.setBody(null);
+            message.setBody(str1);
+            Log.e("czqmessage.getBody()2",str1);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
 
+        Log.e("czqmessage.getBody()3",message.getBody());
+        UserVO userVO = ApplicationSet.getInstance().getUserVO();
+        if(message.getBody().equals("start_consult")&&!userVO.isPublicUser()&&userVO != null) {
+            String str = "您好！请问有什么可以帮助您？";
+            String mBusinessId = message.getBusinessId();
+//            if (StringUtil.isEmpty(message.getBusinessId())) {
+//                mBusinessId = StringUtil.getUUID();
+//                IMBusinessIdVO.setNewBusinessId
+//                        (ApplicationSet.getInstance().getApplicationContext(), mBusinessId, fromUser, userVO.getOpenfireLoginId());
+//            }
+            org.jivesoftware.smack.packet.Message m = new org.jivesoftware.smack.packet.Message();
+            String str3= null;
+            try {
+                str3 = URLEncoder.encode(str,"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            m.setBody(str3);
+            m.setBusinessId(mBusinessId);
+            Chat mChat = SmackManager.getInstance().createChat(SmackManager.getInstance().getChatJid(fromUser, ""));
+            try {
+
+                mChat.sendMessage(m);
+            } catch (SmackException.NotConnectedException e) {
+                e.printStackTrace();
+            }
+
+                IMDBHelper.getInstance().addChatMessageToDB(ApplicationSet.getInstance().getOpenfireLoginId(),
+                        ChatProvider.ChatConstants.OUTGOING,
+                        fromUser, username, ChatProvider.ChatConstants.DS_SENT_OR_READ, System.currentTimeMillis(),
+                        str, mBusinessId, ChatProvider.ChatConstants.BP_NEW);
+
+
+        }else {
         //入库
         IMDBHelper.getInstance().addChatMessageToDB(toUser, ChatProvider.ChatConstants.INCOMING,
-                fromUser,username, readstatus,System.currentTimeMillis(),message,
+                fromUser, username, readstatus, System.currentTimeMillis(), message,
                 ChatProvider.ChatConstants.BP_NEW);
         if(!hint||readstatus==ChatProvider.ChatConstants.DS_SENT_OR_READ)
             return;
@@ -143,6 +194,8 @@ public class IMDBHelper {
         IMNotificationManager.getInstance().notifyClient(fromUser,username,
                 message.getBody(),message.getBusinessId());
     }
+
+}
 
     /**
      * 聊天信息入库
@@ -158,9 +211,10 @@ public class IMDBHelper {
      *                 @ChatConstants.BP_NEW @ChatConstants.BP_OLD
      */
     public void addChatMessageToDB(String userid,int direction,String jid,String fromUserName,int delivery_status, long ts,
-                                   Message message,int bprocess)
-    {
-        addChatMessageToDB(userid,direction,jid,fromUserName,delivery_status,ts,message.getBody(),message.getBusinessId(),bprocess);
+                                   Message message,int bprocess)  {
+
+            addChatMessageToDB(userid,direction,jid,fromUserName,delivery_status,ts,message.getBody(),message.getBusinessId(),bprocess);
+
     }
     /**
      * 聊天信息入库
@@ -177,12 +231,16 @@ public class IMDBHelper {
      *                 @ChatConstants.BP_NEW @ChatConstants.BP_OLD
      */
     public void addChatMessageToDB(String userid,int direction,String jid,String fromUserName,int delivery_status, long ts,
-                                   String message,String businessid,int bprocess)
-    {
+                                   String message,String businessid,int bprocess)   {
         if(StringUtil.isEmpty(message))//空信息不入库
             return;
         ContentValues values = new ContentValues();
-
+//        String str = null;
+//        try {
+//            str = URLDecoder.decode(message,"UTF-8");
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        }
         values.put(ChatProvider.ChatConstants.USERID, userid);
         values.put(ChatProvider.ChatConstants.DIRECTION, direction);
         values.put(ChatProvider.ChatConstants.JID, jid);
@@ -209,11 +267,11 @@ public class IMDBHelper {
         if (StringUtil.isEmpty(businessId))
             mContentResolver.update(ChatProvider.CONTENT_URI, values,
                     ChatProvider.ChatConstants.USERID + " = ? and "+ChatProvider.ChatConstants.JID + " = ?",
-        new String[]{userid,jid});
+                    new String[]{userid,jid});
         else {
             mContentResolver.update(ChatProvider.CONTENT_URI, values,
                     ChatProvider.ChatConstants.USERID + " = ? and "+ChatProvider.ChatConstants.JID + " = ? and "+
-                    ChatProvider.ChatConstants.BUSINESSID + " = ?",
+                            ChatProvider.ChatConstants.BUSINESSID + " = ?",
                     new String[]{userid,jid,businessId});
         }
     }

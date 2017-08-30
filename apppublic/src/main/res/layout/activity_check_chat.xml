@@ -25,7 +25,7 @@
 
 
 
-        <com.lqr.recyclerview.LQRRecyclerView
+        <com.lawyee.apppublic.widget.recycleView.LQRRecyclerView
             android:id="@+id/cvMessage"
             android:layout_width="match_parent"
             android:background="@color/activity_content_bg"

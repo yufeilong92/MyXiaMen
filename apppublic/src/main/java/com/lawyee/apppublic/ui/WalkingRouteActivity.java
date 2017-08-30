@@ -1,5 +1,6 @@
 package com.lawyee.apppublic.ui;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -26,10 +27,13 @@ import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.search.core.PoiInfo;
 import com.baidu.mapapi.search.core.SearchResult;
@@ -110,8 +114,8 @@ public class WalkingRouteActivity extends BaseActivity {
             Toast.makeText(this, "数据为空", Toast.LENGTH_SHORT).show();
             return;
         }
-        showMapWithLocationClient();
-        initBaiDuMap();
+        checkLocal();
+
 
     }
 
@@ -125,6 +129,7 @@ public class WalkingRouteActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 List<String> mData=new ArrayList<>();
+                mData.add("显示路线");
                 mData.add("百度地图导航");
                 mData.add("取消");
                 handlerPopWindos(mData);
@@ -149,35 +154,41 @@ public class WalkingRouteActivity extends BaseActivity {
         applyPopAdapter.setOnRecyclerItemClickListener(new FunctionAdpater.OnRecyclerItemClickListener() {
             @Override
             public void OnItemClickListener(View view, String itemVo, int position) {
-                if(position==1){
+                if(position==2){
                     mPopWindowsShow.dismiss();
                     return;
                 }
-                Intent intent;
-                if(isAvilible(mContext,"com.baidu.BaiduMap")){//传入指定应用包名
+                if (position==0){
+                    mPopWindowsShow.dismiss();
+                    showMapWithLocationClient();
+                    initBaiDuMap();
+                }else {
+                    Intent intent;
+                    if (isAvilible(mContext, "com.baidu.BaiduMap")) {//传入指定应用包名
 
-                    try {
+                        try {
 //                          intent = Intent.getIntent("intent://map/direction?origin=latlng:34.264642646862,108.95108518068|name:我家&destination=大雁塔&mode=driving®ion=西安&src=yourCompanyName|yourAppName#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
-                        intent = Intent.getIntent("intent://map/direction?" +
-                                //"origin=latlng:"+"34.264642646862,108.95108518068&" +   //起点  此处不传值默认选择当前位置
-                                "destination=latlng:"+mLatitude+","+mLongitude+"|name:我的目的地"+        //终点
-                                "&mode=walking&" +          //导航路线方式
-                                "&src=司法服务#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
-                        mContext.startActivity(intent); //启动调用
-                    } catch (URISyntaxException e) {
-                        Log.e("intent", e.getMessage());
+                            intent = Intent.getIntent("intent://map/direction?" +
+                                    //"origin=latlng:"+"34.264642646862,108.95108518068&" +   //起点  此处不传值默认选择当前位置
+                                    "destination=latlng:" + mLatitude + "," + mLongitude + "|name:我的目的地" +        //终点
+                                    "&mode=walking&" +          //导航路线方式
+                                    "&src=司法服务#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
+                            mContext.startActivity(intent); //启动调用
+                        } catch (URISyntaxException e) {
+                            Log.e("intent", e.getMessage());
+                        }
+                    } else {//未安装
+                        //market为路径，id为包名
+                        String map_address = "http://api.map.baidu.com/direction?origin=latlng:" +
+                                mLatLng.latitude + "," + mLatLng.longitude + "|name:&destination=latlng:" +
+                                mLatitude + "," + mLongitude + "|name:&mode=walking&region=" +
+                                "中国&output=html&src=意法|司法";
+                        intent = new Intent();
+                        intent.setAction("android.intent.action.VIEW");
+                        Uri content_url = Uri.parse(map_address);
+                        intent.setData(content_url);
+                        startActivity(intent);
                     }
-                }else{//未安装
-                    //market为路径，id为包名
-                    String map_address="http://api.map.baidu.com/direction?origin=latlng:" +
-                            mLatLng.latitude+","+mLatLng.longitude+"|name:&destination=latlng:"+
-                            mLatitude+","+mLongitude+"|name:&mode=walking&region=" +
-                            "中国&output=html&src=意法|司法";
-                     intent = new Intent();
-                    intent.setAction("android.intent.action.VIEW");
-                    Uri content_url = Uri.parse(map_address);
-                    intent.setData(content_url);
-                    startActivity(intent);
                 }
             }
         });
@@ -204,18 +215,17 @@ public class WalkingRouteActivity extends BaseActivity {
         progressDialog.show();
     }
     private void initBaiDuMap() {
-        mBaiduMap = mMap.getMap();
-        // 开启定位图层
-        mBaiduMap.setMyLocationEnabled(true);
-
-        // 定位初始化
-        mLocationClient = new LocationClient(this);
-        mLocationClient.registerLocationListener(myListener);
-
-        // 设置地图缩放级别为15
-        mBaiduMap.setMapStatus(MapStatusUpdateFactory
-                .newMapStatus(new MapStatus.Builder().zoom(15).build()));
-
+//        mBaiduMap = mMap.getMap();
+//        // 开启定位图层
+//        mBaiduMap.setMyLocationEnabled(true);
+//
+//        // 定位初始化
+//        mLocationClient = new LocationClient(this);
+//        mLocationClient.registerLocationListener(myListener);
+//
+//        // 设置地图缩放级别为15
+//        mBaiduMap.setMapStatus(MapStatusUpdateFactory
+//                .newMapStatus(new MapStatus.Builder().zoom(15).build()));
         LocationClientOption option = new LocationClientOption();
         option.setOpenGps(true); // 打开gps
         option.setCoorType("bd09ll"); // 设置坐标类型
@@ -271,25 +281,35 @@ public class WalkingRouteActivity extends BaseActivity {
         mMap.onPause();
     }
 
-//    public void onClick(View view) {
-//        switch (view.getId()) {
-//            case R.id.bt_buxin://步行
-//                mMethod = BuXin;
-//                cleanView();
-//                initBuXin()
-//                break;
-//            case R.id.bt_gongjiao://公交
-//                mMethod = GongJiao;
-//                cleanView();
-//                initGongJiao();
-//                break;
-//            case R.id.bt_zijia://自驾
-//                mMethod = ZiJia;
-//                cleanView();
-//                initZiJia();
-//                break;
-//        }
-//    }
+    /**
+     * 查看别人发过来，或者已经发送出去的位置信息
+     *
+     * @param latitude   维度
+     * @param longtitude 经度
+     *
+     */
+    private void showMap(double latitude, double longtitude) {
+
+        mBaiduMap = mMap.getMap();
+        // 开启定位图层
+        mBaiduMap.setMyLocationEnabled(true);
+
+        // 定位初始化
+        mLocationClient = new LocationClient(this);
+        mLocationClient.registerLocationListener(myListener);
+
+        // 设置地图缩放级别为15
+        mBaiduMap.setMapStatus(MapStatusUpdateFactory
+                .newMapStatus(new MapStatus.Builder().zoom(15).build()));
+
+        LatLng llA = new LatLng(latitude, longtitude);
+        OverlayOptions ooA = new MarkerOptions().position(llA).icon(BitmapDescriptorFactory
+                .fromResource(R.drawable.icon_yourself_lication))
+                .zIndex(4).draggable(true);
+        mBaiduMap.addOverlay(ooA);
+        MapStatusUpdate u = MapStatusUpdateFactory.newLatLngZoom(llA, 17.0f);
+        mBaiduMap.animateMapStatus(u);
+    }
 
     private void cleanView() {
         mBaiduMap.clear();
@@ -343,21 +363,7 @@ public class WalkingRouteActivity extends BaseActivity {
                     progressDialog.dismiss();
                 }
 //
-//                List<WalkingRouteLine.WalkingStep> allStep = line.getAllStep();
-//                String content = "";
-//                for (int i = 0; i < allStep.size(); i++) {
-//                    WalkingRouteLine.WalkingStep walkingStep = allStep.get(i);
-//                    String instructions = walkingStep.getInstructions();
-//                    if (i < allStep.size()-1) {
-//                        content += instructions + "\n";
-//                    } else {
-//                        content += instructions;
-//                    }
-//                }
-//                mTvContent.clearComposingText();
-//                mTvContent.setText(content);
-//                mSl.setVisibility(View.VISIBLE);
-//                setHeight();
+
             }
         }
 
@@ -375,33 +381,7 @@ public class WalkingRouteActivity extends BaseActivity {
         public void onGetDrivingRouteResult(DrivingRouteResult drivingRouteResult) {
 
         }
-        /**
-         * 测量高度
-         */
-//        private void setHeight() {
-//            final ViewGroup.LayoutParams layoutParams = mSl.getLayoutParams();
-//            mTvContent.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-//                @Override
-//                public boolean onPreDraw() {
-//                    mTvContent.getViewTreeObserver().removeOnPreDrawListener(this);
-//                    WindowManager windowManager = WalkingRouteActivity.this.getWindowManager();
-//                    int measuredHeight = mTvContent.getMeasuredHeight();
-//                    if(measuredHeight>=windowManager.getDefaultDisplay().getHeight()/2){
-//                        if(measuredHeight/2>=windowManager.getDefaultDisplay().getHeight()/2){
-//                            layoutParams.height=windowManager.getDefaultDisplay().getHeight()/2;
-//                        }else{
-//                            layoutParams.height= measuredHeight/2;
-//                        }
-//                    }else{
-//                        layoutParams.height=measuredHeight;
-//                    }
-//                    layoutParams.width= ViewGroup.LayoutParams.MATCH_PARENT;
-//                    mSl.setLayoutParams(layoutParams);
-//                    return true;
-//                }
-//            });
-//
-//        }
+
 
         /**
          * 室内路线规划回调
@@ -439,7 +419,7 @@ public class WalkingRouteActivity extends BaseActivity {
                 builder.target(mLatLng).zoom(16.0f);
                 mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
                 cleanView();
-                initBuXin();
+               initBuXin();
             }
 
         }
@@ -484,5 +464,27 @@ public class WalkingRouteActivity extends BaseActivity {
         return packageNames.contains(packageName);
     }
 
+    /**
+     * 检查是否有访问定位的权限
+     */
+    public void checkLocal() {
+        String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION};
+        performCodeWithPermission(getString(R.string.rationale_location), RC_LOCATION_PERM, perms, new PermissionCallback() {
+            @Override
+            public void hasPermission(List<String> allPerms) {
+//                mIntent = new Intent(mContext, SessionMapActivity.class);
+//                startActivityForResult(mIntent, MAP_PICKER);
+                Log.e("czq","有权限。。。。。。。。。。");
+                showMap(mLatitude,mLongitude);
 
+            }
+
+            @Override
+            public void noPermission(List<String> deniedPerms, List<String> grantedPerms, Boolean hasPermanentlyDenied) {
+                if (hasPermanentlyDenied) {
+                    alertAppSetPermission(getString(R.string.rationale_ask_again), RC_SETTINGS_SCREEN);
+                }
+            }
+        });
+    }
 }

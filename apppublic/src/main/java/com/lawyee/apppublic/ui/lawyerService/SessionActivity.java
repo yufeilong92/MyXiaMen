@@ -8,25 +8,18 @@ import android.database.ContentObserver;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.lawyee.apppublic.R;
 import com.lawyee.apppublic.adapter.SessionAdapter;
 import com.lawyee.apppublic.config.ApplicationSet;
+import com.lawyee.apppublic.dal.BaseJsonService;
+import com.lawyee.apppublic.dal.JalawUserService;
 import com.lawyee.apppublic.exception.IMException;
 import com.lawyee.apppublic.smack.SmackListenerManager;
 import com.lawyee.apppublic.smack.SmackManager;
@@ -39,17 +32,13 @@ import com.lawyee.apppublic.util.XMPPHelper;
 import com.lawyee.apppublic.util.db.ChatProvider;
 import com.lawyee.apppublic.util.db.IMDBHelper;
 import com.lawyee.apppublic.util.db.RosterProvider;
+import com.lawyee.apppublic.vo.ChatMessage;
 import com.lawyee.apppublic.vo.FileMessageVO;
 import com.lawyee.apppublic.vo.GeolocationVO;
 import com.lawyee.apppublic.vo.IMBusinessIdVO;
 import com.lawyee.apppublic.vo.LoginResult;
-import com.lawyee.apppublic.vo.Message;
 import com.lawyee.apppublic.vo.UserVO;
-import com.lqr.emoji.EmotionKeyboard;
-import com.lqr.emoji.EmotionLayout;
-import com.lqr.emoji.IEmotionExtClickListener;
-import com.lqr.emoji.IEmotionSelectedListener;
-import com.lqr.recyclerview.LQRRecyclerView;
+import com.lawyee.apppublic.widget.recycleView.LQRRecyclerView;
 
 import net.lawyee.mobilelib.utils.L;
 import net.lawyee.mobilelib.utils.StringUtil;
@@ -57,8 +46,15 @@ import net.lawyee.mobilelib.utils.T;
 
 import org.jivesoftware.smack.chat.Chat;
 import org.jivesoftware.smack.packet.Presence;
+import org.kymjs.chat.OnOperationListener;
+import org.kymjs.chat.bean.Emojicon;
+import org.kymjs.chat.bean.Faceicon;
+import org.kymjs.chat.emoji.DisplayRules;
+import org.kymjs.chat.widget.KJChatKeyboard;
 import org.reactivestreams.Publisher;
 
+import java.io.File;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,7 +87,7 @@ import static com.lawyee.apppublic.ui.personalcenter.lawyer.ConsultDealActivity.
  * @Copyright: 2017/6/29 www.lawyee.com Inc. All rights reserved.
  * 注意：本内容仅限于北京法意科技有限公司内部传阅，禁止外泄以及用于其他的商业目
  */
-public class SessionActivity extends BaseActivity implements IEmotionSelectedListener, View.OnClickListener {
+public class SessionActivity extends BaseActivity implements  View.OnClickListener {
     /**
      * 传入参数-聊天对象，如果是律师，传入oid
      */
@@ -100,21 +96,12 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
     public static final int MAP_PICKER = 10001;
     public static final int DEAL = 20001;
     private LQRRecyclerView mCvMessage;
-    private EditText mEtContent;
-    private ImageView mIvEmo;
-    private ImageView mIvMore;
-    private Button mBtnSend;
-    private LinearLayout mLlContent;
-    private EmotionLayout mElEmotion;
-    private ImageView mIvAlbum;
-    private ImageView mIvLocation;
-    private FrameLayout mFlEmotionView;
-    private EmotionKeyboard mEmotionKeyboard;
-    private LinearLayout mLlMore;
+    private KJChatKeyboard mBox;
+
     private Intent mIntent;
     private Context mContext;
     private SessionAdapter mAdapter;
-    private List<Message> mMessages = new ArrayList<>();//消息队列
+    private List<ChatMessage> mMessages = new ArrayList<>();//消息队列
     private String mChatOid;
     /**
      * 业务Id
@@ -160,6 +147,8 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
             finish();
             return;
         }
+        initMessageInputToolBox();
+        getBusinessId();
     }
 
     @Override
@@ -171,26 +160,18 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
 
     private void initView() {
         mCvMessage = (LQRRecyclerView) findViewById(R.id.cvMessage);
-        mEtContent = (EditText) findViewById(R.id.etContent);
-        mIvEmo = (ImageView) findViewById(R.id.ivEmo);
-        mIvMore = (ImageView) findViewById(R.id.ivMore);
-        mBtnSend = (Button) findViewById(R.id.btnSend);
-        mLlContent = (LinearLayout) findViewById(R.id.llContent);
-        mElEmotion = (EmotionLayout) findViewById(R.id.elEmotion);
-        mLlMore = (LinearLayout) findViewById(R.id.llMore);
-        mIvAlbum = (ImageView) findViewById(R.id.ivAlbum);
-        mIvLocation = (ImageView) findViewById(R.id.ivLocation);
-        mFlEmotionView = (FrameLayout) findViewById(R.id.flEmotionView);
+        mBox=  (KJChatKeyboard) findViewById(R.id.chat_msg_input_box);
         mViewNull=findViewById(R.id.view_null);
         mTvFinish= (TextView) findViewById(R.id.tv_finish);
         mTvSave= (TextView) findViewById(R.id.tv_save);
-        mElEmotion.attachEditText(mEtContent);
         if (!ApplicationSet.getInstance().getUserVO().isPublicUser()) {
             mViewNull.setVisibility(View.GONE);
             mTvFinish.setVisibility(View.VISIBLE);
             mTvSave.setVisibility(View.VISIBLE);
         }
-        initEmotionKeyboard();
+        mTvFinish.setOnClickListener(this);
+        mTvSave.setOnClickListener(this);
+        //initEmotionKeyboard();
     }
 
     public boolean ismIsOnline() {
@@ -204,41 +185,44 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
         mChangeTitleHandler.sendEmptyMessageDelayed(0, 200);
     }
 
-    public void setBusinessId(String businessId) {
-        if (StringUtil.isEmpty(businessId) || businessId.equals(getBusinessId()))
-            return;
-        mBusinessId = businessId;
-        UserVO userVO = ApplicationSet.getInstance().getUserVO();
-        if (userVO == null || userVO.isPublicUser())//公众则不管业务id
-            return;
-        IMBusinessIdVO vo = new IMBusinessIdVO();
-        vo.setBusinessId(mBusinessId);
-        vo.setJid(mChatOid);
-        vo.setUserid(userVO.getOpenfireLoginId());
-        IMBusinessIdVO.saveVO(vo, IMBusinessIdVO.dataFileName(SessionActivity.this, userVO.getOpenfireLoginId(), mChatOid));
-    }
 
-    public String getBusinessId() {
-        if (StringUtil.isEmpty(mBusinessId)) {
-            UserVO userVO = ApplicationSet.getInstance().getUserVO();
-            if (userVO == null || userVO.isPublicUser())//公众则不管业务id
-                return "";
-            //律师，如果为空时，则读取原来的，如果原来的也为空，则重新生成一个（并记录这个）
-            IMBusinessIdVO vo = (IMBusinessIdVO) IMBusinessIdVO.loadVO(IMBusinessIdVO.dataFileName(SessionActivity.this,
-                    userVO.getOpenfireLoginId(), mChatOid));
-            if (vo == null || StringUtil.isEmpty(vo.getBusinessId())) {
 
-                mBusinessId = StringUtil.getUUID();
-                IMBusinessIdVO.setNewBusinessId(mContext,mBusinessId,mChatOid,userVO.getOpenfireLoginId());
-//                vo = new IMBusinessIdVO();
-//                vo.setBusinessId(mBusinessId);
-//                vo.setJid(mChatOid);
-//                vo.setUserid(userVO.getOpenfireLoginId());
-//                IMBusinessIdVO.saveVO(vo, IMBusinessIdVO.dataFileName(SessionActivity.this, userVO.getOpenfireLoginId(), mChatOid));
-            } else
-                mBusinessId = vo.getBusinessId();
+    public void  getBusinessId() {
+        if (getInProgess())
+            return;
+        setInProgess(true);
+        String lawyerId;
+        String publicid;
+        if(ApplicationSet.getInstance().getUserVO().isPublicUser()){
+            publicid=ApplicationSet.getInstance().getUserVO().getOpenfireLoginId();
+            lawyerId=mChatOid;
+        }else{
+            lawyerId=ApplicationSet.getInstance().getUserVO().getOpenfireLoginId();
+            publicid=mChatOid;
         }
-        return mBusinessId;
+        JalawUserService service = new JalawUserService(mContext);
+        service.setProgressShowContent(mContext.getString(R.string.submit_ing));
+        service.setShowProgress(true);
+        service.getBusinessid(lawyerId, publicid,  new BaseJsonService.IResultInfoListener() {
+                    @Override
+                    public void onComplete(ArrayList<Object> values, String content) {
+                        setInProgess(false);
+                        if(values==null||values.isEmpty()||!(values.get(0) instanceof IMBusinessIdVO))
+                        {
+                            T.showLong(mContext,getString(R.string.get_error_noeffectdata));
+                             finish();
+                        }
+                        mBusinessId= ((IMBusinessIdVO) values.get(0)).getBusinessId();
+                    }
+
+                    @Override
+                    public void onError(String msg, String content) {
+                        setInProgess(false);
+                        T.showLong(mContext, msg);
+                        finish();
+                    }
+                });
+
     }
 
     Handler mChangeTitleHandler = new Handler() {
@@ -327,7 +311,7 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
             sendMessage("start_consult", false);
         }
         checkOnline(true);
-        initListener();
+      //  initListener();
         setAdapter();
         //设置相关聊天消息已读
         IMDBHelper.getInstance().updateChatMessageIsRead(ApplicationSet.getInstance().getOpenfireLoginId(),mChatOid,"");
@@ -354,178 +338,7 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
     @Override
     protected void onResume() {
         super.onResume();
-        mEtContent.clearFocus();
-    }
-
-    //设置 表情布局监听及其他监听
-    public void initListener() {
-        mIvAlbum.setOnClickListener(this);
-        mIvLocation.setOnClickListener(this);
-        mTvFinish.setOnClickListener(this);
-        mTvSave.setOnClickListener(this);
-        mElEmotion.setEmotionSelectedListener(this);
-        mElEmotion.setEmotionAddVisiable(true);
-        mElEmotion.setEmotionSettingVisiable(true);
-
-        mElEmotion.setEmotionExtClickListener(new IEmotionExtClickListener() {
-            @Override
-            public void onEmotionAddClick(View view) {
-                Toast.makeText(getApplicationContext(), "add", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onEmotionSettingClick(View view) {
-                Toast.makeText(getApplicationContext(), "setting", Toast.LENGTH_SHORT).show();
-            }
-        });
-        mLlContent.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        closeBottomAndKeyboard();
-                        break;
-                }
-                return false;
-            }
-        });
-        mEtContent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                hideEmotionLayout();
-                hideMoreLayout();
-            }
-        });
-        mEtContent.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (mEtContent.getText().toString().trim().length() > 0) {
-                    mBtnSend.setVisibility(View.VISIBLE);
-                    mIvMore.setVisibility(View.GONE);
-                } else {
-                    mBtnSend.setVisibility(View.GONE);
-                    //隐藏add按钮
-                  //  mIvMore.setVisibility(View.VISIBLE);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        mBtnSend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String content = mEtContent.getText().toString();
-                sendMessage(content, true);
-
-            }
-        });
-    }
-
-    //初始化 EmotionKeyboard
-    private void initEmotionKeyboard() {
-        mEmotionKeyboard = EmotionKeyboard.with(this);
-        mEmotionKeyboard.bindToEditText(mEtContent);
-        mEmotionKeyboard.bindToContent(mLlContent);
-        mEmotionKeyboard.setEmotionLayout(mFlEmotionView);
-        mEmotionKeyboard.bindToEmotionButton(mIvEmo, mIvMore);
-        mEmotionKeyboard.setOnEmotionButtonOnClickListener(new EmotionKeyboard.OnEmotionButtonOnClickListener() {
-            @Override
-            public boolean onEmotionButtonOnClickListener(View view) {
-                switch (view.getId()) {
-                    case R.id.ivEmo:
-                        if (!mElEmotion.isShown()) {
-                            if (mLlMore.isShown()) {
-                                showEmotionLayout();
-                                hideMoreLayout();
-                                return true;
-                            }
-                        } else if (mElEmotion.isShown() && !mLlMore.isShown()) {
-                            mIvEmo.setSelected(false);
-                            return false;
-                        }
-                        showEmotionLayout();
-                        hideMoreLayout();
-                        break;
-                    case R.id.ivMore:
-                        if (!mLlMore.isShown()) {
-                            if (mElEmotion.isShown()) {
-                                showMoreLayout();
-                                hideEmotionLayout();
-                                return true;
-                            }
-                        } else if (mLlMore.isShown() && !mElEmotion.isShown()) {
-                            mIvMore.setSelected(false);
-                            return false;
-                        }
-                        showMoreLayout();
-                        hideEmotionLayout();
-                        ;
-                        break;
-                }
-                return false;
-            }
-        });
-    }
-
-    //显示表情视图
-    private void showEmotionLayout() {
-        mElEmotion.setVisibility(View.VISIBLE);
-        mIvEmo.setSelected(true);
-    }
-
-    //隐藏表情视图
-    private void hideEmotionLayout() {
-        mElEmotion.setVisibility(View.GONE);
-        mIvEmo.setSelected(false);
-    }
-
-    //显示底部视图
-    private void showMoreLayout() {
-        mLlMore.setVisibility(View.VISIBLE);
-        mIvMore.setSelected(true);
-    }
-
-    //隐藏底部视图
-    private void hideMoreLayout() {
-        mLlMore.setVisibility(View.GONE);
-        mIvMore.setSelected(false);
-    }
-
-    //关闭底部视图和键盘
-    private void closeBottomAndKeyboard() {
-        mElEmotion.setVisibility(View.GONE);
-        mLlMore.setVisibility(View.GONE);
-        if (mEmotionKeyboard != null) {
-            mEmotionKeyboard.interceptBackPress();
-        }
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (mElEmotion.isShown() || mLlMore.isShown()) {
-            mEmotionKeyboard.interceptBackPress();
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    @Override
-    public void onEmojiSelected(String key) {
-        Log.e("czq", "onEmojiSelected : " + key);
-    }
-
-    @Override
-    public void onStickerSelected(String categoryName, String stickerName, String stickerBitmapPath) {
-        Toast.makeText(getApplicationContext(), stickerBitmapPath, Toast.LENGTH_SHORT).show();
-        Log.e("czq", "stickerBitmapPath : " + stickerBitmapPath);
+        //mEtContent.clearFocus();
     }
 
     @Override
@@ -545,7 +358,7 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
                 break;
             case R.id.tv_save:
                 Intent intent1=new Intent(mContext, ConsultDealActivity.class);
-                intent1.putExtra(CONSULTBUSINESS,getBusinessId());
+                intent1.putExtra(CONSULTBUSINESS,mBusinessId);
                 intent1.putExtra(CONSULTPERSON,getBaseTitle());
                 intent1.putExtra(CONSULTPERSONID,mChatOid);
                 startActivityForResult(intent1, DEAL);
@@ -576,6 +389,7 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
         if (!mIsOnline) {
             T.showLong(this, getBaseTitle() + "已经离线，可能无法收到您的消息!");
         }
+
         Observable<Boolean> observable = Observable.create(
                 new ObservableOnSubscribe<Boolean>() {
                     @Override
@@ -587,15 +401,18 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
                         if (mChat == null)
                             throw new IMException("无法创建聊天对象");
                         org.jivesoftware.smack.packet.Message m = new org.jivesoftware.smack.packet.Message();
-                        m.setBody(message);
-                        m.setBusinessId(getBusinessId());
+                        String str=URLEncoder.encode(message,"UTF-8");
+                        m.setBody(str);
+                        m.setBusinessId(mBusinessId);
                         mChat.sendMessage(m);
                         //入库
                         if (bsave)
-                            IMDBHelper.getInstance().addChatMessageToDB(ApplicationSet.getInstance().getOpenfireLoginId(),
-                                    ChatProvider.ChatConstants.OUTGOING,
-                                    mChatOid, getBaseTitle(), ChatProvider.ChatConstants.DS_SENT_OR_READ, System.currentTimeMillis(),
-                                    message, getBusinessId(), ChatProvider.ChatConstants.BP_NEW);
+
+                                IMDBHelper.getInstance().addChatMessageToDB(ApplicationSet.getInstance().getOpenfireLoginId(),
+                                        ChatProvider.ChatConstants.OUTGOING,
+                                        mChatOid, getBaseTitle(), ChatProvider.ChatConstants.DS_SENT_OR_READ, System.currentTimeMillis(),
+                                        message, mBusinessId, ChatProvider.ChatConstants.BP_NEW);
+
                         e.onComplete();
                     }
                 }
@@ -618,7 +435,8 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
 
             @Override
             public void onComplete() {
-                mEtContent.setText("");
+
+                //mEtContent.setText("");
             }
         };
         observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(subscriber);
@@ -632,11 +450,11 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
      * @param ref     是否刷新界面
      */
     private void sendNor(String content, long time, boolean isSend, boolean ref) {
-        Message message = new Message();
+        ChatMessage message = new ChatMessage();
         message.setContent(content);
         message.setSend(isSend);
         message.setDate(time);
-        message.setType(Message.CINT_MESSAGE_TYPE_NR);
+        message.setType(ChatMessage.CINT_MESSAGE_TYPE_NR);
         /*if(!isSend){
             message.setPhoto(mJalawLawyerVO.getPhoto());
         }*/
@@ -655,8 +473,8 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
      * @param ref    是否刷新界面
      */
     private void sendImagesMsg(String image, long time, boolean isSend, boolean ref) {
-        Message message = new Message();
-        message.setType(Message.CINT_MESSAGE_TYPE_IMAGE);
+        ChatMessage message = new ChatMessage();
+        message.setType(ChatMessage.CINT_MESSAGE_TYPE_IMAGE);
         message.setContent(image);
         message.setSend(isSend);
         message.setDate(time);
@@ -679,11 +497,11 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
     private void sendAddressMessage(GeolocationVO gvo, long time, boolean isSend, boolean ref) {
         if (gvo == null)
             return;
-        Message message = new Message();
+        ChatMessage message = new ChatMessage();
         message.setContent(gvo.getAddress());
         message.setSend(isSend);
         message.setDate(time);
-        message.setType(Message.CINT_MESSAGE_TYPE_ADDRESS);
+        message.setType(ChatMessage.CINT_MESSAGE_TYPE_ADDRESS);
         message.setAddress(gvo.getMapAddress());
         message.setLatitude(gvo.getLat());
         message.setLongitude(gvo.getLng());
@@ -727,9 +545,9 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
                 break;
             case DEAL://咨询处理回调
                 if (data != null) {
-                    IMDBHelper.getInstance().deleteChat(mChatOid);
-                    mBusinessId = StringUtil.getUUID();
-                    IMBusinessIdVO.setNewBusinessId(mContext,mBusinessId,mChatOid,ApplicationSet.getInstance().getUserVO().getOpenfireLoginId());
+//                    IMDBHelper.getInstance().deleteChat(mChatOid);
+//                    mBusinessId = StringUtil.getUUID();
+//                    IMBusinessIdVO.setNewBusinessId(mContext,mBusinessId,mChatOid,ApplicationSet.getInstance().getUserVO().getOpenfireLoginId());
                     finish();
                 }
                 break;
@@ -739,15 +557,15 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if (mElEmotion.isShown()) {
-                hideEmotionLayout();
-                mFlEmotionView.setVisibility(View.GONE);
-                return true;
-            } else if (mLlMore.isShown()) {
-                hideMoreLayout();
-                mFlEmotionView.setVisibility(View.GONE);
-                return true;
-            }
+//            if (mElEmotion.isShown()) {
+//                hideEmotionLayout();
+//                mFlEmotionView.setVisibility(View.GONE);
+//                return true;
+//            } else if (mLlMore.isShown()) {
+//                hideMoreLayout();
+//                mFlEmotionView.setVisibility(View.GONE);
+//                return true;
+//            }
             SessionActivity.this.finish();
         }
         return true;
@@ -804,7 +622,7 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
                             boolean issend = direction == ChatProvider.ChatConstants.OUTGOING;
                             long ts = cursor.getLong(cursor.getColumnIndex(ChatProvider.ChatConstants.DATE));
                             String content = cursor.getString(cursor.getColumnIndex(ChatProvider.ChatConstants.MESSAGE));
-                            setBusinessId(cursor.getString(cursor.getColumnIndex(ChatProvider.ChatConstants.BUSINESSID)));
+                           // setBusinessId(cursor.getString(cursor.getColumnIndex(ChatProvider.ChatConstants.BUSINESSID)));
                             GeolocationVO gvo = XMPPHelper.getMapMessageInfo(content);
                             if (gvo != null) {
                                 sendAddressMessage(gvo, ts, issend, false);
@@ -908,4 +726,73 @@ public class SessionActivity extends BaseActivity implements IEmotionSelectedLis
                 })
                 .show();
     }
+    /**
+     * 若软键盘或表情键盘弹起，点击上端空白处应该隐藏输入法键盘
+     *
+     * @return 会隐藏输入法键盘的触摸事件监听器
+     */
+    private View.OnTouchListener getOnTouchListener() {
+        return new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                mBox.hideLayout();
+                mBox.hideKeyboard(mContext);
+                return false;
+            }
+        };
+    }
+    private void initMessageInputToolBox() {
+        mBox.setOnOperationListener(new OnOperationListener() {
+            @Override
+            public void send(String content) {
+//                Message message = new Message(Message.MSG_TYPE_TEXT, Message.MSG_STATE_SUCCESS,
+//                        "Tom", "avatar", "Jerry",
+//                        "avatar", content, true, true, new Date());
+//                datas.add(message);
+//                adapter.refresh(datas);
+//                createReplayMsg(message);
+                sendMessage(content, true);
+            }
+
+            @Override
+            public void selectedFace(Faceicon content) {
+//                Message message = new Message(Message.MSG_TYPE_FACE, Message.MSG_STATE_SUCCESS,
+//                        "Tom", "avatar", "Jerry", "avatar", content.getPath(), true, true, new
+//                        Date());
+//                datas.add(message);
+//                adapter.refresh(datas);
+//                createReplayMsg(message);
+            }
+
+            @Override
+            public void selectedEmoji(Emojicon emoji) {
+                mBox.getEditTextBox().append(emoji.getValue());
+            }
+
+            @Override
+            public void selectedBackSpace(Emojicon back) {
+                DisplayRules.backspace(mBox.getEditTextBox());
+            }
+
+            @Override
+            public void selectedFunction(int index) {
+
+            }
+        });
+
+        List<String> faceCagegory = new ArrayList<>();
+//        File faceList = FileUtils.getSaveFolder("chat");
+        File faceList = new File("");
+        if (faceList.isDirectory()) {
+            File[] faceFolderArray = faceList.listFiles();
+            for (File folder : faceFolderArray) {
+                if (!folder.isHidden()) {
+                    faceCagegory.add(folder.getAbsolutePath());
+                }
+            }
+        }
+
+        mBox.setFaceData(faceCagegory);
+    }
 }
+

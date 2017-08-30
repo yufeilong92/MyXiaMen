@@ -151,7 +151,7 @@ public class JamedServiceListActivity extends BaseActivity implements View.OnCli
                     return;
                 }
                 //缓存数据
-                JamedApplyVO.saveVOList(mDataList, JamedApplyVO.dataListFileName(getApplicationContext(), SAVELISTDATAS));
+//                JamedApplyVO.saveVOList(mDataList, JamedApplyVO.dataListFileName(getApplicationContext(), SAVELISTDATAS));
                 if (!mDataList.isEmpty() && mDataList.size() % Constants.CINT_PAGE_SIZE == 0) {
                     //设置是否可以上拉加载
                     mXrefreshView.setPullLoadEnable(true);
@@ -203,7 +203,9 @@ public class JamedServiceListActivity extends BaseActivity implements View.OnCli
         if (list != null && !list.isEmpty()) {
             addDataList(list);
         } else {
-            handlerRequestService(1, true);
+//            handlerRequestService(1, true);
+         if (mXrefreshView!=null)
+             mXrefreshView.startRefresh();
         }
         setAdapterData();
         Boolean mustRefresh = true;
@@ -253,7 +255,7 @@ public class JamedServiceListActivity extends BaseActivity implements View.OnCli
                     return;
                 }
                 //缓存数据
-                JamedApplyVO.saveVOList(mDataList, JamedApplyVO.dataListFileName(getApplicationContext(), SAVELISTDATAS));
+//                JamedApplyVO.saveVOList(mDataList, JamedApplyVO.dataListFileName(getApplicationContext(), SAVELISTDATAS));
                 if (!mDataList.isEmpty() && mDataList.size() % Constants.CINT_PAGE_SIZE == 0) {
                     //设置是否可以上拉加载
                     mXrefreshView.setPullLoadEnable(true);

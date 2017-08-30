@@ -22,6 +22,8 @@ public class SmackChatManagerListener implements ChatManagerListener {
             public void processMessage(Chat chat, Message message) {
                 //不会收到自己发送过来的消息
                 L.d("SmackChatManagerListener",message.toString());
+
+
                 IMDBHelper.getInstance().processMessage(message,true);
             }
         });

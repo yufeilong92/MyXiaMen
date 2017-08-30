@@ -15,7 +15,6 @@ import com.lawyee.apppublic.R;
 import com.lawyee.apppublic.config.ApplicationSet;
 import com.lawyee.apppublic.ui.basiclaw.ServiceWorkerDetailActivity;
 import com.lawyee.apppublic.util.UrlUtil;
-import com.lawyee.apppublic.vo.BaseCommonDataVO;
 import com.lawyee.apppublic.vo.JaglsStaffVO;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -76,27 +75,7 @@ import static com.lawyee.apppublic.ui.basiclaw.ServiceWorkerDetailActivity.JAGLS
         final JaglsStaffVO jaglsStaffVO=mDatas.get(position);
         holder.mTv_name.setText(jaglsStaffVO.getName());
         holder.mTv_office.setText(jaglsStaffVO.getJaglsOrganizationName());
-        BaseCommonDataVO baseCommonDataVO2= BaseCommonDataVO.findDataVOWithOid(ApplicationSet.getInstance().getAreas(),jaglsStaffVO.getProvince());
-        String province= "";
-        if(baseCommonDataVO2!=null){
-            province=baseCommonDataVO2.getName();
-        }
-        BaseCommonDataVO baseCommonDataVO= BaseCommonDataVO.findDataVOWithOid(ApplicationSet.getInstance().getAreas(),jaglsStaffVO.getCity());
-        String city= "";
-        if(baseCommonDataVO!=null){
-            city=baseCommonDataVO.getName();
-        }
-        BaseCommonDataVO baseCommonDataVO1= BaseCommonDataVO.findDataVOWithOid(ApplicationSet.getInstance().getAreas(),jaglsStaffVO.getCounty());
-        String country="";
-        if(baseCommonDataVO1!=null){
-            country=baseCommonDataVO1.getName();
-        }
-        if(jaglsStaffVO.getAddress()!=null){
-            holder.mTv_address.setText(province+city+country+jaglsStaffVO.getAddress());
-        }else {
-            holder.mTv_address.setText(province+city+country);
-        }
-
+        holder.mTv_address.setText(jaglsStaffVO.getOrgTelephone());
         String imageUrl = jaglsStaffVO.getPhoto();
         if (!TextUtils.isEmpty(imageUrl)){
             ImageLoader.getInstance().displayImage(UrlUtil.getImageFileUrl(mContext,imageUrl),holder.mIv_place, ApplicationSet.CDIO_LAW);

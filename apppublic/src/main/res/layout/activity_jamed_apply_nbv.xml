@@ -204,6 +204,7 @@
                             android:id="@+id/et_jamedService_ApplyID"
                             style="@style/InputBoxRight"
                             android:imeOptions="actionNext"
+                            android:inputType="text"
                             android:maxLength="18" />
                     </LinearLayout>
 

@@ -318,7 +318,8 @@ public class JamedThreeFragment extends BaseFragment implements View.OnClickList
                 break;
             case R.id.tv_jamedThree_mediaNoJoin:
                 String noJion = getTextStr(mTvJamedThreeMediaNoJoin);
-                handlerPopWindos(mTvJamedThreeMediaNoJoin, mNoHandlerLists, noJion);
+                if (mNoHandlerLists != null && !mNoHandlerLists.isEmpty())
+                    handlerPopWindos(mTvJamedThreeMediaNoJoin, mNoHandlerLists, noJion);
                 break;
         }
     }

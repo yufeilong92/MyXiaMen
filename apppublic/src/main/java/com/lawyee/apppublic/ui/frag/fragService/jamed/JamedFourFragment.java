@@ -2,6 +2,7 @@ package com.lawyee.apppublic.ui.frag.fragService.jamed;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,17 +21,34 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.lawyee.apppublic.R;
+import com.lawyee.apppublic.config.ApplicationSet;
+import com.lawyee.apppublic.config.Constants;
 import com.lawyee.apppublic.dal.BaseJsonService;
 import com.lawyee.apppublic.dal.JamedUserService;
 import com.lawyee.apppublic.ui.frag.fragService.BaseFragment;
+import com.lawyee.apppublic.ui.org.japub.ImageLookActivity;
+import com.lawyee.apppublic.util.UrlUtil;
 import com.lawyee.apppublic.vo.AttachmentVO;
 import com.lawyee.apppublic.vo.JamedApplyDetailVO;
+import com.lawyee.apppublic.vo.UserVO;
 
+import net.gotev.uploadservice.MultipartUploadRequest;
+import net.gotev.uploadservice.ServerResponse;
+import net.gotev.uploadservice.UploadInfo;
+import net.gotev.uploadservice.UploadStatusDelegate;
+import net.lawyee.mobilelib.json.JsonParser;
 import net.lawyee.mobilelib.utils.FileUtil;
+import net.lawyee.mobilelib.utils.ImgCompressor;
+import net.lawyee.mobilelib.utils.SecurityUtil;
 import net.lawyee.mobilelib.utils.StringUtil;
 import net.lawyee.mobilelib.utils.T;
 import net.lawyee.mobilelib.utils.TimeUtil;
+import net.lawyee.mobilelib.vo.ResponseVO;
 
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +61,11 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final String ARG_PARAM3 = "param3";
+    /**
+     * 上传子类别名称-人民调解-调解协议
+     */
+    public static final String CSTR_UPLOADSUB_JAMED_WT = "tjxy";
+
     private String mOrgId;
     private String mMediaStatus;
     private RadioButton mRdbJamedFbsuccess;
@@ -50,7 +73,7 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
     private TextView mTvJaemdFinishData;
     private RadioButton mRdbJamedFbyes;
     private RadioButton mRdbJamedFbno;
-    private ArrayList<String> mSelectPathXieYi = new ArrayList<>();//身份证图片地址集合
+    private ArrayList<String> mSelectPathXieYi = new ArrayList<>();//
     private static final int REQUEST_IMAGEAGREEMENT = 1;//上传协议
 
     private String mIsSuccess = "";
@@ -70,6 +93,7 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
     private TextView mTvJamdefourResultXieYi;
     private LinearLayout mLinearJamedFourResult;
     private JamedApplyDetailVO mJamedDetailVo;
+    private ApplyDetailFourVo mApplyDetailVO;
 
     public static JamedFourFragment newInstance(String param1, String param2, JamedApplyDetailVO mJamedDetailVo) {
         JamedFourFragment fragment = new JamedFourFragment();
@@ -141,7 +165,7 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
             requestServiceData();
         } else {
             if (mMediaStatus.equals("3")) {
-                    isShowResult(true, mJamedDetailVo);
+                isShowResult(true, mJamedDetailVo);
             } else if (mJamedDetailVo.getSuccessFlag() == 1) {
                 isShowResult(true, mJamedDetailVo);
             } else if (mJamedDetailVo.getSuccessFlag() == -1) {
@@ -250,14 +274,36 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
                 mTvJamedfourUpload.setBackgroundResource(R.drawable.bg_input_box);
                 mIvJamedFourUploadDelete.setVisibility(View.GONE);
                 break;
+            case R.id.tv_jamdefour_resultXieYi:
+                if (mJamedDetailVo != null && mJamedDetailVo.getAttachments() != null && !mJamedDetailVo.getAttachments().isEmpty()) {
+                    // TODO: 2017/8/17
+                    for (int i = 0; i < mJamedDetailVo.getAttachments().size(); i++) {
+                        String sub = mJamedDetailVo.getAttachments().get(i).getSub();
+                        if (sub.equals(CSTR_UPLOADSUB_JAMED_WT)) {
+                            startImageLookActivity(mJamedDetailVo.getAttachments().get(i));
+                        }
 
+                    }
+
+                }
+                break;
         }
+    }
+
+    private void startImageLookActivity(AttachmentVO attachmentVO) {
+        mTvJamdefourResultXieYi.setTextColor(Color.RED);
+        Intent intent = new Intent(mContext, ImageLookActivity.class);
+        intent.putExtra(ImageLookActivity.CONTENT_PARRMTER_TYPE, ImageLookActivity.CONTENT_PARRMTER_IMAGE);
+        intent.putExtra(ImageLookActivity.CONTNETPARAMETER_URL, attachmentVO.getOid());
+        intent.putExtra(ImageLookActivity.CSTR_EXTRA_TITLE_STR, "调解协议查看");
+        startActivity(intent);
+
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_IMAGEAGREEMENT) {//身份证
+        if (requestCode == REQUEST_IMAGEAGREEMENT) {
             if (resultCode == RESULT_OK) {
                 mSelectPathXieYi = data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT);
                 String name = null;
@@ -306,10 +352,11 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
                 AttachmentVO attachmentVO = new AttachmentVO();
                 attachmentVO.setDescription_(getString(R.string.conditioning_agreement));
                 attachmentVO.setLocfilepath(s);
-                attachmentVO.setSub(AttachmentVO.CSTR_UPLOADSUB_JAMEDSERVICE_TJXY);
+                attachmentVO.setSub(AttachmentVO.CSTR_UPLOADSUB_JAMED_TJXY);
                 vos.add(attachmentVO);
             }
         vo.setLists(vos);
+
         final MaterialDialog.Builder builder = getShowDialog();
         builder.onPositive(new MaterialDialog.SingleButtonCallback() {
             @Override
@@ -327,6 +374,37 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
     }
 
     private void submitService(ApplyDetailFourVo vo) {
+        mApplyDetailVO = vo;
+        if (mSelectPathXieYi != null && !mSelectPathXieYi.isEmpty()) {
+            ImgCompressor imgCompressor = ImgCompressor.getInstance(mContext);
+            imgCompressor.setOutPutDir(Constants.getDataStoreDir(mContext)
+                    + net.lawyee.mobilelib.Constants.CSTR_IMAGECACHEDIR);
+            compressUploadImage(imgCompressor, 0);
+            mTvJamdefourResultXieYi.setText(getString(R.string.loading));
+            submitDate(vo);
+        } else {
+            submitDate(vo);
+        }
+
+    }
+
+    private void compressUploadImage(ImgCompressor imgCompressor, int i) {
+        final AttachmentVO avo = mApplyDetailVO.getLists().get(0);
+        imgCompressor.withListener(new ImgCompressor.CompressListener() {
+            @Override
+            public void onCompressStart() {
+
+            }
+            @Override
+            public void onCompressEnd(ImgCompressor.CompressResult imageOutPath) {
+                if (!TextUtils.isEmpty(imageOutPath.getOutPath()))
+                    avo.setLocfilepath(imageOutPath.getOutPath());
+                startUpload(0);
+            }
+        }).starCompressWithDefault(avo.getLocfilepath());
+    }
+
+    private void submitDate(ApplyDetailFourVo vo) {
         JamedUserService jamedUserService = new JamedUserService(mContext);
         jamedUserService.setProgressShowContent(getString(R.string.submit_ing));
         jamedUserService.setShowProgress(true);
@@ -339,7 +417,7 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
                 }
                 T.showShort(mContext, getString(R.string.submit_success));
                 JamedApplyDetailVO vo = (JamedApplyDetailVO) values.get(0);
-
+                mJamedDetailVo = vo;
                 if (vo != null) {
                     isShowResult(true, vo);
                 }
@@ -352,7 +430,100 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
                 T.showShort(mContext, msg);
             }
         });
+    }
 
+    private void startUpload(int index) {
+        final AttachmentVO avo = mApplyDetailVO.getLists().get(index);
+        MultipartUploadRequest req = null;
+        String errormessage = "";
+        try {
+            req = new MultipartUploadRequest(mContext, mOrgId, UrlUtil.getUploadFileUrl(getContext()))
+                    .setUsesFixedLengthStreamingMode(true)
+                    .setMaxRetries(1)
+                    .setUtf8Charset()
+                    .setAutoDeleteFilesAfterSuccessfulUpload(true);
+            //添加所需要的header
+            /**
+             * timespan：时间戳，yyyyMMddHHmmss
+             loginId:登录帐号
+             password:密码（加密后的，key为时间戳补0，iv使用预定义的）
+             parent:父类别，如法律援助、人民调解
+             sub:子类别
+             description_：文件描述
+             pid:业务id
+             */
+            String timespan = TimeUtil.dateToString(null, "yyyyMMddHHmmss");
+            UserVO uservo = ApplicationSet.getInstance().getUserVO();
+            String pwd = SecurityUtil.Encrypt(uservo.getPassword(), SecurityUtil.getLegalKey(timespan), Constants.CSTR_IVS);
+            req.addHeader("timespan", timespan);
+            req.addHeader("loginId", uservo.getLoginId());
+            req.addHeader("role", uservo.getRole());
+            req.addHeader("password", URLEncoder.encode(pwd, Constants.CSTR_PAGECODE_DEFAULT));
+            req.addHeader("parent", URLEncoder.encode(CSTR_UPLOADSUB_JAMED_WT, Constants.CSTR_PAGECODE_DEFAULT));
+            req.addHeader("pid", mOrgId);
+            //添加上传的文件
+            req.addHeader("sub", avo.getSub());
+            req.addHeader("description_", URLEncoder.encode(avo.getDescription_(), Constants.CSTR_PAGECODE_DEFAULT));
+            req.addFileToUpload(avo.getLocfilepath(), Constants.CSTR_UPLOADFILE_PAREAMNAME, FileUtil.getFileName(avo.getLocfilepath()));
+            req.setDelegate(new UploadStatusDelegate() {
+                @Override
+                public void onProgress(Context context, UploadInfo uploadInfo) {
+                    //取消提醒，不然提醒太多
+                    /*buildNotification("提交预申请材料-"+avo.getDescription_()+"，上传完成"+uploadInfo.getProgressPercent()+"%",
+                            false,JAAIDAPPLYRESULT.processing);*/
+                }
+                @Override
+                public void onError(Context context, UploadInfo uploadInfo, Exception exception) {
+                    T.showShort(mContext, "上传材料-" + avo.getDescription_() + "失败");
+                }
+
+                @Override
+                public void onCompleted(Context context, UploadInfo uploadInfo, ServerResponse serverResponse) {
+                    AttachmentVO result = parserResult(serverResponse.getBodyAsString());
+                    if (result == null)
+                        return;
+                    if (mJamedDetailVo != null && mJamedDetailVo.getAttachments() == null) {
+                        List<AttachmentVO> attachments = mJamedDetailVo.getAttachments();
+                        if (attachments == null) {
+                            attachments = new ArrayList<AttachmentVO>();
+                        } else {
+                            attachments.clear();
+                        }
+                        result.setSub(AttachmentVO.CSTR_UPLOADSUB_JAMED_TJXY);
+                        attachments.add(result);
+                        mJamedDetailVo.setAttachments(attachments);
+                    }
+
+                    mTvJamdefourResultXieYi.setText(result.getName());
+                }
+
+                @Override
+                public void onCancelled(Context context, UploadInfo uploadInfo) {
+
+                }
+            });
+            req.startUpload();
+        } catch (FileNotFoundException e) {
+            errormessage = "上传文件不存在";
+        } catch (IllegalArgumentException e) {
+            errormessage = "缺少相关参数设置";
+        } catch (MalformedURLException e) {
+            errormessage = "上传地址无效";
+        } catch (UnsupportedEncodingException e) {
+            errormessage = "无效的Header参数";
+        }
+
+    }
+
+    private AttachmentVO parserResult(String response) {
+        ResponseVO rvo = new ResponseVO();
+        Object o = JsonParser.parseJsonToEntity(response, rvo);
+        if (!rvo.isSucess() || !(o instanceof AttachmentVO)) {
+            Log.e("====", "parserResult: " + rvo.getMsg() + "///" + rvo.getCode());
+            T.showShort(mContext, "提交预申请失败：服务端返回无效上传文件信息-" + rvo.getMsg());
+            return null;
+        }
+        return (AttachmentVO) o;
     }
 
     /**
@@ -370,6 +541,14 @@ public class JamedFourFragment extends BaseFragment implements View.OnClickListe
                 mTvJamdefourResultFinsihTime.setText(ymdt);
                 mTvJamdefourResultIsSuccess.setText(getStringWithInt(vo.getSuccessFlag()));
                 mTvJamdefourResultIsSure.setText(getStringWithString(vo.getJudconfirmFlag()));
+                if (mJamedDetailVo.getAttachments() != null && !mJamedDetailVo.getAttachments().isEmpty())
+                    for (int i = 0; i < mJamedDetailVo.getAttachments().size(); i++) {
+                        String sub = mJamedDetailVo.getAttachments().get(i).getSub();
+                        if (sub.equals(CSTR_UPLOADSUB_JAMED_WT)) {
+                            mTvJamdefourResultXieYi.setText(mJamedDetailVo.getAttachments().get(i).getName());
+                        }
+
+                    }
             }
         } else {
             mLinearJamedFourApply.setVisibility(View.VISIBLE);

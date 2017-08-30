@@ -450,8 +450,6 @@ public class LawActivityLookActivity extends BaseActivity implements View.OnClic
                     intent.putExtra(WalkingRouteActivity.LATITUDE, Double.parseDouble(latitude));
                     intent.putExtra(WalkingRouteActivity.LONGITUDE, Double.parseDouble(longitude));
                     intent.putExtra(WalkingRouteActivity.ADDRESS, mAddress);
-//                    intent.putExtra(WalkingRouteActivity.SERCESCALL, mJaglsOrgDetailVO.getTelephone());
-//                    intent.putExtra(BaseActivity.CSTR_EXTRA_TITLE_STR, mJaglsOrgDetailVO.getName());
                     mContext.startActivity(intent);
                 }
             });

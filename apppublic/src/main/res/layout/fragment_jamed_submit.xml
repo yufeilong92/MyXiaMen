@@ -53,7 +53,7 @@
                         android:src="@mipmap/icon_tv_stars" />
                 </LinearLayout>
 
-                <EditText
+                <com.lawyee.apppublic.widget.ContentEditText
                     android:id="@+id/et_jamed_apply_disputecase"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -61,6 +61,7 @@
                     android:background="@drawable/bg_input_box"
                     android:gravity="left"
                     android:imeOptions="actionNext"
+                    android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
                     android:lines="5"
                     android:padding="8dp"
                     android:scrollbars="vertical"
@@ -100,7 +101,7 @@
                         android:src="@mipmap/icon_tv_stars" />
                 </LinearLayout>
 
-                <EditText
+                <com.lawyee.apppublic.widget.ContentEditText
                     android:id="@+id/jamed_apply_party"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -108,6 +109,7 @@
                     android:background="@drawable/bg_input_box"
                     android:gravity="left"
                     android:imeOptions="actionDone"
+                    android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
                     android:lines="6"
                     android:padding="8dp"
                     android:scrollbars="vertical"

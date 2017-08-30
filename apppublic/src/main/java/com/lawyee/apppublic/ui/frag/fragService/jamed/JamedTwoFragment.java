@@ -252,9 +252,9 @@ public class JamedTwoFragment extends BaseFragment implements View.OnClickListen
                 if (isChecked) {
                     mTvJamedTwoReason.setClickable(false);
                     mTvJamedTwoReason.setFocusable(false);
-                    if (mMediaFlag){
+                    if (mMediaFlag) {
                         mLinearMediaTwo.setVisibility(View.GONE);
-                    }else {
+                    } else {
                         mLinearMediaTwo.setVisibility(View.VISIBLE);
                     }
                     mIsAccept = mAccept;
@@ -274,9 +274,9 @@ public class JamedTwoFragment extends BaseFragment implements View.OnClickListen
                     mIsAccept = mNoAccept;
                     mTvJamedTwoReason.setClickable(true);
                     mTvJamedTwoReason.setFocusable(true);
-                    if (mMediaFlag){
+                    if (mMediaFlag) {
                         mLinearMediaTwo.setVisibility(View.GONE);
-                    }else {
+                    } else {
                         mLinearMediaTwo.setVisibility(View.GONE);
                     }
                 }
@@ -310,7 +310,8 @@ public class JamedTwoFragment extends BaseFragment implements View.OnClickListen
                 break;
             case R.id.tv_jamedTwo_reason:
                 String str = getTextStr(mTvJamedTwoReason);
-                handlerPopWindos(mTvJamedTwoReason, mNoHandlerLists, str, null);
+                if (mNoHandlerLists != null && !mNoHandlerLists.isEmpty())
+                    handlerPopWindos(mTvJamedTwoReason, mNoHandlerLists, str, null);
                 break;
 
 

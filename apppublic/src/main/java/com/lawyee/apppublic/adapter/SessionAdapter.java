@@ -4,7 +4,6 @@ package com.lawyee.apppublic.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
-import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,15 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lawyee.apppublic.R;
-import com.lawyee.apppublic.config.ApplicationSet;
 import com.lawyee.apppublic.ui.ViewImageActivity;
 import com.lawyee.apppublic.ui.WalkingRouteActivity;
 import com.lawyee.apppublic.util.ImageLoaderManager;
-import com.lawyee.apppublic.vo.Message;
+import com.lawyee.apppublic.vo.ChatMessage;
 import com.lawyee.apppublic.widget.BubbleImageView;
-import com.lqr.adapter.LQRAdapterForRecyclerView;
-import com.lqr.adapter.LQRViewHolderForRecyclerView;
-import com.lqr.emoji.MoonUtils;
+import com.lawyee.apppublic.widget.recycleView.LQRAdapterForRecyclerView;
+import com.lawyee.apppublic.widget.recycleView.LQRViewHolderForRecyclerView;
 
 import net.lawyee.mobilelib.utils.StringUtil;
 import net.lawyee.mobilelib.utils.TimeUtil;
@@ -36,7 +33,7 @@ import static com.lawyee.apppublic.ui.ViewImageActivity.CSTR_EXTRA_IMAGE_STR_LOC
  * @创建者 czq
  * @描述 会话列表适配器
  */
-public class SessionAdapter extends LQRAdapterForRecyclerView<Message> {
+public class SessionAdapter extends LQRAdapterForRecyclerView<ChatMessage> {
 
     private Context mContext;
     private static final int SEND_TEXT = R.layout.item_text_send;
@@ -46,20 +43,20 @@ public class SessionAdapter extends LQRAdapterForRecyclerView<Message> {
     private static final int SEND_LOCATION = R.layout.item_location_send;
     private static final int RECEIVE_LOCATION = R.layout.item_location_receive;
     private Map<String, Float> mProgress = new HashMap<>();
-    public SessionAdapter(Context context, List<Message> data) {
+    public SessionAdapter(Context context, List<ChatMessage> data) {
         super(context, data);
         mContext = context;
     }
 
 
     @Override
-    public void convert(LQRViewHolderForRecyclerView helper, final Message item, final int position) {
+    public void convert(LQRViewHolderForRecyclerView helper, final ChatMessage item, final int position) {
 
         //取上一条的时间显示记录
         String predate = "";
         if(position>0)
         {
-            Message prmesage= getItem(position-1);
+            ChatMessage prmesage= getItem(position-1);
             if(prmesage!=null) {
                 predate = TimeUtil.getChatTime(prmesage.getDate());
             }
@@ -83,20 +80,20 @@ public class SessionAdapter extends LQRAdapterForRecyclerView<Message> {
         setHeader(helper, item);
      //   }
         //文本消息
-        if (item.getType() == Message.CINT_MESSAGE_TYPE_NR) {
+        if (item.getType() == ChatMessage.CINT_MESSAGE_TYPE_NR) {
             setTextMessage(helper, item);
         }
         //图片消息
-        else if (item.getType() == Message.CINT_MESSAGE_TYPE_IMAGE) {
+        else if (item.getType() == ChatMessage.CINT_MESSAGE_TYPE_IMAGE) {
             setImageMessage(helper, item);
         }
         //地图信息
-        else if(item.getType()==Message.CINT_MESSAGE_TYPE_ADDRESS){
+        else if(item.getType()== ChatMessage.CINT_MESSAGE_TYPE_ADDRESS){
             setLocationMessage(helper, item);
         }
     }
 
-    private void setHeader(LQRViewHolderForRecyclerView helper, Message item) {
+    private void setHeader(LQRViewHolderForRecyclerView helper, ChatMessage item) {
         ImageView ivAvatar = helper.getView(R.id.ivAvatar);
         String avatar=item.getPhoto();
         if (!TextUtils.isEmpty(avatar)) {
@@ -111,12 +108,11 @@ public class SessionAdapter extends LQRAdapterForRecyclerView<Message> {
         }
     }
 
-    private void setTextMessage(LQRViewHolderForRecyclerView helper, Message item) {
+    private void setTextMessage(LQRViewHolderForRecyclerView helper, ChatMessage item) {
         helper.setText(R.id.tvText, item.getContent());
         //识别并显示表情
-        MoonUtils.identifyFaceExpression(ApplicationSet.getInstance().getApplicationContext(), helper.getView(R.id.tvText), item.getContent(), ImageSpan.ALIGN_BOTTOM);
     }
-    private void setImageMessage(LQRViewHolderForRecyclerView helper, final Message item) {
+    private void setImageMessage(LQRViewHolderForRecyclerView helper, final ChatMessage item) {
         final BubbleImageView bivPic = helper.getView(R.id.bivPic);
         if (!TextUtils.isEmpty(item.getContent())) {
             ImageLoaderManager.LoadLocalImage(item.getContent(), bivPic);
@@ -133,7 +129,7 @@ public class SessionAdapter extends LQRAdapterForRecyclerView<Message> {
             }
         });
     }
-    private void setLocationMessage(LQRViewHolderForRecyclerView helper, final Message item) {
+    private void setLocationMessage(LQRViewHolderForRecyclerView helper, final ChatMessage item) {
         ImageView bivPic = helper.getView(R.id.iv_map);
         TextView tvMap=helper.getView(R.id.tv_map);
         LinearLayout ll_map=helper.getView(R.id.ll_map);
@@ -157,24 +153,24 @@ public class SessionAdapter extends LQRAdapterForRecyclerView<Message> {
 
     @Override
     public int getItemViewType(int position) {
-        Message msg = getData().get(position);
+        ChatMessage msg = getData().get(position);
         int msgType = msg.getType();
 
-        if (msgType == Message.CINT_MESSAGE_TYPE_NR) {
+        if (msgType == ChatMessage.CINT_MESSAGE_TYPE_NR) {
             if (msg.isSend()) {
                 return SEND_TEXT;
             } else {
                 return RECEIVE_TEXT;
             }
         }
-        if (msgType == Message.CINT_MESSAGE_TYPE_IMAGE) {
+        if (msgType == ChatMessage.CINT_MESSAGE_TYPE_IMAGE) {
             if (msg.isSend()) {
                 return SEND_IMAGE;
             } else {
                 return RECEIVE_IMAGE;
             }
         }
-        if(msgType==Message.CINT_MESSAGE_TYPE_ADDRESS){
+        if(msgType== ChatMessage.CINT_MESSAGE_TYPE_ADDRESS){
             if (msg.isSend()) {
                 return SEND_LOCATION;
             } else {

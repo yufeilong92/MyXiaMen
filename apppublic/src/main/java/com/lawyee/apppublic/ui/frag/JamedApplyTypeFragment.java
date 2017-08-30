@@ -437,9 +437,11 @@ public class JamedApplyTypeFragment extends Fragment implements View.OnClickList
         }
 
         String here = mEtJamedHere.getText().toString().trim();
-        if (!TextUtils.isEmpty(here)) {
-            vo.setApplyAddress(here);//申请单位
+        if (TextUtils.isEmpty(here)) {
+            T.showShort(getContext(), "申请人的单位或住址不能为空");
+            return;
         }
+        vo.setApplyAddress(here);//申请单位
 
         String nexus = mEtJamedNexus.getText().toString().trim();
         if (!TextUtils.isEmpty(nexus)) {
@@ -488,9 +490,11 @@ public class JamedApplyTypeFragment extends Fragment implements View.OnClickList
         }
 
         String quitlhere = mEtJamedQuiltHere.getText().toString().trim();
-        if (!TextUtils.isEmpty(quitlhere)) {
-            vo.setBeApplyAddress(quitlhere);//被申请人地址
+        if (TextUtils.isEmpty(quitlhere)) {
+            T.showShort(getContext(), "被申请人的单位或住址不能为空");
+            return;
         }
+        vo.setBeApplyAddress(quitlhere);//被申请人地址
         EventBus.getDefault().post(new JamedApplyThreeSubmitEven(vo, true));
 
     }
@@ -508,7 +512,8 @@ public class JamedApplyTypeFragment extends Fragment implements View.OnClickList
         applyPopAdapter.setSeletsStr(nation);
         return applyPopAdapter;
     }
-    private boolean isEmpty(String str){
+
+    private boolean isEmpty(String str) {
         return TextUtils.isEmpty(str);
     }
 }

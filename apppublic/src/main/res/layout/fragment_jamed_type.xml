@@ -212,7 +212,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/InputboxLifeNoIcon"
+                    style="@style/InputboxLife"
                     android:text="@string/jamed_domicile" />
 
                 <EditText
@@ -396,7 +396,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    style="@style/InputboxLifeNoIcon"
+                    style="@style/InputboxLife"
                     android:text="@string/jamed_domicile" />
 
                 <EditText

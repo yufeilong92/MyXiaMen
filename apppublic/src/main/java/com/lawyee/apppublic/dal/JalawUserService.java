@@ -118,6 +118,34 @@ public class JalawUserService extends BaseJsonService {
     }
 
 
+    /**
+     * 【【公众/律师】获取在线咨询业务ID
+     * @param serverId 律师id
+     *  @param chatId 公众ID
+     * @param listener 结果回调
+     */
+    public void getBusinessid(String serverId,String chatId,
+                                 IResultInfoListener listener) {
+        UserVO userVO = ApplicationSet.getInstance().getUserVO();
+        if(userVO==null||StringUtil.isEmpty(userVO.getLoginId())||StringUtil.isEmpty(userVO.getPassword()))
+        {
+            listener.onError("请先进行用户登录","");
+            return;
+        }
+
+        JsonCreater creater = JsonCreater.startJson(getDevID());
+        creater.setParam("loginId", userVO.getLoginId());
+        creater.setParam("role", userVO.getRole());
+        creater.setParam("password", SecurityUtil.Encrypt(userVO.getPassword(),SecurityUtil.getLegalKey(creater.getId()), Constants.CSTR_IVS));
+        creater.setParam("serverId",serverId);
+        creater.setParam("chatId",chatId);
+        mCommandName = "mmLawyerGetBusinessid";
+        String json = creater.createJson(mCommandName);
+        setResultInfoListener(listener);
+        setValueType(CINT_VALUETYPE_ENTITY);
+        getData(json, null);
+    }
+
 
 
 }

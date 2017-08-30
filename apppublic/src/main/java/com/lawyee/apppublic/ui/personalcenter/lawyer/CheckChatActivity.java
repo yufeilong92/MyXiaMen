@@ -11,14 +11,16 @@ import com.lawyee.apppublic.dal.BaseJsonService;
 import com.lawyee.apppublic.dal.JacstService;
 import com.lawyee.apppublic.ui.BaseActivity;
 import com.lawyee.apppublic.util.UIUtils;
+import com.lawyee.apppublic.vo.ChatMessage;
 import com.lawyee.apppublic.vo.ConsulationRecordVO;
 import com.lawyee.apppublic.vo.GeolocationVO;
-import com.lawyee.apppublic.vo.Message;
-import com.lqr.recyclerview.LQRRecyclerView;
+import com.lawyee.apppublic.widget.recycleView.LQRRecyclerView;
 
 import net.lawyee.mobilelib.utils.T;
 import net.lawyee.mobilelib.utils.TimeUtil;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -41,7 +43,7 @@ public class CheckChatActivity extends BaseActivity {
     private LQRRecyclerView mCvMessage;
     private Context mContext;
     private SessionAdapter mAdapter;
-    private List<Message> mMessages = new ArrayList<>();//消息队列
+    private List<ChatMessage> mMessages = new ArrayList<>();//消息队列
     private ArrayList <ConsulationRecordVO> mConsulationRecordVOs=new ArrayList<>();
     private String mChatOid;
     /**
@@ -101,15 +103,21 @@ public class CheckChatActivity extends BaseActivity {
     private void initMessage() {
 
         for(int i = 0; i <mConsulationRecordVOs.size() ; i++) {
-            Message message = new Message();
-            message.setContent(mConsulationRecordVOs.get(i).getContent());
-            if(mConsulationRecordVOs.get(i).getFrom().equals(ApplicationSet.getInstance().getUserVO().getOid())){
+            ChatMessage message = new ChatMessage();
+            String str= null;
+            try {
+                str = URLDecoder.decode(mConsulationRecordVOs.get(i).getContent(),"UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            message.setContent(str);
+            if(mConsulationRecordVOs.get(i).getFrom().equals(ApplicationSet.getInstance().getUserVO().getOpenfireLoginId())){
                 message.setSend(true);
             }else{
                 message.setSend(false);
             }
             message.setDate(TimeUtil.strToDate(mConsulationRecordVOs.get(i).getSendTime(),new Date()));
-            message.setType(Message.CINT_MESSAGE_TYPE_NR);
+            message.setType(ChatMessage.CINT_MESSAGE_TYPE_NR);
         /*if(!isSend){
             message.setPhoto(mJalawLawyerVO.getPhoto());
         }*/
@@ -174,11 +182,11 @@ public class CheckChatActivity extends BaseActivity {
      * @param ref     是否刷新界面
      */
     private void sendNor(String content, long time, boolean isSend, boolean ref) {
-        Message message = new Message();
+        ChatMessage message = new ChatMessage();
         message.setContent(content);
         message.setSend(isSend);
         message.setDate(time);
-        message.setType(Message.CINT_MESSAGE_TYPE_NR);
+        message.setType(ChatMessage.CINT_MESSAGE_TYPE_NR);
         /*if(!isSend){
             message.setPhoto(mJalawLawyerVO.getPhoto());
         }*/
@@ -197,8 +205,8 @@ public class CheckChatActivity extends BaseActivity {
      * @param ref    是否刷新界面
      */
     private void sendImagesMsg(String image, long time, boolean isSend, boolean ref) {
-        Message message = new Message();
-        message.setType(Message.CINT_MESSAGE_TYPE_IMAGE);
+        ChatMessage message = new ChatMessage();
+        message.setType(ChatMessage.CINT_MESSAGE_TYPE_IMAGE);
         message.setContent(image);
         message.setSend(isSend);
         message.setDate(time);
@@ -221,11 +229,11 @@ public class CheckChatActivity extends BaseActivity {
     private void sendAddressMessage(GeolocationVO gvo, long time, boolean isSend, boolean ref) {
         if (gvo == null)
             return;
-        Message message = new Message();
+        ChatMessage message = new ChatMessage();
         message.setContent(gvo.getAddress());
         message.setSend(isSend);
         message.setDate(time);
-        message.setType(Message.CINT_MESSAGE_TYPE_ADDRESS);
+        message.setType(ChatMessage.CINT_MESSAGE_TYPE_ADDRESS);
         message.setAddress(gvo.getMapAddress());
         message.setLatitude(gvo.getLat());
         message.setLongitude(gvo.getLng());

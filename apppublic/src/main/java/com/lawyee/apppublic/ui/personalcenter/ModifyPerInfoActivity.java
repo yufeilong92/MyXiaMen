@@ -25,10 +25,12 @@ import com.lawyee.apppublic.ui.BaseActivity;
 import com.lawyee.apppublic.util.ShowOrHide;
 import com.lawyee.apppublic.vo.BaseCommonDataVO;
 import com.lawyee.apppublic.vo.JaaidApplyFilterVo;
+import com.lawyee.apppublic.vo.JalawBusinessVO;
 import com.lawyee.apppublic.vo.UserVO;
 
 import net.lawyee.mobilelib.utils.StringUtil;
 import net.lawyee.mobilelib.utils.T;
+import net.lawyee.mobilelib.utils.TimeUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,8 +95,10 @@ public class ModifyPerInfoActivity extends BaseActivity implements View.OnClickL
                 mEtModifyId.setText(idCard);
 
             String birthday = userVO.getBirthday();
-            if (!isEmpty(birthday))
-                mTvModifyBrithday.setText(birthday);
+            if (!isEmpty(birthday)) {
+                String ymdt = TimeUtil.getYMDT(birthday);
+                mTvModifyBrithday.setText(ymdt);
+            }
 
             String mobile = userVO.getMobile();
             if (!isEmpty(mobile))
@@ -453,8 +457,11 @@ public class ModifyPerInfoActivity extends BaseActivity implements View.OnClickL
                         submit = false;
                         T.showShort(ModifyPerInfoActivity.this, getString(R.string.submit_success));
                         UserVO o = (UserVO) values.get(0);
-                        if (o != null)
-                            ApplicationSet.getInstance().setUserVO(o, true);
+                        if (o != null) {
+                            UserVO userVO = ApplicationSet.getInstance().getUserVO();
+                            copyUser(o,userVO);
+                            ApplicationSet.getInstance().setUserVO(userVO, true);
+                        }
                         finish();
                     }
 
@@ -467,6 +474,105 @@ public class ModifyPerInfoActivity extends BaseActivity implements View.OnClickL
                     }
                 });
     }
+
+    /**
+     *
+     * @param userVO 拷貝
+     * @param userVO1 保存的vi
+     */
+    private void copyUser(UserVO userVO, UserVO userVO1) {
+        String address = userVO.getAddress();
+        if (!isEmpty(address)){
+            userVO1.setAddress(address);
+        }
+        String birthday = userVO.getBirthday();
+        if (!isEmpty(birthday)){
+            userVO1.setBirthday(birthday);
+        }
+        List<JalawBusinessVO> business = userVO.getBusiness();
+       if (business!=null&&!business.isEmpty()){
+           userVO1.setBusiness(business);
+       }
+        String city = userVO.getCity();
+        if (!isEmpty(city)){
+            userVO1.setCity(city);
+        }
+
+        String cityName = userVO.getCityName();
+        if (!isEmpty(cityName)){
+            userVO1.setCityName(cityName);
+        }
+        String county = userVO.getCounty();
+        if (!isEmpty(county)){
+            userVO1.setCounty(county);
+        }
+        String countyName = userVO.getCountyName();
+        if (!isEmpty(countyName)){
+            userVO1.setCountyName(countyName);
+        }
+
+        String gender = userVO.getGender();
+        if (!isEmpty(gender)){
+            userVO1.setGender(gender);
+        }
+        String idCard = userVO.getIdCard();
+        if (!isEmpty(idCard)){
+            userVO1.setIdCard(idCard);
+        }
+        String loginId = userVO.getLoginId();
+        if (!isEmpty(loginId)){
+            userVO1.setLoginId(loginId);
+        }
+        String mobile = userVO.getMobile();
+        if (!isEmpty(mobile)){
+         userVO1.setMobile(mobile);
+        }
+        String nickName = userVO.getNickName();
+        if (!isEmpty(nickName))
+            userVO1.setNickName(nickName);
+        String openfireLoginId = userVO.getOpenfireLoginId();
+        if (!isEmpty(openfireLoginId))
+            userVO1.setOpenfireLoginId(openfireLoginId);
+
+        String openfirePassword = userVO.getOpenfirePassword();
+        if (!isEmpty(openfirePassword))
+            userVO1.setOpenfirePassword(openfirePassword);
+        String orgId = userVO.getOrgId();
+        if (!isEmpty(orgId))
+            userVO1.setOrgId(orgId);
+        String orgName = userVO.getOrgName();
+        if (!isEmpty(orgName)){
+            userVO1.setOrgName(orgName);
+        }
+        String password = userVO.getPassword();
+        if (!isEmpty(password)){
+            userVO1.setPassword(password);
+        }
+        String photo = userVO.getPhoto();
+        if (!isEmpty(photo))
+            userVO1.setPhoto(photo);
+        String province = userVO.getProvince();
+        if (!isEmpty(province))
+            userVO1.setProvince(province);
+        String provinceName = userVO.getProvinceName();
+        if (!isEmpty(provinceName))
+            userVO1.setProvinceName(provinceName);
+
+        String realName = userVO.getRealName();
+        if (!isEmpty(realName))
+            userVO1.setRealName(realName);
+        String role = userVO.getRole();
+        if (!isEmpty(role))
+            userVO1.setRole(role);
+        String userId = userVO.getUserId();
+        if (!isEmpty(userId)){
+            userVO1.setUserId(userId);
+        }
+        String oid = userVO.getOid();
+        if (!isEmpty(oid))
+            userVO1.setOid(oid);
+    }
+
 
     private boolean isEmpty(String str) {
         return TextUtils.isEmpty(str);

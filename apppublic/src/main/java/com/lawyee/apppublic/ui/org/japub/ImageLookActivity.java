@@ -56,6 +56,8 @@ public class ImageLookActivity extends BaseActivity {
             mImagePv.setVisibility(View.GONE);
             WebSettings settings = mWebOrgshow.getSettings();
             settings.setJavaScriptEnabled(true);
+            settings.setSupportZoom(true);
+            settings.setBuiltInZoomControls(true);
             settings.setLoadsImagesAutomatically(true);
             settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
             settings.setUseWideViewPort(true);

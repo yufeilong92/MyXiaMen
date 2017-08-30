@@ -5,11 +5,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.ImageView;
 
 import com.baidu.mapapi.SDKInitializer;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.lawyee.apppublic.R;
 import com.lawyee.apppublic.smack.SmackListenerManager;
 import com.lawyee.apppublic.smack.SmackManager;
@@ -18,8 +15,6 @@ import com.lawyee.apppublic.vo.AreaVO;
 import com.lawyee.apppublic.vo.DataDictionaryVO;
 import com.lawyee.apppublic.vo.LoginResult;
 import com.lawyee.apppublic.vo.UserVO;
-import com.lqr.emoji.IImageLoader;
-import com.lqr.emoji.LQREmotionKit;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -91,12 +86,12 @@ public class ApplicationSet extends Application {
         mMainLooper = getMainLooper();
         mHandler = new Handler();
         initImageLoader(this);
-        LQREmotionKit.init(this, new IImageLoader() {
-            @Override
-            public void displayImage(Context context, String path, ImageView imageView) {
-                Glide.with(context).load(path).centerCrop().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageView);
-            }
-        });
+//        LQREmotionKit.init(this, new IImageLoader() {
+//            @Override
+//            public void displayImage(Context context, String path, ImageView imageView) {
+//                Glide.with(context).load(path).centerCrop().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageView);
+//            }
+//        });
     }
 
     public String getOpenfireLoginId()

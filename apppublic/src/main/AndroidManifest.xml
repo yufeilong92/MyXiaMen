@@ -166,23 +166,6 @@
             android:name=".ui.lawyerService.map.SessionMapActivity"
             android:screenOrientation="portrait" />
 
-        <service android:name=".services.JaaidApplyService" />
-        android:screenOrientation="portrait">
-        <service android:name=".services.JaaidApplyService" />
-
-        <!-- 这里输入百度密钥 -->
-        <!-- 正式的key  kfzhnLR2qSZuFYouZrbQTSKGm4zohW2Q -->
-        <!-- czq  PkqztaAZZB1CA7lrLTZeYHt92XSU25oR -->
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="PkqztaAZZB1CA7lrLTZeYHt92XSU25oR" />
-
-        <!-- 百度的远程服务 -->
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
-
         <activity
             android:name=".ui.lawyerService.SessionActivity"
             android:screenOrientation="portrait" />
@@ -287,6 +270,23 @@
             android:name=".ui.personalcenter.lawyer.CheckChatActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".ui.org.japub.ImageLookActivity"></activity>
+
+        <service android:name=".services.JaaidApplyService" />
+        android:screenOrientation="portrait">
+        <service android:name=".services.JaaidApplyService" />
+
+        <!-- 这里输入百度密钥 -->
+        <!-- 正式的key  kfzhnLR2qSZuFYouZrbQTSKGm4zohW2Q -->
+        <!-- czq  PkqztaAZZB1CA7lrLTZeYHt92XSU25oR -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="kfzhnLR2qSZuFYouZrbQTSKGm4zohW2Q" />
+
+        <!-- 百度的远程服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
     </application>
 
 </manifest>
